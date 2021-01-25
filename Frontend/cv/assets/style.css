@@ -1,0 +1,79 @@
+/*  marge */
+* {
+  margin: 0;
+  padding: 0;
+}
+.stopMargPad {
+  margin: 0;
+  padding: 0;
+}
+.margTitre {
+  margin-top: 130px;
+}
+
+/* hauteur */
+.slider {
+  height: 500px;
+}
+.paragraphe {
+  height: 400px;
+}
+.foot {
+  height: 500px;
+}
+
+/* largeur */
+.larg100 {
+  width: 100%;
+}
+.larg50 {
+  width: 50%;
+}
+.largInput {
+  width: 40%;
+}
+
+/* cube */
+.cube {
+  width: 80px;
+  height: 80px;
+}
+
+/* bordure */
+
+.bordureProfil {
+  border: 3mm ridge#a6b622ff;
+}
+
+/* back */
+
+.backSkillSize {
+  height: 500px;
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+.backSlideSize {
+  height: 550px;
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+/* COLOR */
+.backFooter {
+  background-color: #748928ff;
+}
+.btnCarte {
+  background-color: #748928ff;
+}
+.textSlide {
+  color: #404020;
+}
+.colorSubmit {
+  background-color: #2c3e50;
+}
+/* divers */
+
+.displayNone {
+  display: none;
+}
