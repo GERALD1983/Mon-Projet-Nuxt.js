@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white ">
-    <div class="backFooter foot">
+    <div class="backFooter foot mobileFootHeight">
       <div>
         <h3 id="contact" class="invisible text-light pt-5 pb-3">Contact</h3>
       </div>
@@ -10,13 +10,33 @@
           id="logosReseaux"
           class="invisible larg50 d-flex justify-content-between"
         >
-          <b-icon icon="facebook" font-scale="2"></b-icon>
-          <b-icon icon="github" font-scale="2"></b-icon>
-          <b-icon icon="linkedin" font-scale="2"></b-icon>
-          <b-icon icon="twitter" font-scale="2"></b-icon>
+          <b-icon
+            @click="clickFacebook"
+            role="button"
+            icon="facebook"
+            font-scale="2"
+          ></b-icon>
+          <b-icon
+            @click="clickGit"
+            role="button"
+            icon="github"
+            font-scale="2"
+          ></b-icon>
+          <b-icon
+            @click="clickLinkedIn"
+            role="button"
+            icon="linkedin"
+            font-scale="2"
+          ></b-icon>
+          <b-icon
+            @click="clickTwitter"
+            role="button"
+            icon="twitter"
+            font-scale="2"
+          ></b-icon>
         </div>
       </div>
-      <div class="d-flex justify-content-around">
+      <div class="mobileFoot d-flex justify-content-around">
         <div class="d-flex flex-column justify-content-center text-light">
           <h5 id="boxK" class="invisible">
             <b-icon icon="house-door-fill"></b-icon> Adresse :
@@ -28,10 +48,11 @@
             26 42
           </p>
           <p id="boxG" class="invisible">
-            <b-icon class="mr-2" icon="mailbox"></b-icon> Mail: dfggggfdgrr
+            <b-icon class="mr-2" icon="mailbox"></b-icon> Mail:
+            ferron-gerald@outlook.fr
           </p>
         </div>
-        <div class="larg50">
+        <div class="mobileLarg100 larg50">
           <Formulaire />
         </div>
       </div>
@@ -45,6 +66,14 @@ export default {
   name: "foot",
   components: {
     Formulaire
+  },
+  data() {
+    return {
+      urlGitHub: "https://github.com/GERALD1983",
+      urlLinkedIn: "https://www.linkedin.com/in/gerald-ferron/",
+      urlFacebook: "https://fr-fr.facebook.com/",
+      urlTwitter: "https://twitter.com/?lang=fr"
+    };
   },
 
   mounted() {
@@ -83,6 +112,20 @@ export default {
         boxG.classList.add("boxG");
       }
     });
+  },
+  methods: {
+    clickGit() {
+      window.open(`${this.urlGitHub}`);
+    },
+    clickLinkedIn() {
+      window.open(`${this.urlLinkedIn}`);
+    },
+    clickFacebook() {
+      window.open(`${this.urlFacebook}`);
+    },
+    clickTwitter() {
+      window.open(`${this.urlTwitter}`);
+    }
   }
 };
 </script>

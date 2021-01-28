@@ -77,3 +77,105 @@
 .displayNone {
   display: none;
 }
+
+/*  media queries */
+@media screen and (max-width: 770px) {
+  .tailleModaleProjMob {
+    width: 100% !important;
+  }
+  .backModalCompMobile {
+    height: auto !important;
+  }
+  .mobileBackSlideSize {
+    height: 400px;
+  }
+  .mobileBackSize {
+    width: 14em !important;
+    font-size: 30px;
+  }
+  .mobileSizeIcon {
+    height: 30px;
+    width: 30px;
+  }
+  .mobileFoot {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileLarg100 {
+    width: 100%;
+  }
+  .mobileFootHeight {
+    height: 700px;
+  }
+  .mobileMargTitre {
+    margin-top: 0 !important;
+  }
+  .mobileParagraphe {
+    height: 550px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .mobileParagraphe2 {
+    height: 530px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .largImgModaleMob {
+    width: 100% !important;
+  }
+  .blocapMob {
+    width: 14em !important;
+    height: 120px !important;
+  }
+
+  .blocapFontMob {
+    font-size: 0.8em !important;
+  }
+
+  .mobileBackSize550 {
+    height: 4em !important;
+    width: 7em !important;
+    font-size: 30px;
+    border-radius: 15px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .margTitreMobile {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mobileFont {
+    font-size: 20px !important;
+  }
+  .stopPadMargX {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .mobileStopPadTop {
+    padding-top: 0 !important;
+  }
+  .mobileBackSkillSize {
+    height: 550px;
+  }
+  .blocapMob450 {
+    width: 10em !important;
+    height: 120px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .backPopMobile {
+    height: 80px !important;
+    border-radius: 4px !important;
+  }
+  .supprimDialPhotoMob {
+    display: none !important;
+  }
+}

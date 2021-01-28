@@ -11,12 +11,12 @@
     -->
 
       <div
-        class="pb-5 mx-5 px-5 d-flex flex-wrap justify-content-around align-items-center "
+        class="pb-5 mx-5 px-5 stopPadMargX d-flex flex-wrap justify-content-around align-items-center "
       >
         <div
           v-for="(image, index) in images"
           :key="index"
-          class=" my-5 col-8 col-lg-4"
+          class=" my-5 col-xxl-3 col-xl-4 col-lg-5 col-md-7 col-sm-12"
         >
           <div class="bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
@@ -53,7 +53,12 @@
           v-bind:revele="revele"
           v-bind:toggleModale="toggleModale"
         >
-          <img id="imageModale" src="../assets/resto400.jpg" alt="" />
+          <img
+            id="imageModale"
+            class="hautImgModale largImgModaleMob"
+            src="../assets/resto400.jpg"
+            alt=""
+          />
         </modale>
       </div>
     </div>
@@ -75,6 +80,7 @@ export default {
         {
           id: 1,
           link: require("../assets/cv400.jpg"),
+          link2: require("../assets/cv.jpg"),
           nom: "Maquette Cv",
           description: `Cv responsive. Ceci est un site fait entiérement en html et css il est optimiser
            pour mobile.
@@ -88,6 +94,7 @@ export default {
         {
           id: 2,
           link: require("../assets/resto400.jpg"),
+          link2: require("../assets/resto.jpg"),
           nom: "Oh My Food",
           description: `Projet oh my food restaurant.
           Ceci est un rendu d'une maquette faite en HTML Css et du préprocesseur Saas.
@@ -101,6 +108,7 @@ export default {
         {
           id: 3,
           link: require("../assets/site400.jpg"),
+          link2: require("../assets/site.jpg"),
           nom: "Projet Site Perso",
           description: "En construction",
           url: "#"
@@ -108,6 +116,7 @@ export default {
         {
           id: 4,
           link: require("../assets/chouette400.jpg"),
+          link2: require("../assets/agence.jpg"),
           nom: "Agence Web",
           description: `Amelioration site la chouette agence, Seo optimisation.
           Ceci est le site chouette agence après optimisation des Seo des graphismes
@@ -121,19 +130,21 @@ export default {
         {
           id: 5,
           link: require("../assets/orinoco400.jpg"),
-          nom: "E-commerce Orinico",
+          link2: require("../assets/orinoco400.jpg"),
+          nom: "E-commerce Orinoco",
           description: `Site E-commerce Orinoco version Mvp.
           Ceci est l'application e-commerce front-end réaliser par mes soins à l'aide
-          du Framework boostrap et Javascript vanilla.
+          du Framework bootstrap et en Javascript vanilla.
           Le code est commenté et utilise des promises en requête Ajax sous forme de fonction.
-          Ce projet a été fait dans le cadre du projet 5 d'Openclassroom.
-          Le backent été fourni ainsi que les informations et les différentes données affichaient en front-end.`,
+          Ce projet a été fait dans le cadre du projet 5 d'Openclassrooms.
+          Le backend été fourni ainsi que les informations et les différentes données affichaient en front-end.`,
           url: "https://github.com/GERALD1983/FrontEndP5"
         },
         {
           id: 6,
           link: require("../assets/sopecocko400.jpg"),
-          nom: "Critiqe Gastronomique",
+          link2: require("../assets/sopecocko400.jpg"),
+          nom: "Critique Gastronomique",
           description: `Backend projet6 api d'ajout de vos sauces, likes et dislikes.
           Ceci est une application de critique gastronomique pour une agence de sauces Sopekocko
           le côté front-end était ici déjà fourni.
@@ -146,6 +157,7 @@ export default {
         {
           id: 7,
           link: require("../assets/groupomania400.jpg"),
+          link2: require("../assets/groupomania400.jpg"),
           nom: "Réseau social",
           description: `Conception Backend et Frontend
           en base de donnee Mysql pour le projet Groupomania.
@@ -189,10 +201,10 @@ export default {
     },
 
     insertImage(image) {
-      localStorage.setItem("imageMod", image.link);
-      document.getElementById("imageModale").src = `${image.link}`;
+      localStorage.setItem("imageMod", image.link2);
+      document.getElementById("imageModale").src = `${image.link2}`;
 
-      console.log(image.link);
+      console.log(image.link2);
     }
 
     /*
@@ -217,6 +229,10 @@ export default {
 <style>
 .hautImg {
   height: 370px;
+}
+.hautImgModale {
+  height: auto;
+  width: auto;
 }
 .hautDivColor {
   height: 40px;
