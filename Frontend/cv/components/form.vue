@@ -137,10 +137,12 @@ export default {
       this.form.tel = "";
 
       // Trick to reset/clear native browser form validation state
+      /*
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
       });
+      */
     }
   }
 };

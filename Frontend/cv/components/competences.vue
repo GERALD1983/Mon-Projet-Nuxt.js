@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white margTitre">
+  <div class="bg-white margTitre mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
       <h2 id="competence" class="invisible bg-white py-5">
         Mes Compétences
@@ -8,7 +8,7 @@
 
     <div
       id="animBack"
-      class=" backSkillSize invisible slider d-flex justify-content-center align-items-center"
+      class=" backSkillSize mobileBackSkillSize invisible slider d-flex justify-content-center align-items-center"
     >
       <div
         id="animLogos"
@@ -24,7 +24,10 @@
           />
         </div>
       </div>
-      <div id="animModal" class="backModal efface col-md-8 d-flex flex-column ">
+      <div
+        id="animModal"
+        class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
+      >
         <h4 class="text-right text-danger">
           <span @click="clearReadSkill" role="button"> X </span>
         </h4>
@@ -105,100 +108,118 @@ export default {
         {
           link: require("../assets/vuejs.png"),
           nom: "Mes compétences en Vue.js",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Construire une application Vue.js.",
+          description2:
+            "Augmenter les capacités d'une application avec Vue CLI",
+          description3: "Créer des composants réutilisables dans Vue.js "
         },
         {
           link: require("../assets/bootstrap.png"),
           nom: "Mes compétences en Bootstrap",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Identifier les avantages de Bootstrap.",
+          description2:
+            "Créer des fonctionnalités et des thèmes personnalisés à l'aide de Bootstrap.",
+          description3:
+            "Utiliser les composants d'interface utilisateur de Bootstrap."
         },
         {
           link: require("../assets/npm.png"),
           nom: "Mes compétences en Npm",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Utiliser Npm à l'aide d'un terminal de commande.",
+          description2: "Installer les différents packages Npm en ligne.",
+          description3: "Intégrer les dépendances Npm à l'application."
         },
         {
           link: require("../assets/vscode.png"),
           nom: "Mes compétences en Visual Studio Code",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1:
+            "Installer les Modules avantageux de l'IDE Visual Studio.",
+          description2: "Configurer un projet sur Visual Studio Code.",
+          description3:
+            "Utiliser Visual Studio à toutes les étapes du cycle de vie d’une application."
         },
         {
           link: require("../assets/mysql.png"),
           nom: "Mes compétences en MySql",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Configurer MySQL , gérer les erreurs SQL.",
+          description2: "Manipuler des données dans une base de données MySQL.",
+          description3:
+            "Gérer les utilisateurs , sécuriser une base de données."
         },
         {
           link: require("../assets/sql.png"),
           nom: "Mes compétences en SQL",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Créer une base de données en requête SQL.",
+          description2: "Créer et modifier des tables avec des requêtes SQL.",
+          description3:
+            "Insérer, modifier, supprimer et sélectionner des données dans la base."
         },
         {
           link: require("../assets/mongodb.png"),
           nom: "Mes compétences en MongoDb",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1:
+            "Stocker des données de manière sécurisée dans MongoDb.",
+          description2: "Gérer une base de donnée MongoDb et ses utilisateurs.",
+          description3:
+            "Utiliser Mongoose et modéliser des objets MongoDb pour Node.js."
         },
         {
           link: require("../assets/git.png"),
           nom: "Mes compétences en Git",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Utiliser les commandes de base de Git",
+          description2:
+            "Structurer l'arbre Git et garder les branches propres.",
+          description3:
+            "Initialiser , commiter gérer les problémes de conflit sur Git"
         },
         {
           link: require("../assets/github.png"),
           nom: "Mes compétences en GitHub",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Gérer plusieurs versions sur GitHub",
+          description2: "Envoyer et héberger une application sur GitHub.",
+          description3: "Collaborer grâce à GitHub en utilisant les workflows."
         },
         {
           link: require("../assets/gimp.png"),
           nom: "Mes compétences en Gimp",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Intégrer une maquette et en saisir le contenu",
+          description2:
+            "Revoir différents aspect d'une maquette taille , couleurs",
+          description3:
+            "Concevoir différents modéle de base images, banniéres, logos, textes."
         },
         {
           link: require("../assets/node1.png"),
           nom: "Mes compétences en Node.js",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Créer une API REST avec Node.js en modéle MVC.",
+          description2: "Concevoir des applications évolutives avec Node.js.",
+          description3:
+            "Réaliser toute une structure Backend fonctionnelle avec Node.js."
         },
         {
           link: require("../assets/cline.png"),
           nom: "Mes compétences en Ligne de Commande",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Utiliser les commandes de base d'un terminal.",
+          description2: "Manipuler des fichiers avec un terminal.",
+          description3: "Ajouter des packages et naviguer depuis un terminal."
         },
         {
           link: require("../assets/postman.jpg"),
           nom: "Mes compétences avec Postman",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Manipuler des API avec l'interface Postman.",
+          description2:
+            "Tester différentes routes d'un Backend en phase de test.",
+          description3:
+            "Utiliser et envoyer les données en phase de test avec Postman."
         },
         {
           link: require("../assets/express.png"),
           nom: "Mes compétences avec Express.js",
-          description1: "Site ambiance naturelle",
-          description2: "Site ambiance naturelle",
-          description3: "Site ambiance naturelle"
+          description1: "Créer un serveur Web simple avec Express.",
+          description2:
+            "Mettre en place un système d'authentification sur une application Express.",
+          description3:
+            "Gérer des fichiers utilisateur sur une application Express."
         }
       ]
     };

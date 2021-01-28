@@ -1,16 +1,16 @@
 <template>
   <div
     id="backMaPage"
-    class="slider backSlide backSlideSize d-flex flex-column justify-content-between align-items-between"
+    class="slider backSlide backSlideSize mobileBackSlideSize d-flex flex-column justify-content-between align-items-between"
   >
     <div
-      class="larg100 textSlide margTitre d-flex justify-content-around align-items-center"
+      class="larg100 textSlide margTitre margTitreMobile d-flex justify-content-around align-items-center"
     >
       <b-icon
         @mouseenter="stopRotation()"
         @mouseleave="startRotation()"
         @click="prev"
-        class="bg-white"
+        class="bg-white mobileSizeIcon"
         role="button"
         icon="chevron-left"
         animation="fade"
@@ -18,7 +18,9 @@
         aria-label="Help"
       ></b-icon>
       <div v-for="number in [currentNumber]" :key="number">
-        <h1 class="rounded-pill backSize bg-white">
+        <h1
+          class="rounded-pill backSize mobileBackSize mobileBackSize550 bg-white"
+        >
           {{ currentMsg }}
         </h1>
       </div>
@@ -27,7 +29,7 @@
         @mouseenter="stopRotation()"
         @mouseleave="startRotation()"
         @click="next"
-        class="bg-white "
+        class="bg-white mobileSizeIcon"
         role="button"
         icon="chevron-right"
         animation="fade"
@@ -39,20 +41,21 @@
       class="larg100 mb-3 pl-3 d-flex justify-content-left align-items-center"
     >
       <img
-        @click="afficherMasquer()"
+        @mouseenter="afficherMasquer()"
+        @mouseleave="afficherMasquer()"
         role="button"
         width="160px"
         class="mr-3 justify-content-left bordureProfil rounded-circle ombre"
         src="../assets/photo1.jpg"
         alt="photo profil"
       />
-      <div id="dialPhoto" class="afficher">
+      <div id="dialPhoto" class="supprimDialPhotoMob afficher">
         <div class=" d-flex justify-content-center align-items-center">
           <div class="miniFleche"></div>
           <div
-            class="backDial bg-white d-flex justify-content-around align-items-center"
+            class="backDial blocapMob blocapMob450 bg-white d-flex justify-content-around align-items-center"
           >
-            <h5 class="bg-white">
+            <h5 class="bg-white blocapFontMob">
               Hello ! Je m'appelle Gérald, je suis Développeur web Fullstack
               Javascript . Bienvenue à vous !
             </h5>
@@ -75,7 +78,7 @@ export default {
         "Développeur Backend Node.js",
         "Intégrateur Prestashop",
         "Webmaster optimisation Seo",
-        "Développeur Fullstack"
+        "Développeur Fullstack Js"
       ],
       currentNumber: 0,
       timer: null

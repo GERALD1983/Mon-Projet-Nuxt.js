@@ -8,14 +8,19 @@
       </div>
 
       <div
-        class="d-flex flex-column justify-content-center paragraphe bg-secondary"
+        class=" d-flex flex-column justify-content-center paragraphe mobileParagraphe bg-secondary"
       >
-        <h3 class="objectif invisible paratop1 text-white ">
-          " Aime développer produire dans le web rester connecté à la
-          technologie. "
+        <h3 class="mobileFont pb-3 objectif invisible paratop1 text-white ">
+          " Je m'appelle Gérald Ferron je suis dévellopeur d'applications Web. "
+          <br />
+          " Je conçois et développe des applications produite dans le web, je
+          suis connecté à la technologie. "
         </h3>
-        <h3 class="objectif invisible paratop2 text-white">
-          " Vous rendre de la qualité , du travail bien fait , un service
+        <h3 class="mobileFont pt-3 objectif invisible paratop2 text-white">
+          "Mes objectifs sont d'accomplir vos projets en intégrant les derniéres
+          technologies digitales. "
+          <br />
+          " De vous rendre de la qualité , du travail bien fait , un service
           optimiser. "
         </h3>
       </div>
@@ -27,12 +32,12 @@
       <div class="d-flex justify-content-center align-items-center">
         <h2
           id="textPop"
-          class="d-flex justify-content-center align-items-center rounded-pill invisible text-white my-5"
+          class="backPopMobile d-flex justify-content-center align-items-center rounded-pill invisible text-white my-5"
         >
           Quelles sont mes offres ?
         </h2>
       </div>
-      <div class="bg-secondary paragraphe">
+      <div class="bg-secondary paragraphe mobileParagraphe2">
         <h5 class="text-white pt-5">
           <ul id="liste" class="invisible">
             <li>
@@ -57,7 +62,7 @@
             </li>
           </ul>
         </h5>
-        <h4 id="liste2" class="invisible text-white pt-5">
+        <h4 id="liste2" class="invisible text-white pt-5 mobileStopPadTop">
           Mes services correspondront donc peut être à ce que vous avez peut
           être toujours chercher !
         </h4>

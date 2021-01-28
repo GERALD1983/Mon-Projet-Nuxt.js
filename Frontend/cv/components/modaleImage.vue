@@ -1,7 +1,7 @@
 <template>
   <div class="bloc-modale" v-if="revele">
     <div class="overlay"></div>
-    <div class="modale card">
+    <div class="tailleModaleProjMob modale card">
       <div
         @click="toggleModale(), clearImage()"
         class="btn-modale btn btn-danger"
@@ -51,6 +51,9 @@ export default {
   left: 0;
 }
 .modale {
+  overflow: auto;
+  height: 90vh;
+  width: 100vh;
   background: white;
 
   position: fixed;
