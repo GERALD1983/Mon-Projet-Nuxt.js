@@ -1,5 +1,21 @@
 require("dotenv").config();
 
+const maskData = require("maskdata");
+
+// methode masquage email
+const emailMaskOptions = {
+  maskWith: "*",
+  unmaskedStartCharactersBeforeAt: 2,
+  unmaskedEndCharactersAfterAt: 1,
+  maskAtTheRate: false,
+};
+
+const maskPhoneOptions = {
+  maskWith: "*",
+  unmaskedStartDigits: 3,
+  unmaskedEndDigits: 1,
+};
+
 const db = require("knex")({
   client: "mysql",
   connection: {
@@ -18,10 +34,10 @@ exports.post = async (req, res) => {
     }
 
     await db("form").insert({
-      email: req.body.email,
+      email: maskData.maskEmail2(req.body.email, emailMaskOptions),
       nom: req.body.nom,
       message: req.body.message,
-      phone: req.body.phone,
+      phone: maskData.maskPhone(req.body.phone, maskPhoneOptions),
       date_cree: new Date(),
     });
 
@@ -36,8 +52,7 @@ exports.post = async (req, res) => {
 
 exports.getAll = async (req, res) => {
   try {
-    data = await db("form").select("*").from("form");
-
+    data = await db("form").select("*");
     res.send(data);
   } catch (error) {
     if (error.errno === 19) {

@@ -1,5 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const helmet = require("helmet");
+const nocache = require("nocache");
+const cookieSession = require("cookie-session");
 
 const formRoutes = require("./routes/form");
 
@@ -20,7 +23,23 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(
+  cookieSession({
+    name: "session",
+    secret: process.env.SECRET,
+    cookie: {
+      secure: true,
+      httpOnly: true,
+      domain: "http://localhost:3000/",
+    },
+  })
+);
+
+app.use(helmet());
+
 console.log("salut mon site perso");
+
+app.use(nocache());
 
 app.use(bodyParser.json());
 
