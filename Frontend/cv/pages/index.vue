@@ -1,73 +1,37 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        cv
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div id="app">
+    <MaPage />
+    <Contenu />
+    <Foot />
   </div>
 </template>
 
 <script>
-export default {}
+import MaPage from "../components/maPage.vue";
+import Contenu from "../components/contenu.vue";
+import Foot from "../components/footer.vue";
+export default {
+  components: {
+    MaPage,
+    Contenu,
+    Foot
+  },
+
+  data() {
+    return {};
+  }
+  /*
+  mounted() {
+    const page = document.getElementById("app");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        page.classList.add("scroll");
+        console.log("scroll");
+      }
+    });
+  }
+  */
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style></style>

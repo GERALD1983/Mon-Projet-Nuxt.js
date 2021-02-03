@@ -1,20 +1,20 @@
 require("dotenv").config();
 
-const maskData = require("maskdata");
+const nodemailer = require("nodemailer");
 
-// methode masquage email
-const emailMaskOptions = {
-  maskWith: "*",
-  unmaskedStartCharactersBeforeAt: 2,
-  unmaskedEndCharactersAfterAt: 1,
-  maskAtTheRate: false,
-};
+let transporter = nodemailer.createTransport({
+  host: process.env.HOST,
+  port: process.env.PORTHOST,
 
-const maskPhoneOptions = {
-  maskWith: "*",
-  unmaskedStartDigits: 3,
-  unmaskedEndDigits: 1,
-};
+  secure: true,
+
+  auth: {
+    user: process.env.USERMAIL, // generated ethereal user
+    pass: process.env.USERPASS, // generated ethereal password
+  },
+});
+
+const CryptoJS = require("crypto-js");
 
 const db = require("knex")({
   client: "mysql",
@@ -29,17 +29,37 @@ const db = require("knex")({
 exports.post = async (req, res) => {
   try {
     const email = req.body.email;
+    const phone = req.body.phone;
+    // Encrypt
+    const ciphertext = CryptoJS.AES.encrypt(
+      email,
+      process.env.CRYPTOSECRET
+    ).toString();
+    const ciphertext2 = CryptoJS.AES.encrypt(
+      phone,
+      process.env.CRYPTOSECRET
+    ).toString();
     if (!email) {
       res.status(400).json(`Missing ${!email}!`);
     }
 
     await db("form").insert({
-      email: maskData.maskEmail2(req.body.email, emailMaskOptions),
+      email: ciphertext,
       nom: req.body.nom,
       message: req.body.message,
-      phone: maskData.maskPhone(req.body.phone, maskPhoneOptions),
+      phone: ciphertext2,
       date_cree: new Date(),
     });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: req.body.email, // sender address
+      to: process.env.USERMAIL, // list of receivers
+      subject: "Mon Nom est : " + req.body.nom, // Subject line
+      text: req.body.message + " Mon numéro de tel est : " + req.body.phone, // plain text body
+    });
+
+    console.log("Message sent: %s", info.messageId);
 
     res.status(200).json("all good");
   } catch (error) {
@@ -53,6 +73,28 @@ exports.post = async (req, res) => {
 exports.getAll = async (req, res) => {
   try {
     data = await db("form").select("*");
+    /*
+    for (i = 0; i < data.length; i++) {
+      var bytes = CryptoJS.AES.decrypt(data[i].email, "secret key 123");
+      var decryptedData = bytes.toString(CryptoJS.enc.Utf8);
+
+      var bytes2 = CryptoJS.AES.decrypt(data[i].phone, "secret key 123");
+      var decryptedData2 = bytes2.toString(CryptoJS.enc.Utf8);
+
+      var dataId = data[i].id;
+      var dataMessage = data[i].message;
+      var dataNom = data[i].nom;
+
+      var tableau = [
+        dataId,
+        decryptedData,
+        dataNom,
+        dataMessage,
+        decryptedData2,
+      ];
+      console.log(tableau);
+    }
+    */
     res.send(data);
   } catch (error) {
     if (error.errno === 19) {

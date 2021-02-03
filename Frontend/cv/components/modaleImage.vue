@@ -8,7 +8,7 @@
       >
         X
       </div>
-      <h2>fenetre modale</h2>
+      <h2>Maquette</h2>
       <div>
         <slot> </slot>
       </div>

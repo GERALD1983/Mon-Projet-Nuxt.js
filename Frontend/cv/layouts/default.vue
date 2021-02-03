@@ -1,9 +1,8 @@
 <template>
   <div id="app" class="bg-secondary">
     <div id="nav">
-      <Nuxt-link to="/Acceuil">Acceuil</Nuxt-link>
+      <Nuxt-link to="/">Acceuil</Nuxt-link>
     </div>
-
     <Nuxt />
   </div>
 </template>
