@@ -11,17 +11,14 @@
         class=" d-flex flex-column justify-content-center paragraphe mobileParagraphe bg-secondary"
       >
         <h3 class="mobileFont pb-3 objectif invisible paratop1 text-white ">
-          " Je m'appelle Gérald Ferron je suis dévellopeur d'applications Web. "
-          <br />
-          " Je conçois et développe des applications produite dans le web, je
-          suis connecté à la technologie. "
+          " Je m'appelle Gérald Ferron je suis développeur d'applications Web,
+          je conçois et développe des site internet pour le web, je suis en
+          veille technologique constante. "
         </h3>
         <h3 class="mobileFont pt-3 objectif invisible paratop2 text-white">
           "Mes objectifs sont d'accomplir vos projets en intégrant les derniéres
-          technologies digitales. "
-          <br />
-          " De vous rendre de la qualité , du travail bien fait , un service
-          optimiser. "
+          technologies digitales, pour un rendu de qualité , du travail bien
+          fait , un service optimiser. "
         </h3>
       </div>
     </div>
@@ -63,8 +60,7 @@
           </ul>
         </h5>
         <h4 id="liste2" class="invisible text-white pt-5 mobileStopPadTop">
-          Mes services correspondront donc peut être à ce que vous avez peut
-          être toujours chercher !
+          Mes services sont à votre disposition n'hésitez pas à me contacter !
         </h4>
       </div>
     </div>
@@ -136,10 +132,8 @@ export default {
     window.addEventListener("scroll", () => {
       let scrollValue =
         (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-      console.log(scrollValue);
 
       if (window.scrollY >= 0) {
-        console.log(window.scrollY);
       }
       if (window.scrollY > 100) {
         objectif.classList.remove("invisible");
@@ -178,16 +172,16 @@ export default {
 
 <style>
 .boxt {
-  animation: 1.5s linear boxt;
+  animation: 1s linear boxt;
 }
 .boxb {
   animation: 1s linear boxb;
 }
 .para1 {
-  animation: 1.5s linear para1;
+  animation: 1s linear para1;
 }
 .para2 {
-  animation: 1.5s linear para2;
+  animation: 1s linear para2;
 }
 .para3 {
   animation: 1s linear para3;

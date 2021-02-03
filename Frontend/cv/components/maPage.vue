@@ -45,6 +45,7 @@
         @mouseleave="afficherMasquer()"
         role="button"
         width="160px"
+        height="160px"
         class="mr-3 justify-content-left bordureProfil rounded-circle ombre"
         src="../assets/photo1.jpg"
         alt="photo profil"

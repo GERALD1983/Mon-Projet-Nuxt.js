@@ -55,9 +55,13 @@
                 DESCRIPTION2
               </p>
             </div>
-            <div class="d-flex justify-content-left align-items-center">
+            <div
+              class="d-flex justify-content-left align-items-center mobileDernierCompMod"
+            >
               <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod3">DESCRIPTION3</p>
+              <p class="stopMargPad ml-5" id="descriMod3">
+                DESCRIPTION3
+              </p>
             </div>
           </div>
         </div>
@@ -269,8 +273,6 @@ export default {
       document.getElementById(
         "descriMod3"
       ).textContent = `${image.description3}`;
-
-      console.log(image.link);
     },
     clearReadSkill: function() {
       const backMod = document.getElementById("animModal");

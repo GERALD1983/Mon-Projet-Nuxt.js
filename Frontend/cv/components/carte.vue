@@ -203,8 +203,6 @@ export default {
     insertImage(image) {
       localStorage.setItem("imageMod", image.link2);
       document.getElementById("imageModale").src = `${image.link2}`;
-
-      console.log(image.link2);
     }
 
     /*

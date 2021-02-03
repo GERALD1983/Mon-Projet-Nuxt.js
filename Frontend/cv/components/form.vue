@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+    <b-form @submit.prevent="submit" @reset="onReset" v-if="show">
       <div class="text-white d-flex justify-content-around">
         <b-form-group
           class="invisible largInput"
@@ -10,11 +10,23 @@
         >
           <b-form-input
             id="input-1"
-            v-model="form.email"
             type="email"
             placeholder="Enter email"
             required
+            v-model.trim="$v.email.$model"
           ></b-form-input>
+          <div
+            class="error"
+            v-if="!$v.email.required && submitStatus === 'ERROR'"
+          >
+            Field is required
+          </div>
+          <div class="error" v-if="!$v.email.email">
+            écrire un email valide ex: marty@hotmail.com
+          </div>
+          <div class="error" v-if="!$v.email.maxLength">
+            .Max 70 nrbs. Merci!
+          </div>
         </b-form-group>
 
         <b-form-group
@@ -25,10 +37,19 @@
         >
           <b-form-input
             id="input-2"
-            v-model="form.name"
             placeholder="Enter name"
             required
+            v-model.trim="$v.nom.$model"
           ></b-form-input>
+          <div
+            class="error"
+            v-if="!$v.nom.required && submitStatus === 'ERROR'"
+          >
+            Field is required
+          </div>
+          <div class="error" v-if="!$v.nom.strongNom">
+            Ecrire un nom sans charactére spéciaux .Max 70 letrs. Merci!
+          </div>
         </b-form-group>
       </div>
       <div class="text-white d-flex justify-content-around">
@@ -40,11 +61,20 @@
         >
           <b-form-textarea
             id="input-4"
-            v-model="form.message"
+            v-model.trim="$v.message.$model"
             type="text-area"
             placeholder="Enter Message"
             required
           ></b-form-textarea>
+          <div
+            class="error"
+            v-if="!$v.message.required && submitStatus === 'ERROR'"
+          >
+            Field is required
+          </div>
+          <div class="error" v-if="!$v.message.strongMessage">
+            Ecrire un message sans charactére spéciaux .Max 250 letrs. Merci!
+          </div>
         </b-form-group>
 
         <b-form-group
@@ -55,40 +85,105 @@
         >
           <b-form-input
             id="input-5"
-            v-model="form.tel"
+            v-model.trim="$v.phone.$model"
             placeholder="Enter phone"
             required
           ></b-form-input>
+          <div
+            class="error"
+            v-if="!$v.phone.required && submitStatus === 'ERROR'"
+          >
+            Field is required
+          </div>
+          <div class="error" v-if="!$v.phone.numeric">
+            Ecrire des chiffres sans espace sans charactére spéciaux Merci!
+          </div>
+          <div class="error" v-if="!$v.phone.maxLength">
+            .Max 20 nrbs. Merci!
+          </div>
         </b-form-group>
       </div>
       <div class="d-flex justify-content-around">
-        <b-button id="sub" class="invisible colorSubmit" type="submit"
+        <b-button
+          id="sub"
+          class="invisible colorSubmit"
+          type="submit"
+          :disabled="submitStatus === 'PENDING'"
           >Submit</b-button
         >
         <b-button id="res" class="invisible" type="reset" variant="danger"
           >Reset</b-button
         >
       </div>
+      <div>
+        <p class="typo__p" v-if="submitStatus === 'OK'">
+          Thanks for your submission!
+        </p>
+        <p class="typo__p" v-if="submitStatus === 'ERROR'">
+          Please fill the form correctly.
+        </p>
+        <p class="typo__p" v-if="submitStatus === 'ERROR SERVEUR'">
+          erreur serveur:Le mot de passe ou l'email ne correponde pas OU server
+          HS !
+        </p>
+        <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
+
+        <br />
+        <br />
+      </div>
     </b-form>
     <b-card class="mt-3 displayNone" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
+      <pre class="m-0">{{ email }} <br>
+        {{ nom }} <br> {{ message }} <br> {{ phone }} </pre>
     </b-card>
   </div>
 </template>
 
 <script>
+import { required, email, maxLength, numeric } from "vuelidate/lib/validators";
+import axios from "axios";
 export default {
   name: "formulaire",
   data() {
     return {
-      form: {
-        email: "",
-        name: "",
-        message: "",
-        tel: ""
-      },
-      show: true
+      email: "",
+      nom: "",
+      message: "",
+      phone: "",
+
+      client: [],
+      show: true,
+      submitStatus: null
     };
+  },
+  validations: {
+    email: { required, email, maxLength: 70 },
+    nom: {
+      required,
+      strongNom(nom) {
+        return (
+          /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-\s]{0,60}$/.test(
+            nom
+          ) && nom.length <= 70
+        );
+      }
+    },
+    message: {
+      required,
+
+      strongMessage(message) {
+        return (
+          // regex espace chiffre lettre seulement
+          ///^[a-zA-Z0-9_ ]*$/.test(message) && // checks for a-z
+
+          // regex accepte espace accent sans charactéeres spéciaux
+          /^[a-zA-Z0-9'áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-\s]{0,60}$/.test(
+            message
+          ) && message.length <= 250
+        );
+      }
+    },
+    phone: { required, numeric, maxLength: 20 }
   },
   mounted() {
     const boxC = document.getElementById("boxC");
@@ -123,18 +218,54 @@ export default {
       }
     });
   },
+  /*
+  async created() {
+    axios
+      .get("http://localhost:3100/client")
+      .then(response => ((this.client = response.data), console.log(response)))
+      .catch(error => console.log(error));
+  },
+  */
   methods: {
+    submit() {
+      console.log("requete ver serveur!");
+      this.$v.$touch();
+      if (this.$v.$invalid) {
+        this.submitStatus = "ERROR";
+        console.log("A echouer informations non complete!");
+      } else {
+        // do your submit logic here
+        console.log("En attente");
+        this.submitStatus = "PENDING";
+
+        axios
+          .post("http://localhost:3100/poster", {
+            email: this.email,
+            nom: this.nom,
+            message: this.message,
+            phone: this.phone
+          })
+          .then(response => {
+            (this.submitStatus = "OK"), console.log(response);
+            this.$router.go("/Acceuil");
+          })
+          .catch(
+            error => ((this.submitStatus = "ERROR SERVEUR"), console.log(error))
+          );
+      }
+    },
+
     onSubmit(event) {
       event.preventDefault();
-      alert(JSON.stringify(this.form));
+      alert(JSON.stringify(this.email, this.nom, this.message, this.phone));
     },
     onReset(event) {
       event.preventDefault();
       // Reset our form values
-      this.form.email = "";
-      this.form.name = "";
-      this.form.message = "";
-      this.form.tel = "";
+      this.email = "";
+      this.nom = "";
+      this.message = "";
+      this.phone = "";
 
       // Trick to reset/clear native browser form validation state
       /*

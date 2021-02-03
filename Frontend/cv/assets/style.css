@@ -19,7 +19,7 @@
   height: 400px;
 }
 .foot {
-  height: 500px;
+  height: auto;
 }
 
 /* largeur */
@@ -105,13 +105,16 @@
     width: 100%;
   }
   .mobileFootHeight {
-    height: 700px;
+    height: auto;
   }
   .mobileMargTitre {
     margin-top: 0 !important;
   }
   .mobileParagraphe {
     height: 550px !important;
+  }
+  .mobileDernierCompMod {
+    margin-bottom: 1.5em;
   }
 }
 
