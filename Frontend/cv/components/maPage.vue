@@ -47,8 +47,8 @@
         width="160px"
         height="160px"
         class="mr-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/photo1.jpg"
-        alt="photo profil"
+        src="../assets/moi5.jpg"
+        alt="photo profil développeur web"
       />
       <div id="dialPhoto" class="supprimDialPhotoMob afficher">
         <div class=" d-flex justify-content-center align-items-center">
@@ -199,7 +199,7 @@ export default {
 
 <style scoped>
 .backSlide {
-  background-image: url("../assets/roche.jpg");
+  background-image: url("../assets/roche2.jpg");
 }
 .backSlide1 {
   background-image: url("../assets/js.jpg");

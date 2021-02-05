@@ -20,7 +20,10 @@
             role="button"
             class=" cube ombreLogo"
             :src="image.link"
-            alt=""
+            :alt="
+              'Langage informatique programmation compétences développeur web : ' +
+                image.titre
+            "
           />
         </div>
       </div>
@@ -32,7 +35,12 @@
           <span @click="clearReadSkill" role="button"> X </span>
         </h4>
         <div>
-          <img id="imgMod" class="cube" src="../assets/html.png" alt="" />
+          <img
+            id="imgMod"
+            class="cube"
+            src="../assets/html.png"
+            alt="langage programmation logo"
+          />
         </div>
         <div>
           <h3 id="titreMod">TITRE</h3>
@@ -77,6 +85,7 @@ export default {
     return {
       images: [
         {
+          titre: "HTML5",
           link: require("../assets/html.png"),
           nom: "Mes compétences en Html 5 :",
           description1: "Intégrer du contenu conformément à une maquette.",
@@ -86,6 +95,7 @@ export default {
             "Mettre en place une structure de navigation Html pour un site web."
         },
         {
+          titre: "Css3",
           link: require("../assets/css.png"),
           nom: "Mes compétences en Css 3 :",
           description1: "Mettre en œuvre des effets CSS graphiques avancés.",
@@ -94,6 +104,7 @@ export default {
             "Maîtriser les translations, les rotations et l’opacité."
         },
         {
+          titre: "Javascript",
           link: require("../assets/js.png"),
           nom: "Mes compétences en Javascript",
           description1: "Gérer des événements JavaScript.",
@@ -102,6 +113,7 @@ export default {
             "Gérer la logique d'un programme en JavaScript (conditions, boucles et erreurs)."
         },
         {
+          titre: "Json",
           link: require("../assets/json.png"),
           nom: "Mes compétences en Json",
           description1: "Manipuler des données au format Json",
@@ -110,6 +122,7 @@ export default {
           description3: "Interagir avec un objet Json."
         },
         {
+          titre: "Vue.js",
           link: require("../assets/vuejs.png"),
           nom: "Mes compétences en Vue.js",
           description1: "Construire une application Vue.js.",
@@ -118,6 +131,7 @@ export default {
           description3: "Créer des composants réutilisables dans Vue.js "
         },
         {
+          titre: "Bootstrap",
           link: require("../assets/bootstrap.png"),
           nom: "Mes compétences en Bootstrap",
           description1: "Identifier les avantages de Bootstrap.",
@@ -127,6 +141,7 @@ export default {
             "Utiliser les composants d'interface utilisateur de Bootstrap."
         },
         {
+          titre: "npm",
           link: require("../assets/npm.png"),
           nom: "Mes compétences en Npm",
           description1: "Utiliser Npm à l'aide d'un terminal de commande.",
@@ -134,6 +149,7 @@ export default {
           description3: "Intégrer les dépendances Npm à l'application."
         },
         {
+          titre: "visual studio code",
           link: require("../assets/vscode.png"),
           nom: "Mes compétences en Visual Studio Code",
           description1:
@@ -143,6 +159,7 @@ export default {
             "Utiliser Visual Studio à toutes les étapes du cycle de vie d’une application."
         },
         {
+          titre: "MySql",
           link: require("../assets/mysql.png"),
           nom: "Mes compétences en MySql",
           description1: "Configurer MySQL , gérer les erreurs SQL.",
@@ -151,6 +168,7 @@ export default {
             "Gérer les utilisateurs , sécuriser une base de données."
         },
         {
+          titre: "SQL",
           link: require("../assets/sql.png"),
           nom: "Mes compétences en SQL",
           description1: "Créer une base de données en requête SQL.",
@@ -159,6 +177,7 @@ export default {
             "Insérer, modifier, supprimer et sélectionner des données dans la base."
         },
         {
+          titre: "MongoDb",
           link: require("../assets/mongodb.png"),
           nom: "Mes compétences en MongoDb",
           description1:
@@ -168,6 +187,7 @@ export default {
             "Utiliser Mongoose et modéliser des objets MongoDb pour Node.js."
         },
         {
+          titre: "Git",
           link: require("../assets/git.png"),
           nom: "Mes compétences en Git",
           description1: "Utiliser les commandes de base de Git",
@@ -177,6 +197,7 @@ export default {
             "Initialiser , commiter gérer les problémes de conflit sur Git"
         },
         {
+          titre: "GitHub",
           link: require("../assets/github.png"),
           nom: "Mes compétences en GitHub",
           description1: "Gérer plusieurs versions sur GitHub",
@@ -184,6 +205,7 @@ export default {
           description3: "Collaborer grâce à GitHub en utilisant les workflows."
         },
         {
+          titre: "Gimp",
           link: require("../assets/gimp.png"),
           nom: "Mes compétences en Gimp",
           description1: "Intégrer une maquette et en saisir le contenu",
@@ -193,6 +215,7 @@ export default {
             "Concevoir différents modéle de base images, banniéres, logos, textes."
         },
         {
+          titre: "Node.js",
           link: require("../assets/node1.png"),
           nom: "Mes compétences en Node.js",
           description1: "Créer une API REST avec Node.js en modéle MVC.",
@@ -201,6 +224,7 @@ export default {
             "Réaliser toute une structure Backend fonctionnelle avec Node.js."
         },
         {
+          titre: "Terminal , ligne de commande",
           link: require("../assets/cline.png"),
           nom: "Mes compétences en Ligne de Commande",
           description1: "Utiliser les commandes de base d'un terminal.",
@@ -208,6 +232,7 @@ export default {
           description3: "Ajouter des packages et naviguer depuis un terminal."
         },
         {
+          titre: "Postman",
           link: require("../assets/postman.jpg"),
           nom: "Mes compétences avec Postman",
           description1: "Manipuler des API avec l'interface Postman.",
@@ -217,6 +242,7 @@ export default {
             "Utiliser et envoyer les données en phase de test avec Postman."
         },
         {
+          titre: "Express",
           link: require("../assets/express.png"),
           nom: "Mes compétences avec Express.js",
           description1: "Créer un serveur Web simple avec Express.",
@@ -234,10 +260,11 @@ export default {
     const logos = document.getElementById("animLogos");
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 800) {
+      if (window.scrollY > 700) {
         competence.classList.remove("invisible");
         competence.classList.add("boxt");
-
+      }
+      if (window.scrollY > 800) {
         back.classList.remove("invisible");
         back.classList.add("backSkill");
 
@@ -258,6 +285,7 @@ export default {
 
       localStorage.setItem("link", image.link);
       document.getElementById("imgMod").src = `${image.link}`;
+      document.getElementById("imgMod").alt = `${image.titre}`;
 
       localStorage.setItem("descri1", image.description1);
       document.getElementById(
@@ -316,18 +344,19 @@ export default {
 .backSkill {
   background-image: url("../assets/flux.jpg");
 
-  animation: rotate-vert-center 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: rotate-vert-center 2s
+    /*cubic-bezier(0.455, 0.03, 0.515, 0.955) both*/ ease-in-out;
 }
 
 @keyframes rotate-vert-center {
   0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
+    /* -webkit-transform: rotateY(0);
+    transform: rotateY(0);*/
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+    /*  -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);*/
     opacity: 1;
   }
 }

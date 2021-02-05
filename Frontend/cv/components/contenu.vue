@@ -172,10 +172,10 @@ export default {
 
 <style>
 .boxt {
-  animation: 1s linear boxt;
+  animation: 0.5s linear boxt;
 }
 .boxb {
-  animation: 1s linear boxb;
+  animation: 0.5s linear boxb;
 }
 .para1 {
   animation: 1s linear para1;
