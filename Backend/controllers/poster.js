@@ -75,10 +75,10 @@ exports.getAll = async (req, res) => {
     data = await db("form").select("*");
     /*
     for (i = 0; i < data.length; i++) {
-      var bytes = CryptoJS.AES.decrypt(data[i].email, "secret key 123");
+      var bytes = CryptoJS.AES.decrypt(data[i].email, "process.env.CRYPTOSECRET);
       var decryptedData = bytes.toString(CryptoJS.enc.Utf8);
 
-      var bytes2 = CryptoJS.AES.decrypt(data[i].phone, "secret key 123");
+      var bytes2 = CryptoJS.AES.decrypt(data[i].phone, process.env.CRYPTOSECRET");
       var decryptedData2 = bytes2.toString(CryptoJS.enc.Utf8);
 
       var dataId = data[i].id;

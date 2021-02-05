@@ -25,7 +25,7 @@
                 role="button"
                 class="hautImg card-img-top"
                 :src="image.link"
-                alt=""
+                :alt="'Projet de développement site internet : ' + image.nom"
               />
             </div>
 
@@ -57,7 +57,7 @@
             id="imageModale"
             class="hautImgModale largImgModaleMob"
             src="../assets/resto400.jpg"
-            alt=""
+            alt="Maquette projet site internet applications web"
           />
         </modale>
       </div>
@@ -110,7 +110,10 @@ export default {
           link: require("../assets/site400.jpg"),
           link2: require("../assets/site.jpg"),
           nom: "Projet Site Perso",
-          description: "En construction",
+          description: `Mon portfolio cette maquette a été entiérement réaliser par mes soins de sa conception graphique ,
+           jusqu' à son développement.
+           Il a été conçu en Vue.js avec le framework Nuxt.js ,
+          un backend à également été réaliser en Node.js et Express avec une base de donnée SQL sécurisée`,
           url: "#"
         },
         {
@@ -130,7 +133,7 @@ export default {
         {
           id: 5,
           link: require("../assets/orinoco400.jpg"),
-          link2: require("../assets/orinoco400.jpg"),
+          link2: require("../assets/orinoco2.jpg"),
           nom: "E-commerce Orinoco",
           description: `Site E-commerce Orinoco version Mvp.
           Ceci est l'application e-commerce front-end réaliser par mes soins à l'aide
@@ -157,7 +160,7 @@ export default {
         {
           id: 7,
           link: require("../assets/groupomania400.jpg"),
-          link2: require("../assets/groupomania400.jpg"),
+          link2: require("../assets/groupomania.jpg"),
           nom: "Réseau social",
           description: `Conception Backend et Frontend
           en base de donnee Mysql pour le projet Groupomania.
@@ -203,6 +206,7 @@ export default {
     insertImage(image) {
       localStorage.setItem("imageMod", image.link2);
       document.getElementById("imageModale").src = `${image.link2}`;
+      document.getElementById("imageModale").alt = `${image.nom}`;
     }
 
     /*
