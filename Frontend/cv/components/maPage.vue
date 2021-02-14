@@ -38,7 +38,7 @@
       ></b-icon>
     </div>
     <div
-      class="larg100 mb-3 pl-3 d-flex justify-content-left align-items-center"
+      class="mobileCentrePhotoMoi larg100 mb-3 pl-3 d-flex justify-content-left align-items-center"
     >
       <img
         @mouseenter="afficherMasquer()"
@@ -46,8 +46,8 @@
         role="button"
         width="160px"
         height="160px"
-        class="mr-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/moi5.jpg"
+        class=" mr-3 justify-content-left bordureProfil rounded-circle ombre"
+        src="../assets/moi.jpg"
         alt="photo profil développeur web"
       />
       <div id="dialPhoto" class="supprimDialPhotoMob afficher">
@@ -87,6 +87,7 @@ export default {
   },
   created() {},
   mounted: function() {
+    this.load();
     this.startRotation();
   },
 
@@ -101,6 +102,11 @@ export default {
         document.getElementById("dialPhoto").style.display = "none";
       }
     },
+    load: function() {
+      window.onload = function() {
+        backMaPage.classList.add("backSlide");
+      };
+    },
     startRotation: function() {
       this.timer = setInterval(this.next, 5000);
     },
@@ -110,17 +116,20 @@ export default {
       this.timer = null;
     },
 
-    next: function() {
+    next: async function() {
       let backMaPage = document.getElementById("backMaPage");
       this.currentNumber += 1;
+      console.log(this.currentNumber);
 
+      /*
       if (this.currentNumber == 0) {
         backMaPage.classList.add("backSlide");
       }
+      */
 
       if (this.currentNumber == 1) {
-        backMaPage.classList.remove("backSlide");
-        backMaPage.classList.add("backSlide1");
+        await backMaPage.classList.remove("backSlide");
+        await backMaPage.classList.add("backSlide1");
       }
       if (this.currentNumber == 2) {
         backMaPage.classList.remove("backSlide1");
@@ -142,6 +151,7 @@ export default {
         backMaPage.classList.remove("backSlide5");
         backMaPage.classList.add("backSlide6");
       }
+
       if (this.currentNumber > 6) {
         this.currentNumber = 0;
         backMaPage.classList.remove("backSlide6");
@@ -199,25 +209,32 @@ export default {
 
 <style scoped>
 .backSlide {
-  background-image: url("../assets/roche2.jpg");
+  background-image: url("../assets/roche.jpg");
+  animation: opacBack1 1s ease-in-out;
 }
 .backSlide1 {
-  background-image: url("../assets/js.jpg");
+  background-image: url("../assets/jsImg.jpg");
+  animation: opacBack2 1s ease-in-out;
 }
 .backSlide2 {
   background-image: url("../assets/ecole.jpg");
+  animation: opacBack3 1s ease-in-out;
 }
 .backSlide3 {
   background-image: url("../assets/cerveau.jpg");
+  animation: opacBack4 1s ease-in-out;
 }
 .backSlide4 {
-  background-image: url("../assets/raw.jpg");
+  background-image: url("../assets/hebergeur2.jpg");
+  animation: opacBack5 1s ease-in-out;
 }
 .backSlide5 {
-  background-image: url("../assets/matrice.jpeg");
+  background-image: url("../assets/web.jpg");
+  animation: opacBack6 1s ease-in-out;
 }
 .backSlide6 {
-  background-image: url("../assets/boreale.jpg");
+  background-image: url("../assets/boreale2.jpg");
+  animation: opacBack7 1s ease-in-out;
 }
 .backSize {
   width: 15em;
@@ -241,6 +258,62 @@ export default {
 .ombre:hover {
   box-shadow: 0 0 0 0 #748928ff;
   animation: pulse 1.3s infinite;
+}
+@keyframes opacBack1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack5 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack6 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacBack7 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes pulse {
   to {

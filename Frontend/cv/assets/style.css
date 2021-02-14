@@ -33,16 +33,16 @@
   width: 40%;
 }
 
-/* cube */
+/* cube 
 .cube {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
 }
-
+*/
 /* bordure */
 
 .bordureProfil {
-  border: 3mm ridge#a6b622ff;
+  border: 2mm ridge#a6b622ff;
 }
 
 /* back */
@@ -54,7 +54,7 @@
 }
 
 .backSlideSize {
-  height: 550px;
+  height: 600px;
   width: 100%;
   background-size: 100% 100%;
 }
@@ -87,7 +87,10 @@
     height: auto !important;
   }
   .mobileBackSlideSize {
-    height: 400px;
+    height: 350px;
+  }
+  .mobileCentrePhotoMoi {
+    justify-content: center;
   }
   .mobileBackSize {
     width: 14em !important;
@@ -105,6 +108,7 @@
     width: 100%;
   }
   .mobileFootHeight {
+    min-height: 660px;
     height: auto;
   }
   .mobileMargTitre {
@@ -116,6 +120,9 @@
   .mobileDernierCompMod {
     margin-bottom: 1.5em;
   }
+  .supprimDialPhotoMob {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -125,6 +132,12 @@
 }
 
 @media screen and (max-width: 550px) {
+  .mobileNavProjet {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .largImgModaleMob {
     width: 100% !important;
   }
@@ -177,8 +190,5 @@
   .backPopMobile {
     height: 80px !important;
     border-radius: 4px !important;
-  }
-  .supprimDialPhotoMob {
-    display: none !important;
   }
 }

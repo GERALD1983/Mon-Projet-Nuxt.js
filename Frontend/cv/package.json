@@ -13,6 +13,8 @@
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.2",
+    "dotenv": "^8.2.0",
+    "jump.js": "^1.0.2",
     "nuxt": "^2.14.12",
     "vuelidate": "^0.7.6"
   },

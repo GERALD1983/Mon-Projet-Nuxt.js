@@ -21,6 +21,8 @@
           <div class="bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
               <img
+                width="325px"
+                height="370px"
                 @click="toggleModale()"
                 role="button"
                 class="hautImg card-img-top"
@@ -145,8 +147,8 @@ export default {
         },
         {
           id: 6,
-          link: require("../assets/sopecocko400.jpg"),
-          link2: require("../assets/sopecocko400.jpg"),
+          link: require("../assets/sauce400.jpg"),
+          link2: require("../assets/sauce400.jpg"),
           nom: "Critique Gastronomique",
           description: `Backend projet6 api d'ajout de vos sauces, likes et dislikes.
           Ceci est une application de critique gastronomique pour une agence de sauces Sopekocko
