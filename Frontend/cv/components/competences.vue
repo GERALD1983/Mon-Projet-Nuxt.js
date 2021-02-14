@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white margTitre mobileMargTitre">
+  <div class="bg-white mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
       <h2 id="competence" class="invisible bg-white py-5">
         Mes Compétences
@@ -16,9 +16,11 @@
       >
         <div v-for="(image, index) in images" :key="index">
           <img
+            width="75px"
+            height="75px"
             @click="readSkill(image)"
             role="button"
-            class=" cube ombreLogo"
+            class="ombreLogo"
             :src="image.link"
             :alt="
               'Langage informatique programmation compétences développeur web : ' +
@@ -31,13 +33,20 @@
         id="animModal"
         class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
       >
-        <h4 class="text-right text-danger">
-          <span @click="clearReadSkill" role="button"> X </span>
+        <h4 class="pt-1 text-right">
+          <span
+            @click="clearReadSkill"
+            role="button"
+            class="bg-danger text-white"
+          >
+            X
+          </span>
         </h4>
         <div>
           <img
+            width="75px"
+            height="75px"
             id="imgMod"
-            class="cube"
             src="../assets/html.png"
             alt="langage programmation logo"
           />
@@ -216,7 +225,7 @@ export default {
         },
         {
           titre: "Node.js",
-          link: require("../assets/node1.png"),
+          link: require("../assets/node.png"),
           nom: "Mes compétences en Node.js",
           description1: "Créer une API REST avec Node.js en modéle MVC.",
           description2: "Concevoir des applications évolutives avec Node.js.",
@@ -264,7 +273,7 @@ export default {
         competence.classList.remove("invisible");
         competence.classList.add("boxt");
       }
-      if (window.scrollY > 800) {
+      if (window.scrollY >= 800) {
         back.classList.remove("invisible");
         back.classList.add("backSkill");
 
@@ -302,10 +311,13 @@ export default {
         "descriMod3"
       ).textContent = `${image.description3}`;
     },
+
     clearReadSkill: function() {
       const backMod = document.getElementById("animModal");
       const logos = document.getElementById("animLogos");
       logos.classList.remove("efface");
+      //logos.classList.remove("logos");
+
       backMod.classList.add("efface");
     }
   }
@@ -314,7 +326,8 @@ export default {
 
 <style scoped>
 .ombreLogo:hover {
-  box-shadow: 0 0 0 0 #748928ff;
+  /* box-shadow: 0 0 0 0 #748928ff; */
+  box-shadow: 0 0 0 0 rgb(35, 173, 162);
   animation: pulse 1.3s infinite;
 }
 .backModal {
@@ -330,12 +343,12 @@ export default {
   display: none !important;
 }
 .logos {
-  animation: 1.5s linear logo;
+  animation: 1s linear logo;
 }
 @keyframes logo {
   0% {
     opacity: 0;
-    transform: translateY(150%);
+    /* transform: translateY(150%);*/
   }
   100% {
     opacity: 1;

@@ -12,13 +12,13 @@
       >
         <h3 class="mobileFont pb-3 objectif invisible paratop1 text-white ">
           " Je m'appelle Gérald Ferron je suis développeur d'applications Web,
-          je conçois et développe des site internet pour le web, je suis en
+          je conçois et développe des sites internet pour le web, je suis en
           veille technologique constante. "
         </h3>
         <h3 class="mobileFont pt-3 objectif invisible paratop2 text-white">
           "Mes objectifs sont d'accomplir vos projets en intégrant les derniéres
           technologies digitales, pour un rendu de qualité , du travail bien
-          fait , un service optimiser. "
+          fait , un service optimisé. "
         </h3>
       </div>
     </div>
@@ -42,7 +42,7 @@
             </li>
             <br />
             <li>
-              - Vous révez d'avoir votre propre réseau social et marquer
+              - Vous rêvez d'avoir votre propre réseau social et marquer
               l'histoire
             </li>
             <br />
@@ -51,7 +51,7 @@
             </li>
             <br />
             <li>
-              - Vous voulez dévelloper votre entreprise
+              - Vous voulez développer votre entreprise
             </li>
             <br />
             <li>
@@ -242,14 +242,10 @@ export default {
 }
 @keyframes text-shadow-pop-top {
   0% {
-    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
-      0 0 #555555, 0 0 #555555, 0 0 #555555;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   100% {
-    text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555,
-      0 -5px #555555, 0 -6px #555555, 0 -7px #555555, 0 -8px #555555;
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }

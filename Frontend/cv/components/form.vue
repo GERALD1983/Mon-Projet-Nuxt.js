@@ -104,15 +104,15 @@
         </b-form-group>
       </div>
       <div class="d-flex justify-content-around">
+        <b-button id="res" class="invisible" type="reset" variant="danger"
+          >Reset</b-button
+        >
         <b-button
           id="sub"
           class="invisible colorSubmit"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
           >Submit</b-button
-        >
-        <b-button id="res" class="invisible" type="reset" variant="danger"
-          >Reset</b-button
         >
       </div>
       <div>
@@ -221,7 +221,7 @@ export default {
   /*
   async created() {
     axios
-      .get("http://localhost:3100/client")
+      .get("")
       .then(response => ((this.client = response.data), console.log(response)))
       .catch(error => console.log(error));
   },
@@ -239,7 +239,7 @@ export default {
         this.submitStatus = "PENDING";
 
         axios
-          .post("http://localhost:3100/poster", {
+          .post("SECRET", {
             email: this.email,
             nom: this.nom,
             message: this.message,

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white ">
+  <div class="ancreForm bg-white ">
     <div class="backFooter foot mobileFootHeight">
       <div>
         <h3 id="contact" class="invisible text-light pt-5 pb-3">Contact</h3>
@@ -36,7 +36,7 @@
           ></b-icon>
         </div>
       </div>
-      <div class="mobileFoot d-flex justify-content-around">
+      <div class=" mobileFoot d-flex justify-content-around">
         <div class="d-flex flex-column justify-content-center text-light">
           <h5 id="boxK" class="invisible">
             <b-icon icon="house-door-fill"></b-icon> Adresse :
