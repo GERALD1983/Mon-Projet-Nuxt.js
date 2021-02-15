@@ -1,84 +1,85 @@
 <template>
-  <div class="bg-white mobileMargTitre">
+  <div class=" mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="competence" class="invisible bg-white py-5">
+      <h2 id="competence" class="invisible py-5">
         Mes Compétences
       </h2>
     </div>
-
-    <div
-      id="animBack"
-      class=" backSkillSize mobileBackSkillSize invisible slider d-flex justify-content-center align-items-center"
-    >
+    <div class="d-flex justify-content-center">
       <div
-        id="animLogos"
-        class="invisible backLogos col-md-6 d-flex flex-wrap justify-content-around align-items-center "
+        id="animBack"
+        class="col-md-8 bordureCercleSkill backSkillSize mobileBackSkillSize invisible slider d-flex justify-content-center align-items-center"
       >
-        <div v-for="(image, index) in images" :key="index">
-          <img
-            width="75px"
-            height="75px"
-            @click="readSkill(image)"
-            role="button"
-            class="ombreLogo"
-            :src="image.link"
-            :alt="
-              'Langage informatique programmation compétences développeur web : ' +
-                image.titre
-            "
-          />
-        </div>
-      </div>
-      <div
-        id="animModal"
-        class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
-      >
-        <h4 class="pt-1 text-right">
-          <span
-            @click="clearReadSkill"
-            role="button"
-            class="bg-danger text-white"
-          >
-            X
-          </span>
-        </h4>
-        <div>
-          <img
-            width="75px"
-            height="75px"
-            id="imgMod"
-            src="../assets/html.png"
-            alt="langage programmation logo"
-          />
-        </div>
-        <div>
-          <h3 id="titreMod">TITRE</h3>
+        <div
+          id="animLogos"
+          class="invisible backLogos col-md-6 d-flex flex-wrap justify-content-around align-items-center "
+        >
+          <div v-for="(image, index) in images" :key="index">
+            <img
+              width="70px"
+              height="70px"
+              @click="readSkill(image)"
+              role="button"
+              class="ombreLogo"
+              :src="image.link"
+              :alt="
+                'Langage informatique programmation compétences développeur web : ' +
+                  image.titre
+              "
+            />
+          </div>
         </div>
         <div
-          class="d-flex  justify-content-center align-content-center align-items-center"
+          id="animModal"
+          class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
         >
-          <div
-            class="d-flex col-xxl-6 col-xl-10 col-lg-11 col-md-12 flex-column justify-content-left"
-          >
-            <div class="d-flex justify-content-left align-items-center">
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod1">
-                DESCRIPTION1
-              </p>
-            </div>
-            <div class="d-flex justify-content-left align-items-center">
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod2">
-                DESCRIPTION2
-              </p>
-            </div>
-            <div
-              class="d-flex justify-content-left align-items-center mobileDernierCompMod"
+          <h4 class="pt-1 text-right">
+            <span
+              @click="clearReadSkill"
+              role="button"
+              class="bg-dark text-white"
             >
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod3">
-                DESCRIPTION3
-              </p>
+              X
+            </span>
+          </h4>
+          <div>
+            <img
+              width="75px"
+              height="75px"
+              id="imgMod"
+              src="../assets/html.png"
+              alt="langage programmation logo"
+            />
+          </div>
+          <div>
+            <h3 id="titreMod">TITRE</h3>
+          </div>
+          <div
+            class="d-flex  justify-content-center align-content-center align-items-center"
+          >
+            <div
+              class="d-flex col-xxl-6 col-xl-10 col-lg-11 col-md-12 flex-column justify-content-left"
+            >
+              <div class="d-flex justify-content-left align-items-center">
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod1">
+                  DESCRIPTION1
+                </p>
+              </div>
+              <div class="d-flex justify-content-left align-items-center">
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod2">
+                  DESCRIPTION2
+                </p>
+              </div>
+              <div
+                class="d-flex justify-content-left align-items-center mobileDernierCompMod"
+              >
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod3">
+                  DESCRIPTION3
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -275,7 +276,8 @@ export default {
       }
       if (window.scrollY >= 800) {
         back.classList.remove("invisible");
-        back.classList.add("backSkill");
+        // back.classList.add("backSkill");
+        back.classList.add("bgTree");
 
         logos.classList.remove("invisible");
         logos.classList.add("logos");
@@ -327,8 +329,9 @@ export default {
 <style scoped>
 .ombreLogo:hover {
   /* box-shadow: 0 0 0 0 #748928ff; */
-  box-shadow: 0 0 0 0 rgb(35, 173, 162);
+  box-shadow: 0 0 0 0 rgb(23, 255, 236);
   animation: pulse 1.3s infinite;
+  background-color: #fffbf4;
 }
 .backModal {
   width: 20em;

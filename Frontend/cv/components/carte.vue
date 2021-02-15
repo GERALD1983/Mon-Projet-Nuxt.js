@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <div>
-      <!--
+  <div class="d-flex justify-content-center ">
+    <!--
     <div id="exemple">
       <div>
         <p>Tout contenu que vous voulez montrer aux utilisateurs.</p>
@@ -10,13 +9,14 @@
     </div>
     -->
 
-      <div
-        class="pb-5 mx-5 px-5 stopPadMargX d-flex flex-wrap justify-content-around align-items-center "
-      >
+    <div
+      class="col-8 bgTree  bordureBackCarte pb-5 mx-5 px-5 stopPadMargX d-flex justify-content-around align-items-center "
+    >
+      <div class=" d-flex flex-wrap">
         <div
           v-for="(image, index) in images"
           :key="index"
-          class=" my-5 col-xxl-3 col-xl-4 col-lg-5 col-md-7 col-sm-12"
+          class=" my-5 col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-12"
         >
           <div class="bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
@@ -31,11 +31,11 @@
               />
             </div>
 
-            <div class="bg-secondary hautDivColor"></div>
+            <div class="bgSecondary hautDivColor"></div>
             <div class="card-body">
               <h5 class="card-title">{{ image.nom }}</h5>
 
-              <button @click="afficherMasquer(image)" class="btn btn-secondary">
+              <button @click="afficherMasquer(image)" class="btn bgTree">
                 Détails
               </button>
 
@@ -243,10 +243,10 @@ export default {
   width: 100%;
 }
 .bordureCarte {
-  border: 0.5mm ridge#a6b622ff !important;
+  border: 0.5mm ridge#ffdea4 !important;
 }
 .ombreCarte:hover {
-  box-shadow: 0 0 0 0 #748928ff;
+  box-shadow: 0 0 0 0 rgb(23, 255, 236);
   animation: pulse 1.3s infinite;
 }
 .ombreCarte {

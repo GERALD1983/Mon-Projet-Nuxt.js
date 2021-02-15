@@ -1,5 +1,5 @@
 <template>
-  <div class="ancreForm bg-white ">
+  <div id="footer" class="ancreForm bg-white ">
     <div class="backFooter foot mobileFootHeight">
       <div>
         <h3 id="contact" class="invisible text-light pt-5 pb-3">Contact</h3>

@@ -38,19 +38,19 @@
       ></b-icon>
     </div>
     <div
-      class="mobileCentrePhotoMoi larg100 mb-3 pl-3 d-flex justify-content-left align-items-center"
+      class="mobileCentrePhotoMoi larg100 mb-5 pl-3 d-flex justify-content-center align-items-center"
     >
       <img
         @mouseenter="afficherMasquer()"
         @mouseleave="afficherMasquer()"
         role="button"
-        width="160px"
-        height="160px"
+        width="370px"
+        height="370px"
         class=" mr-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/moi.jpg"
+        src="../assets/moi350.jpg"
         alt="photo profil développeur web"
       />
-      <div id="dialPhoto" class="supprimDialPhotoMob afficher">
+      <div id="dialPhoto" class="supprimDialPhotoMob ">
         <div class=" d-flex justify-content-center align-items-center">
           <div class="miniFleche"></div>
           <div

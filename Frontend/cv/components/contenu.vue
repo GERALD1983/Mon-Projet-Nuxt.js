@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white">
+  <div id="contenu" class="">
     <div>
       <div class="  d-flex justify-content-center align-items-center">
         <h2 id="objectif" class="objectif invisible nonvis py-5">
@@ -8,18 +8,24 @@
       </div>
 
       <div
-        class=" d-flex flex-column justify-content-center paragraphe mobileParagraphe bg-secondary"
+        class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe"
       >
-        <h3 class="mobileFont pb-3 objectif invisible paratop1 text-white ">
-          " Je m'appelle Gérald Ferron je suis développeur d'applications Web,
-          je conçois et développe des sites internet pour le web, je suis en
-          veille technologique constante. "
-        </h3>
-        <h3 class="mobileFont pt-3 objectif invisible paratop2 text-white">
-          "Mes objectifs sont d'accomplir vos projets en intégrant les derniéres
-          technologies digitales, pour un rendu de qualité , du travail bien
-          fait , un service optimisé. "
-        </h3>
+        <div class="col-md-8">
+          <h4
+            class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif invisible paratop1 text-white "
+          >
+            " Je m'appelle Gérald Ferron je suis développeur d'applications Web,
+            je conçois et développe des sites internet pour le web, je suis en
+            veille technologique constante. "
+          </h4>
+          <h4
+            class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif invisible paratop2 text-white"
+          >
+            "Mes objectifs sont d'accomplir vos projets en intégrant les
+            derniéres technologies digitales, pour un rendu de qualité , du
+            travail bien fait , un service optimisé. "
+          </h4>
+        </div>
       </div>
     </div>
     <div>
@@ -29,12 +35,14 @@
       <div class="d-flex justify-content-center align-items-center">
         <h2
           id="textPop"
-          class="backPopMobile d-flex justify-content-center align-items-center rounded-pill invisible text-white my-5"
+          class="backPopMobile d-flex justify-content-center align-items-center  invisible my-5"
         >
           Quelles sont mes offres ?
         </h2>
       </div>
-      <div class="bg-secondary paragraphe mobileParagraphe2">
+      <div
+        class="col-md-8 ml-auto backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe2"
+      >
         <h5 class="text-white pt-5">
           <ul id="liste" class="invisible">
             <li>
@@ -67,7 +75,7 @@
     <div class="d-flex justify-content-center align-items-center">
       <h2 id="titreProjet" class="invisible mb-0 pb-5 pt-5">Mes projets</h2>
     </div>
-    <div id="carte" class="invisible">
+    <div id="carte" class="mb-5 invisible">
       <Carte />
     </div>
   </div>
@@ -147,7 +155,7 @@ export default {
       }
       if (window.scrollY > 1400) {
         textPop.classList.remove("invisible");
-        textPop.classList.add("text-pop-up-top");
+        textPop.classList.add("boxt");
       }
       if (window.scrollY > 1550) {
         liste.classList.remove("invisible");
@@ -171,6 +179,12 @@ export default {
 </script>
 
 <style>
+ul {
+  list-style: none;
+}
+li {
+  font-size: 24px;
+}
 .boxt {
   animation: 0.5s linear boxt;
 }
