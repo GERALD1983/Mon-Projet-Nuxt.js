@@ -1,77 +1,13 @@
 <template>
-  <div id="app" class="bg-secondary ">
-    <div
-      id="nav"
-      class="mobileNavProjet d-flex justify-content-between align-items-center"
-    >
-      <div class="mb-3">
-        <img
-          width="90px"
-          height="60px"
-          class="bg-light bordureLogo"
-          src="../assets/gf3.png"
-          alt="logo développeur gérald ferron"
-        />
-      </div>
-      <div class="mobileNavProjet col-lg-5 px-0 d-flex justify-content-around">
-        <div
-          @click="toProject"
-          role="button"
-          class="ombreNav col-md-4 col-lg-5 bg-light bordureLogo d-flex
-        align-items-center justify-content-center"
-        >
-          <h4 class="my-1 ">Mes projets</h4>
-        </div>
-        <div
-          @click="toFoot"
-          role="button"
-          class="ombreNav col-md-4 col-lg-5 bg-light bordureLogo d-flex
-        align-items-center justify-content-center"
-        >
-          <h4 class="my-1 ">
-            Contact
-          </h4>
-        </div>
-      </div>
-    </div>
+  <div id="app" class="bgPrimary ">
     <Nuxt />
   </div>
 </template>
 
 <script>
-import jump from "jump.js";
-export default {
-  mounted() {},
-  methods: {
-    toFoot() {
-      // window.scrollTo(0, 400);
-      jump(".ancreForm", {
-        duration: 1000,
-        callback: () => console.log("Saut terminé!")
-      });
-    },
-    toProject() {
-      // window.scrollTo(0, 400);
-      jump("#titreProjet", {
-        duration: 1000,
-        callback: () => console.log("Saut terminé!")
-      });
-    }
-  }
-};
+export default {};
 </script>
 <style>
-.ombreNav:hover {
-  /* box-shadow: 0 0 0 0 #748928ff; */
-  box-shadow: 0 0 0 0 rgb(35, 173, 162);
-  animation: pulse 1.3s infinite;
-  background: #9e9d9d !important;
-  color: white !important;
-}
-.bordureLogo {
-  border-radius: 0.5em;
-  border: 1mm ridge#a6b622ff;
-}
 html::-webkit-scrollbar {
   background-color: #6c757d;
 }

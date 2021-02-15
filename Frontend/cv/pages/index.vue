@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <MaPage />
-    <Contenu />
-    <Foot />
+    <MaPage class="" />
+    <Navbar class="" />
+    <Contenu class="" />
+    <Foot class="" />
   </div>
 </template>
 
 <script>
 import MaPage from "../components/maPage.vue";
+import Navbar from "../components/nav.vue";
 import Contenu from "../components/contenu.vue";
 import Foot from "../components/footer.vue";
 export default {
   components: {
     MaPage,
+    Navbar,
     Contenu,
     Foot
   },

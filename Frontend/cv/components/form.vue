@@ -104,12 +104,12 @@
         </b-form-group>
       </div>
       <div class="d-flex justify-content-around">
-        <b-button id="res" class="invisible" type="reset" variant="danger"
+        <b-button id="res" class="bgFour btnReset invisible" type="reset"
           >Reset</b-button
         >
         <b-button
           id="sub"
-          class="invisible colorSubmit"
+          class="invisible text-secondary colorSubmit"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
           >Submit</b-button
@@ -279,6 +279,9 @@ export default {
 };
 </script>
 <style>
+.btnReset:hover {
+  background-color: rgb(206, 46, 46) !important;
+}
 .boxC {
   animation: 1s linear boxC;
 }

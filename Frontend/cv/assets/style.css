@@ -42,35 +42,62 @@
 /* bordure */
 
 .bordureProfil {
-  border: 2mm ridge#a6b622ff;
+  border: 2mm ridge #ffdea4;
+}
+.bordureDivG {
+  border-radius: 20px 0 0 20px;
+}
+.bordureDivD {
+  border-radius: 0 20px 20px 0;
+}
+.bordureCercleSkill {
+  border-radius: 50%;
+}
+.bordureBackCarte {
+  border-radius: 25px;
+}
+/* back */
+.backParagrapheSize {
+  min-height: 400px;
 }
 
-/* back */
-
 .backSkillSize {
-  height: 500px;
-  width: 100%;
   background-size: 100% 100%;
 }
 
 .backSlideSize {
-  height: 600px;
+  height: 100vh;
   width: 100%;
   background-size: 100% 100%;
 }
 
 /* COLOR */
+.bgPrimary {
+  background-color: #fffbf4;
+}
+.bgSecondary {
+  background-color: #909090;
+}
+.bgTree {
+  background-color: #ffdea4;
+}
+.bgFour {
+  background-color: #886526;
+}
 .backFooter {
-  background-color: #748928ff;
+  background-color: #909090;
 }
 .btnCarte {
-  background-color: #748928ff;
+  background-color: #886526;
 }
 .textSlide {
   color: #404020;
 }
 .colorSubmit {
-  background-color: #2c3e50;
+  background-color: #ffdea4;
+}
+.colorSubmit:hover {
+  color: #ffdea4 !important;
 }
 /* divers */
 
