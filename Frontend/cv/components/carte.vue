@@ -1,11 +1,11 @@
 <template>
-  <div class="d-flex justify-content-center ">
+  <div class=" d-flex justify-content-center ">
     <div
-      class="col-8 bgTree  bordureBackCarte py-5 mx-5 px-5 stopPadMargX d-flex justify-content-around align-items-center "
+      class="col-md-8 bgTree bordureBackCarte py-5 mx-5 px-5 stopMargPad d-flex justify-content-around align-items-center "
     >
       <div class="py-5  d-flex flex-wrap justify-content-around">
         <div v-for="(image, index) in images" :key="index" class=" ">
-          <div class="my-5 carteSize bordureCarte ombreCarte card ">
+          <div class="carteMobile my-5 carteSize bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
               <img
                 width="325px"
@@ -23,7 +23,7 @@
 
               <button
                 @click="afficherMasquer(image)"
-                class="cursorNone btn bgTree"
+                class=" cursorNone btn bgTree"
               >
                 Détails
               </button>
@@ -98,8 +98,8 @@ export default {
         },
         {
           id: 3,
-          link: require("../assets/site400.jpg"),
-          link2: require("../assets/site.jpg"),
+          link: require("../assets/site4001.jpg"),
+          link2: require("../assets/site1.jpg"),
           nom: "Projet Site Perso",
           description: `Mon portfolio cette maquette a été entiérement réaliser par mes soins de sa conception graphique ,
            jusqu' à son développement.
@@ -207,21 +207,13 @@ export default {
       document.getElementById("modale").innerHTML = name; // affiche l'alerte
     },
   */
-    /*
-    exemple() {
-      document.getElementById("exemple").style.visibility =
-        document.getElementById("exemple").style.visibility == "visible"
-          ? "hidden"
-          : "visible";
-    },
-    */
   }
 };
 </script>
 
 <style>
 .carteSize {
-  width: 375px !important;
+  width: 375px;
   min-height: 520px !important;
 }
 .bordureCarte {
@@ -260,38 +252,4 @@ export default {
     box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.01);
   }
 }
-
-/* 
-#exemple {
-  visibility: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  z-index: 1000;
-}
-#exemple div {
-  width: 350px;
-  height: 300px;
-  margin: 100px auto;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border: 1px solid #666666;
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  border: 3px solid #cccccc;
-  position: absolute;
-  left: 50%;
-  top: 100px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-}
-*/
 </style>

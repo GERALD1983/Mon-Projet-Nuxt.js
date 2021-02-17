@@ -1,78 +1,80 @@
 <template>
-  <div
-    id="backMaPage"
-    class=" slider backSlide backSlideSize mobileBackSlideSize d-flex flex-column justify-content-between align-items-between"
-  >
+  <div>
     <div
-      class=" larg100 textSlide margTitre margTitreMobile d-flex justify-content-around align-items-center"
+      id="backMaPage"
+      class=" backSlide backSlideSize mobileBackSlideSize d-flex flex-column justify-content-between align-items-between"
     >
-      <b-icon
-        @mouseenter="stopRotation()"
-        @mouseleave="startRotation()"
-        @click="prev"
-        class="lienBlack bg-white mobileSizeIcon"
-        icon="chevron-left"
-        animation="fade"
-        font-scale="3"
-        aria-label="Help"
-      ></b-icon>
-      <div v-for="number in [currentNumber]" :key="number">
-        <h1
-          class="rounded-pill backSize mobileBackSize mobileBackSize550 bg-white"
-        >
-          {{ currentMsg }}
-        </h1>
-      </div>
-
-      <b-icon
-        @mouseenter="stopRotation()"
-        @mouseleave="startRotation()"
-        @click="next"
-        class="lienBlack bg-white mobileSizeIcon"
-        icon="chevron-right"
-        animation="fade"
-        font-scale="3"
-        aria-label="Help"
-      ></b-icon>
-    </div>
-    <div
-      class="mobileCentrePhotoMoi larg100 mb-3 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div id="dialPhoto" class=" mb-3 supprimDialPhotoMob ">
-        <div class=" d-flex justify-content-center align-items-center">
-          <div
-            class="filtreImage backDial blocapMob blocapMob450 d-flex justify-content-around align-items-center"
+      <div
+        class=" larg100 textSlide margTitre margTitreMobile d-flex justify-content-around align-items-center"
+      >
+        <b-icon
+          @mouseenter="stopRotation()"
+          @mouseleave="startRotation()"
+          @click="prev"
+          class="lienBlack bg-white mobileSizeIcon"
+          icon="chevron-left"
+          animation="fade"
+          font-scale="3"
+          aria-label="Help"
+        ></b-icon>
+        <div v-for="number in [currentNumber]" :key="number">
+          <h1
+            class="rounded-pill backSize mobileBackSize mobileBackSize550 bg-white"
           >
-            <h2
-              class="lienSouris dialogueFont text-white d-flex flex-column justify-content-center align-items-center blocapFontMob"
-            >
-              <div id="dialogue1">
-                <span>Hello ! Je m'appelle Gérald, </span>
-              </div>
-              <div id="dialogue2">
-                <span>
-                  je suis Développeur web Fullstack Javascript .
-                </span>
-              </div>
+            {{ currentMsg }}
+          </h1>
+        </div>
 
-              <div id="dialogue3">
-                <span>
-                  Bienvenue à vous !
-                </span>
-              </div>
-            </h2>
+        <b-icon
+          @mouseenter="stopRotation()"
+          @mouseleave="startRotation()"
+          @click="next"
+          class="lienBlack bg-white mobileSizeIcon"
+          icon="chevron-right"
+          animation="fade"
+          font-scale="3"
+          aria-label="Help"
+        ></b-icon>
+      </div>
+      <div
+        class="larg100 mb-3 d-flex flex-column justify-content-center align-items-center"
+      >
+        <div id="dialPhoto" class="afficher mb-3 supprimDialPhotoMob ">
+          <div class=" d-flex justify-content-center align-items-center">
+            <div
+              class="filtreImage backDial blocapMob blocapMob450 d-flex justify-content-around align-items-center"
+            >
+              <h2
+                class="lienSouris dialogueFont text-white d-flex flex-column justify-content-center align-items-center blocapFontMob"
+              >
+                <div id="dialogue1">
+                  <span>Hello ! Je m'appelle Gérald, </span>
+                </div>
+                <div id="dialogue2">
+                  <span>
+                    je suis Développeur web Fullstack Javascript .
+                  </span>
+                </div>
+
+                <div id="dialogue3">
+                  <span>
+                    Bienvenue à vous !
+                  </span>
+                </div>
+              </h2>
+            </div>
           </div>
         </div>
+        <img
+          @mouseenter="afficherMasquer()"
+          @mouseleave="afficherMasquer()"
+          width="360px"
+          height="360px"
+          class="mobileEffacePhotoMoiG mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
+          src="../assets/moi350.jpg"
+          alt="photo profil développeur web"
+        />
       </div>
-      <img
-        @mouseenter="afficherMasquer()"
-        @mouseleave="afficherMasquer()"
-        width="370px"
-        height="370px"
-        class="mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/moi350.jpg"
-        alt="photo profil développeur web"
-      />
     </div>
   </div>
 </template>
@@ -134,7 +136,8 @@ export default {
       };
     },
     startRotation: function() {
-      this.timer = setInterval(this.next, 5000);
+      // this.timer = setInterval(this.next, 5000);
+      this.next;
     },
 
     stopRotation: function() {
@@ -266,7 +269,7 @@ export default {
   filter: none;
 }
 .backSlide {
-  background-image: url("../assets/roche.jpg");
+  background-image: url("../assets/web.jpg");
   animation: opacBack1 1s ease-in-out;
 }
 .backSlide1 {
@@ -286,7 +289,7 @@ export default {
   animation: opacBack5 1s ease-in-out;
 }
 .backSlide5 {
-  background-image: url("../assets/web.jpg");
+  background-image: url("../assets/roche.jpg");
   animation: opacBack6 1s ease-in-out;
 }
 .backSlide6 {

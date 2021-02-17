@@ -12,9 +12,7 @@
 }
 
 /* hauteur */
-.slider {
-  height: 500px;
-}
+
 .paragraphe {
   height: 400px;
 }
@@ -87,6 +85,7 @@ body {
   border-radius: 50%;
 }
 .bordureBackCarte {
+  width: auto;
   border-radius: 25px;
 }
 /* back */
@@ -96,6 +95,7 @@ body {
 
 .backSkillSize {
   background-size: 100% 100%;
+  height: 500px;
 }
 
 .backSlideSize {
@@ -142,27 +142,48 @@ body {
 }
 
 /*  media queries */
+
+@media screen and (max-width: 1100px) {
+  .ecranFontparagraphe {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 770px) {
+  .displayBlock {
+    display: block;
+  }
+  .mobileNavLink30 {
+    width: 30%;
+    border: none !important;
+  }
+
   .tailleModaleProjMob {
     width: 100% !important;
   }
   .backModalCompMobile {
     height: auto !important;
   }
+
   .mobileBackSlideSize {
-    height: 350px;
+    height: 50vh;
   }
-  .mobileCentrePhotoMoi {
-    justify-content: center;
+
+  .mobileEffacePhotoMoiG {
+    display: none;
   }
   .mobileBackSize {
     width: 14em !important;
     font-size: 30px;
   }
+  .mobileCercleSkill {
+    border-radius: 0;
+  }
   .mobileSizeIcon {
     height: 30px;
     width: 30px;
   }
+
   .mobileFoot {
     flex-direction: column;
     align-items: center;
@@ -178,7 +199,7 @@ body {
     margin-top: 0 !important;
   }
   .mobileParagraphe {
-    height: 550px !important;
+    height: 600px !important;
   }
   .mobileDernierCompMod {
     margin-bottom: 1.5em;
@@ -189,18 +210,35 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+  .mobileFontpara {
+    font-size: 20px !important;
+  }
+  .mobileNavSize {
+    height: 150px !important;
+  }
+
+  .mobileNavProjet {
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: center;
+  }
   .mobileParagraphe2 {
-    height: 530px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .mobileNavProjet {
-    height: 15em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .mobileParagraphe550 {
+    height: 680px !important;
   }
+  .mobileNavLink70 {
+    width: 80%;
+  }
+
   .largImgModaleMob {
     width: 100% !important;
   }
@@ -250,6 +288,9 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+  .carteMobile {
+    width: 340px !important;
+  }
   .backPopMobile {
     height: 80px !important;
     border-radius: 4px !important;

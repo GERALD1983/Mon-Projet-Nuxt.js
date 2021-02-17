@@ -1,5 +1,14 @@
 <template>
   <div id="contenu" class="">
+    <div class="displayBlock displayNone">
+      <img
+        width="300px"
+        height="300px"
+        class=" mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
+        src="../assets/moi350.jpg"
+        alt="photo profil développeur web"
+      />
+    </div>
     <div>
       <div class="  d-flex justify-content-center align-items-center">
         <h2 id="objectif" class="lienSouris objectif invisible nonvis py-5">
@@ -8,7 +17,7 @@
       </div>
 
       <div
-        class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe"
+        class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe mobileParagraphe550"
       >
         <div class="col-md-8">
           <h4
@@ -41,35 +50,40 @@
         </h2>
       </div>
       <div
-        class="col-md-8 ml-auto backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe2"
+        class="col-8 ml-auto d-flex justify-content-center align-items-center backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe mobileParagraphe2 mobileParagraphe550"
       >
-        <h5 class="text-white pt-5">
-          <ul id="liste" class="invisible">
-            <li>
-              - Vous avez un projet : création de plate-forme e-commerce
-            </li>
-            <br />
-            <li>
-              - Vous rêvez d'avoir votre propre réseau social et marquer
-              l'histoire
-            </li>
-            <br />
-            <li>
-              - Vous aspirez à faire valoir votre savoir-faire
-            </li>
-            <br />
-            <li>
-              - Vous voulez développer votre entreprise
-            </li>
-            <br />
-            <li>
-              - Où simplement afficher votre présence dans le monde digitale
-            </li>
-          </ul>
-        </h5>
-        <h4 id="liste2" class=" invisible text-white pt-5 mobileStopPadTop">
-          Mes services sont à votre disposition n'hésitez pas à me contacter !
-        </h4>
+        <div class=" col-sm-9 col-md-12 col-lg-12">
+          <h5 class="text-white pt-3">
+            <ul id="liste" class=" invisible">
+              <li class="ecranFontparagraphe mobileFontpara">
+                - Vous avez un projet : création de plate-forme e-commerce
+              </li>
+              <br />
+              <li class="ecranFontparagraphe mobileFontpara">
+                - Vous rêvez d'avoir votre propre réseau social et marquer
+                l'histoire
+              </li>
+              <br />
+              <li class="ecranFontparagraphe mobileFontpara">
+                - Vous aspirez à faire valoir votre savoir-faire
+              </li>
+              <br />
+              <li class="ecranFontparagraphe mobileFontpara">
+                - Vous voulez développer votre entreprise
+              </li>
+              <br />
+              <li class="ecranFontparagraphe mobileFontpara">
+                - Où simplement afficher votre présence dans le monde digitale
+              </li>
+            </ul>
+          </h5>
+          <h4
+            id="liste2"
+            class="mobileFontpara invisible text-white pt-3 mobileStopPadTop"
+          >
+            Mes services sont à votre disposition n'hésitez pas à me contacter !
+          </h4>
+        </div>
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
