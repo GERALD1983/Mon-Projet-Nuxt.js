@@ -2,7 +2,7 @@
   <div id="contenu" class="">
     <div>
       <div class="  d-flex justify-content-center align-items-center">
-        <h2 id="objectif" class="objectif invisible nonvis py-5">
+        <h2 id="objectif" class="lienSouris objectif invisible nonvis py-5">
           Mes Objectifs
         </h2>
       </div>
@@ -35,7 +35,7 @@
       <div class="d-flex justify-content-center align-items-center">
         <h2
           id="textPop"
-          class="backPopMobile d-flex justify-content-center align-items-center  invisible my-5"
+          class="lienSouris backPopMobile d-flex justify-content-center align-items-center  invisible my-5"
         >
           Quelles sont mes offres ?
         </h2>
@@ -67,13 +67,15 @@
             </li>
           </ul>
         </h5>
-        <h4 id="liste2" class="invisible text-white pt-5 mobileStopPadTop">
+        <h4 id="liste2" class=" invisible text-white pt-5 mobileStopPadTop">
           Mes services sont à votre disposition n'hésitez pas à me contacter !
         </h4>
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="titreProjet" class="invisible mb-0 pb-5 pt-5">Mes projets</h2>
+      <h2 id="titreProjet" class="lienSouris invisible mb-0 pb-5 pt-5">
+        Mes projets
+      </h2>
     </div>
     <div id="carte" class="mb-5 invisible">
       <Carte />

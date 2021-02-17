@@ -1,31 +1,17 @@
 <template>
   <div class="d-flex justify-content-center ">
-    <!--
-    <div id="exemple">
-      <div>
-        <p>Tout contenu que vous voulez montrer aux utilisateurs.</p>
-        <button @click="exemple()">Cliquez ici pour fermer la boîte</button>
-      </div>
-    </div>
-    -->
-
     <div
-      class="col-8 bgTree  bordureBackCarte pb-5 mx-5 px-5 stopPadMargX d-flex justify-content-around align-items-center "
+      class="col-8 bgTree  bordureBackCarte py-5 mx-5 px-5 stopPadMargX d-flex justify-content-around align-items-center "
     >
-      <div class=" d-flex flex-wrap">
-        <div
-          v-for="(image, index) in images"
-          :key="index"
-          class=" my-5 col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-12"
-        >
-          <div class="bordureCarte ombreCarte card ">
+      <div class="py-5  d-flex flex-wrap justify-content-around">
+        <div v-for="(image, index) in images" :key="index" class=" ">
+          <div class="my-5 carteSize bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
               <img
                 width="325px"
                 height="370px"
                 @click="toggleModale()"
-                role="button"
-                class="hautImg card-img-top"
+                class="imageCarte hautImg card-img-top"
                 :src="image.link"
                 :alt="'Projet de développement site internet : ' + image.nom"
               />
@@ -35,14 +21,17 @@
             <div class="card-body">
               <h5 class="card-title">{{ image.nom }}</h5>
 
-              <button @click="afficherMasquer(image)" class="btn bgTree">
+              <button
+                @click="afficherMasquer(image)"
+                class="cursorNone btn bgTree"
+              >
                 Détails
               </button>
 
               <p :id="image.id" class="nonAfficher pt-3 card-text"></p>
 
               <button
-                class="ml-3 btn btnCarte btn-secondary"
+                class=" cursorNone  ml-3 btn btnCarte btn-secondary"
                 @click="clickUrl(image)"
               >
                 Voir Projet
@@ -231,6 +220,17 @@ export default {
 </script>
 
 <style>
+.carteSize {
+  width: 375px !important;
+  min-height: 520px !important;
+}
+.bordureCarte {
+  filter: grayscale(100%);
+  transition: 2s;
+}
+.bordureCarte:hover {
+  filter: none;
+}
 .hautImg {
   height: 370px;
 }

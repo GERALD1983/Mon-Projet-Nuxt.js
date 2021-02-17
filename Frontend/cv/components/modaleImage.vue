@@ -4,7 +4,7 @@
     <div class="tailleModaleProjMob modale card">
       <div
         @click="toggleModale(), clearImage()"
-        class="btn-modale btn btn-danger"
+        class="cursorNone btn-modale btn btn-dark"
       >
         X
       </div>
@@ -34,6 +34,7 @@ export default {
 <style>
 .bloc-modale {
   position: fixed;
+  z-index: 10;
   top: 0;
   bottom: 0;
   right: 0;
@@ -42,6 +43,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .overlay {
   background: rgba(0, 0, 0, 0.1);
   position: fixed;

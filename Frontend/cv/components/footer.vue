@@ -2,7 +2,9 @@
   <div id="footer" class="ancreForm bg-white ">
     <div class="backFooter foot mobileFootHeight">
       <div>
-        <h3 id="contact" class="invisible text-light pt-5 pb-3">Contact</h3>
+        <h3 id="contact" class=" invisible text-light pt-5 pb-3">
+          Contact
+        </h3>
       </div>
 
       <div class="mb-5 mt-3 d-flex justify-content-center ">
@@ -12,25 +14,25 @@
         >
           <b-icon
             @click="clickFacebook"
-            role="button"
+            class="lienSouris"
             icon="facebook"
             font-scale="2"
           ></b-icon>
           <b-icon
             @click="clickGit"
-            role="button"
+            class="lienSouris"
             icon="github"
             font-scale="2"
           ></b-icon>
           <b-icon
             @click="clickLinkedIn"
-            role="button"
+            class="lienSouris"
             icon="linkedin"
             font-scale="2"
           ></b-icon>
           <b-icon
             @click="clickTwitter"
-            role="button"
+            class="lienSouris"
             icon="twitter"
             font-scale="2"
           ></b-icon>

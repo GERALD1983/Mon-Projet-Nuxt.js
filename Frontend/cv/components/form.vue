@@ -104,12 +104,15 @@
         </b-form-group>
       </div>
       <div class="d-flex justify-content-around">
-        <b-button id="res" class="bgFour btnReset invisible" type="reset"
+        <b-button
+          id="res"
+          class="lienSouris cursorNone bgFour btnReset invisible"
+          type="reset"
           >Reset</b-button
         >
         <b-button
           id="sub"
-          class="invisible text-secondary colorSubmit"
+          class="lienSouris cursorNone invisible text-secondary colorSubmit"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
           >Submit</b-button
