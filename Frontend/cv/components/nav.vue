@@ -15,19 +15,17 @@
     <div class="mobileNavProjet col-lg-5 px-0 d-flex justify-content-around">
       <div
         @click="toProject"
-        role="button"
-        class="ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
+        class="px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
-        <h4 class="my-1 ">Mes projets</h4>
+        <h4 class="lienSouris my-1 ">Mes projets</h4>
       </div>
       <div
         @click="toFoot"
-        role="button"
-        class="ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
+        class="px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
-        <h4 class="my-1 ">
+        <h4 class="lienSouris my-1 ">
           Contact
         </h4>
       </div>
@@ -41,8 +39,6 @@ export default {
   name: "navbar",
   mounted() {
     var navbar = document.getElementById("nav");
-    var contenu = document.getElementById("contenu");
-    var footer = document.getElementById("footer");
     var header = document.getElementById("backMaPage");
     var visible = header.offsetHeight;
     console.log(visible);
@@ -76,10 +72,14 @@ export default {
 </script>
 
 <style>
+.navNoOpac {
+  opacity: 1 !important;
+}
 .navFixed {
-  position: fixed !important;
-  z-index: 9999 !important;
+  position: fixed;
+  z-index: 9;
   top: 0;
+  opacity: 0.5;
 }
 .navSize {
   height: 80px;
@@ -91,8 +91,8 @@ export default {
   /* box-shadow: 0 0 0 0 #748928ff; */
   box-shadow: 0 0 0 0 rgb(23, 255, 236);
   animation: pulse 1.3s infinite;
-  background: #9e9d9d !important;
-  color: white !important;
+  /* background: #9e9d9d !important;
+  color: white !important;*/
 }
 .bordureLogo {
   border-radius: 0.5em;

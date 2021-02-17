@@ -1,7 +1,7 @@
 <template>
   <div class=" mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="competence" class="invisible py-5">
+      <h2 id="competence" class="lienSouris invisible py-5">
         Mes Compétences
       </h2>
     </div>
@@ -19,7 +19,6 @@
               width="70px"
               height="70px"
               @click="readSkill(image)"
-              role="button"
               class="ombreLogo"
               :src="image.link"
               :alt="

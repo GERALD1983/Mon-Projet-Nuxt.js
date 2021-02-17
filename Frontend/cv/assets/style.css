@@ -32,13 +32,46 @@
 .largInput {
   width: 40%;
 }
-
-/* cube 
-.cube {
-  width: 75px;
-  height: 75px;
+/* souris */
+body {
+  cursor: none !important;
 }
-*/
+.cursorNone {
+  cursor: none !important;
+}
+.souris {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #886526;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 101 !important;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  backdrop-filter: sepia(70%);
+
+  transition: all 0.5s ease;
+  transition-property: background, transform;
+}
+.linkGrow {
+  transform: scale(1.5) translate(-25%, -25%) !important;
+  background: #886526 !important;
+  opacity: 0.8 !important;
+  z-index: 101 !important;
+}
+.hoveredLink {
+  color: white !important;
+
+  transition: 0.3s ease-in-out !important;
+  z-index: 9998 !important;
+}
+.hoveredLien {
+  background-color: black !important;
+  color: #ffdea4 !important;
+  transition: 0.3s ease-in-out !important;
+  z-index: 9999 !important ;
+}
+
 /* bordure */
 
 .bordureProfil {
@@ -72,6 +105,9 @@
 }
 
 /* COLOR */
+.bgFourOpac {
+  background-color: rgba(136, 101, 38, 0.7);
+}
 .bgPrimary {
   background-color: #fffbf4;
 }

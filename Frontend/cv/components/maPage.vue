@@ -1,17 +1,16 @@
 <template>
   <div
     id="backMaPage"
-    class="slider backSlide backSlideSize mobileBackSlideSize d-flex flex-column justify-content-between align-items-between"
+    class=" slider backSlide backSlideSize mobileBackSlideSize d-flex flex-column justify-content-between align-items-between"
   >
     <div
-      class="larg100 textSlide margTitre margTitreMobile d-flex justify-content-around align-items-center"
+      class=" larg100 textSlide margTitre margTitreMobile d-flex justify-content-around align-items-center"
     >
       <b-icon
         @mouseenter="stopRotation()"
         @mouseleave="startRotation()"
         @click="prev"
-        class="bg-white mobileSizeIcon"
-        role="button"
+        class="lienBlack bg-white mobileSizeIcon"
         icon="chevron-left"
         animation="fade"
         font-scale="3"
@@ -29,8 +28,7 @@
         @mouseenter="stopRotation()"
         @mouseleave="startRotation()"
         @click="next"
-        class="bg-white mobileSizeIcon"
-        role="button"
+        class="lienBlack bg-white mobileSizeIcon"
         icon="chevron-right"
         animation="fade"
         font-scale="3"
@@ -38,31 +36,43 @@
       ></b-icon>
     </div>
     <div
-      class="mobileCentrePhotoMoi larg100 mb-5 pl-3 d-flex justify-content-center align-items-center"
+      class="mobileCentrePhotoMoi larg100 mb-3 d-flex flex-column justify-content-center align-items-center"
     >
-      <img
-        @mouseenter="afficherMasquer()"
-        @mouseleave="afficherMasquer()"
-        role="button"
-        width="370px"
-        height="370px"
-        class=" mr-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/moi350.jpg"
-        alt="photo profil développeur web"
-      />
-      <div id="dialPhoto" class="supprimDialPhotoMob ">
+      <div id="dialPhoto" class=" mb-3 supprimDialPhotoMob ">
         <div class=" d-flex justify-content-center align-items-center">
-          <div class="miniFleche"></div>
           <div
-            class="backDial blocapMob blocapMob450 bg-white d-flex justify-content-around align-items-center"
+            class="filtreImage backDial blocapMob blocapMob450 d-flex justify-content-around align-items-center"
           >
-            <h5 class="bg-white blocapFontMob">
-              Hello ! Je m'appelle Gérald, je suis Développeur web Fullstack
-              Javascript . Bienvenue à vous !
-            </h5>
+            <h2
+              class="lienSouris dialogueFont text-white d-flex flex-column justify-content-center align-items-center blocapFontMob"
+            >
+              <div id="dialogue1">
+                <span>Hello ! Je m'appelle Gérald, </span>
+              </div>
+              <div id="dialogue2">
+                <span>
+                  je suis Développeur web Fullstack Javascript .
+                </span>
+              </div>
+
+              <div id="dialogue3">
+                <span>
+                  Bienvenue à vous !
+                </span>
+              </div>
+            </h2>
           </div>
         </div>
       </div>
+      <img
+        @mouseenter="afficherMasquer()"
+        @mouseleave="afficherMasquer()"
+        width="370px"
+        height="370px"
+        class="mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
+        src="../assets/moi350.jpg"
+        alt="photo profil développeur web"
+      />
     </div>
   </div>
 </template>
@@ -86,20 +96,36 @@ export default {
     };
   },
   created() {},
-  mounted: function() {
+  mounted() {
     this.load();
     this.startRotation();
   },
 
   methods: {
     afficherMasquer() {
-      if (
-        document.getElementById("dialPhoto").style.display == "none" ||
-        document.getElementById("dialPhoto").style.display == ""
-      ) {
-        document.getElementById("dialPhoto").style.display = "block";
+      let dialPhoto = document.getElementById("dialPhoto");
+      let dialogue1 = document.getElementById("dialogue1");
+      let dialogue2 = document.getElementById("dialogue2");
+      let dialogue3 = document.getElementById("dialogue3");
+
+      if (dialPhoto.style.display == "none" || dialPhoto.style.display == "") {
+        dialPhoto.style.display = "block";
+        dialogue2.style.display = "none";
+        dialogue3.style.display = "none";
+        dialogue1.classList.add("dialogue1");
+        setTimeout(() => {
+          dialogue1.classList.remove("dialogue1");
+          dialogue2.style.display = "block";
+          dialogue2.classList.add("dialogue2");
+        }, 5000);
+        setTimeout(() => {
+          dialogue1.classList.remove("dialogue1");
+          dialogue2.classList.remove("dialogue2");
+          dialogue3.style.display = "block";
+          dialogue3.classList.add("dialogue3");
+        }, 10000);
       } else {
-        document.getElementById("dialPhoto").style.display = "none";
+        dialPhoto.style.display = "none";
       }
     },
     load: function() {
@@ -208,6 +234,37 @@ export default {
 </script>
 
 <style scoped>
+.dialogueFont {
+  font-weight: 900;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.dialogue1 {
+  animation: typing1 3s steps(23, end) forwards, blink 1s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 23ch;
+}
+.dialogue2 {
+  animation: typing2 3s steps(23, end) forwards, blink2 1s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 38ch;
+}
+.dialogue3 {
+  animation: typing3 2s steps(23, end) forwards, blink3 1s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 17ch;
+}
+.filtreImage {
+  filter: sepia(100%);
+}
+.filtreNone {
+  filter: none;
+}
 .backSlide {
   background-image: url("../assets/roche.jpg");
   animation: opacBack1 1s ease-in-out;
@@ -240,10 +297,11 @@ export default {
   width: 15em;
 }
 .backDial {
-  width: 20em;
-  height: 120px;
+  width: 50em;
+  height: 70px;
   border-radius: 25px;
 }
+/*
 .miniFleche {
   width: 0;
   height: 0;
@@ -252,11 +310,12 @@ export default {
 
   border-right: 10px solid white;
 }
+*/
 .afficher {
   display: none;
 }
 .ombre:hover {
-  box-shadow: 0 0 0 0 #748928ff;
+  box-shadow: 0 0 0 0 rgb(23, 255, 236);
   animation: pulse 1.3s infinite;
 }
 @keyframes opacBack1 {
@@ -318,6 +377,57 @@ export default {
 @keyframes pulse {
   to {
     box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.01);
+  }
+}
+@keyframes typing1 {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 23ch;
+  }
+}
+@keyframes typing2 {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 38ch;
+  }
+}
+@keyframes typing3 {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 17ch;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 3px solid transparent;
+  }
+  50% {
+    border-right: 3px solid white;
+  }
+}
+@keyframes blink2 {
+  0%,
+  100% {
+    border-right: 3px solid transparent;
+  }
+  50% {
+    border-right: 3px solid white;
+  }
+}
+@keyframes blink3 {
+  0%,
+  100% {
+    border-right: 3px solid transparent;
+  }
+  50% {
+    border-right: 3px solid white;
   }
 }
 </style>
