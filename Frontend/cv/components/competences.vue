@@ -8,11 +8,11 @@
     <div class="d-flex justify-content-center">
       <div
         id="animBack"
-        class="col-md-8 bordureCercleSkill backSkillSize mobileBackSkillSize invisible slider d-flex justify-content-center align-items-center"
+        class="col-md-8 bordureCercleSkill backSkillSize mobileCercleSkill mobileBackSkillSize invisible d-flex justify-content-center align-items-center"
       >
         <div
           id="animLogos"
-          class="invisible backLogos col-md-6 d-flex flex-wrap justify-content-around align-items-center "
+          class="invisible backLogos col-md-8 col-lg-8 d-flex flex-wrap justify-content-around align-items-center "
         >
           <div v-for="(image, index) in images" :key="index">
             <img

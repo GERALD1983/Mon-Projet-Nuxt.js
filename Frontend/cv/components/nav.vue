@@ -1,9 +1,9 @@
 <template>
   <div
     id="nav"
-    class="navSize mobileNavProjet d-flex justify-content-between align-items-center"
+    class="navSize mobileNavSize  d-flex justify-content-between align-items-center"
   >
-    <div class="mb-3">
+    <div class="my-3">
       <img
         width="90px"
         height="60px"
@@ -15,14 +15,14 @@
     <div class="mobileNavProjet col-lg-5 px-0 d-flex justify-content-around">
       <div
         @click="toProject"
-        class="px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
+        class="mobileNavLink30 mobileNavLink70 px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
         <h4 class="lienSouris my-1 ">Mes projets</h4>
       </div>
       <div
         @click="toFoot"
-        class="px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
+        class="mobileNavLink30 mobileNavLink70 px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
         <h4 class="lienSouris my-1 ">
