@@ -208,8 +208,23 @@ body {
     display: none !important;
   }
 }
+@media screen and (max-width: 767px) {
+  .mobileCube3DBottomReverse {
+    flex-direction: column-reverse !important;
+  }
+  .mobileCompetenceTitre {
+    padding-top: 0 !important;
+  }
+  .mobileProjetTitre {
+    margin-bottom: 0 !important;
+  }
+}
 
 @media screen and (max-width: 650px) {
+  .mobileCube3DBottom {
+    flex-direction: column;
+  }
+
   .mobileFontpara {
     font-size: 20px !important;
   }
@@ -288,8 +303,13 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+  .mobileHautImg {
+    height: 300px !important;
+  }
   .carteMobile {
-    width: 340px !important;
+    width: 300px !important;
+    min-height: 430px !important;
+    max-height: auto !important;
   }
   .backPopMobile {
     height: 80px !important;

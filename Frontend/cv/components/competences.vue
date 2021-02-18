@@ -1,7 +1,10 @@
 <template>
   <div class=" mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="competence" class="lienSouris invisible py-5">
+      <h2
+        id="competence"
+        class="mobileCompetenceTitre lienSouris invisible py-5"
+      >
         Mes Compétences
       </h2>
     </div>

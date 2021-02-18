@@ -4,12 +4,13 @@
     <MaPage class="" />
     <Navbar class="" />
     <Contenu class="" />
-
+    <Cube />
     <Foot class="" />
   </div>
 </template>
 
 <script>
+import Cube3D from "../components/cube.vue";
 import MaPage from "../components/maPage.vue";
 import Navbar from "../components/nav.vue";
 import Contenu from "../components/contenu.vue";
@@ -19,7 +20,8 @@ export default {
     MaPage,
     Navbar,
     Contenu,
-    Foot
+    Foot,
+    Cube3D
   },
 
   data() {

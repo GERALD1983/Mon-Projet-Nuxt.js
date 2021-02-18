@@ -3,6 +3,10 @@
     id="nav"
     class="navSize mobileNavSize  d-flex justify-content-between align-items-center"
   >
+    <div>
+      <Logo />
+    </div>
+    <!--
     <div class="my-3">
       <img
         width="90px"
@@ -12,6 +16,7 @@
         alt="logo développeur gérald ferron"
       />
     </div>
+    -->
     <div class="mobileNavProjet col-lg-5 px-0 d-flex justify-content-around">
       <div
         @click="toProject"
@@ -34,9 +39,13 @@
 </template>
 
 <script>
+import Logo from "./logo.vue";
 import jump from "jump.js";
 export default {
   name: "navbar",
+  components: {
+    Logo
+  },
   mounted() {
     var navbar = document.getElementById("nav");
     var header = document.getElementById("backMaPage");
@@ -82,7 +91,7 @@ export default {
   opacity: 0.5;
 }
 .navSize {
-  height: 80px;
+  height: 90px;
 
   background: #9e9d9d;
   width: 100%;
@@ -96,6 +105,10 @@ export default {
 }
 .bordureLogo {
   border-radius: 0.5em;
-  border: 1mm ridge#ffdea4;
+
+  background: gray;
+  color: white;
+  border: 0.1px solid #ffdea4;
+  /*border: 1mm ridge#ffdea4;*/
 }
 </style>

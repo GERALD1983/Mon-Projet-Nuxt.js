@@ -242,7 +242,7 @@ export default {
         this.submitStatus = "PENDING";
 
         axios
-          .post("SECRET", {
+          .post("", {
             email: this.email,
             nom: this.nom,
             message: this.message,
