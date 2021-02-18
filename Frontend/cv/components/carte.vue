@@ -1,7 +1,7 @@
 <template>
   <div class=" d-flex justify-content-center ">
     <div
-      class="col-md-8 bgTree bordureBackCarte py-5 mx-5 px-5 stopMargPad d-flex justify-content-around align-items-center "
+      class="col-md-8 bgTree bordureBackCarte py-5   stopMargPad d-flex justify-content-around align-items-center "
     >
       <div class="py-5  d-flex flex-wrap justify-content-around">
         <div v-for="(image, index) in images" :key="index" class=" ">
@@ -11,7 +11,7 @@
                 width="325px"
                 height="370px"
                 @click="toggleModale()"
-                class="imageCarte hautImg card-img-top"
+                class="mobileHautImg imageCarte hautImg card-img-top"
                 :src="image.link"
                 :alt="'Projet de développement site internet : ' + image.nom"
               />
@@ -214,7 +214,7 @@ export default {
 <style>
 .carteSize {
   width: 375px;
-  min-height: 520px !important;
+  min-height: 520px;
 }
 .bordureCarte {
   filter: grayscale(100%);

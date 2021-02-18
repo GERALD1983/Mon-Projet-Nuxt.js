@@ -9,38 +9,44 @@
         alt="photo profil développeur web"
       />
     </div>
+
     <div>
       <div class="  d-flex justify-content-center align-items-center">
         <h2 id="objectif" class="lienSouris objectif invisible nonvis py-5">
           Mes Objectifs
         </h2>
       </div>
-
-      <div
-        class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe mobileParagraphe550"
-      >
-        <div class="col-md-8">
-          <h4
-            class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif invisible paratop1 text-white "
-          >
-            " Je m'appelle Gérald Ferron je suis développeur d'applications Web,
-            je conçois et développe des sites internet pour le web, je suis en
-            veille technologique constante. "
-          </h4>
-          <h4
-            class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif invisible paratop2 text-white"
-          >
-            "Mes objectifs sont d'accomplir vos projets en intégrant les
-            derniéres technologies digitales, pour un rendu de qualité , du
-            travail bien fait , un service optimisé. "
-          </h4>
+      <div class="row mobileCube3DBottom">
+        <div
+          class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe mobileParagraphe550"
+        >
+          <div class="col-md-8">
+            <h4
+              class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif invisible paratop1 text-white "
+            >
+              " Je m'appelle Gérald Ferron je suis développeur d'applications
+              Web, je conçois et développe des sites internet pour le web, je
+              suis en veille technologique constante. "
+            </h4>
+            <h4
+              class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif invisible paratop2 text-white"
+            >
+              "Mes objectifs sont d'accomplir vos projets en intégrant les
+              derniéres technologies digitales, pour un rendu de qualité , du
+              travail bien fait , un service optimisé. "
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <Cube />
         </div>
       </div>
     </div>
     <div>
       <Competences />
     </div>
-    <div class="mb-5">
+
+    <div class="mobileProjetTitre mb-5">
       <div class="d-flex justify-content-center align-items-center">
         <h2
           id="textPop"
@@ -49,45 +55,55 @@
           Quelles sont mes offres ?
         </h2>
       </div>
-      <div
-        class="col-8 ml-auto d-flex justify-content-center align-items-center backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe mobileParagraphe2 mobileParagraphe550"
-      >
-        <div class=" col-sm-9 col-md-12 col-lg-12">
-          <h5 class="text-white pt-3">
-            <ul id="liste" class=" invisible">
-              <li class="ecranFontparagraphe mobileFontpara">
-                - Vous avez un projet : création de plate-forme e-commerce
-              </li>
-              <br />
-              <li class="ecranFontparagraphe mobileFontpara">
-                - Vous rêvez d'avoir votre propre réseau social et marquer
-                l'histoire
-              </li>
-              <br />
-              <li class="ecranFontparagraphe mobileFontpara">
-                - Vous aspirez à faire valoir votre savoir-faire
-              </li>
-              <br />
-              <li class="ecranFontparagraphe mobileFontpara">
-                - Vous voulez développer votre entreprise
-              </li>
-              <br />
-              <li class="ecranFontparagraphe mobileFontpara">
-                - Où simplement afficher votre présence dans le monde digitale
-              </li>
-            </ul>
-          </h5>
-          <h4
-            id="liste2"
-            class="mobileFontpara invisible text-white pt-3 mobileStopPadTop"
-          >
-            Mes services sont à votre disposition n'hésitez pas à me contacter !
-          </h4>
+      <div class="row mobileCube3DBottomReverse">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <Cube />
+        </div>
+        <div
+          class="col-8 ml-auto d-flex justify-content-center align-items-center backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe mobileParagraphe2 mobileParagraphe550"
+        >
+          <div class=" col-sm-9 col-md-12 col-lg-12">
+            <h5 class="text-white pt-3">
+              <ul id="liste" class=" invisible">
+                <li class="ecranFontparagraphe mobileFontpara">
+                  - Vous avez un projet : création de plate-forme e-commerce
+                </li>
+                <br />
+                <li class="ecranFontparagraphe mobileFontpara">
+                  - Vous rêvez d'avoir votre propre réseau social et marquer
+                  l'histoire
+                </li>
+                <br />
+                <li class="ecranFontparagraphe mobileFontpara">
+                  - Vous aspirez à faire valoir votre savoir-faire
+                </li>
+                <br />
+                <li class="ecranFontparagraphe mobileFontpara">
+                  - Vous voulez développer votre entreprise
+                </li>
+                <br />
+                <li class="ecranFontparagraphe mobileFontpara">
+                  - Où simplement afficher votre présence dans le monde digitale
+                </li>
+              </ul>
+            </h5>
+            <h4
+              id="liste2"
+              class="mobileFontpara invisible text-white pt-3 mobileStopPadTop"
+            >
+              Mes services sont à votre disposition n'hésitez pas à me contacter
+              !
+            </h4>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="titreProjet" class="lienSouris invisible mb-0 pb-5 pt-5">
+      <h2
+        id="titreProjet"
+        class="mobileCompetenceTitre lienSouris invisible mb-0 pb-5 pt-5"
+      >
         Mes projets
       </h2>
     </div>
