@@ -11,8 +11,13 @@
     </div>
 
     <div>
-      <div class="  d-flex justify-content-center align-items-center">
-        <h2 id="objectif" class="lienSouris objectif invisible nonvis py-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2
+          id="objectif"
+          class="lienSouris objectif aos-item nonvis py-5"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
           Mes Objectifs
         </h2>
       </div>
@@ -22,14 +27,18 @@
         >
           <div class="my-5 col-md-8">
             <h4
-              class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif invisible paratop1 text-white "
+              class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif aos-item paratop1 text-white "
+              data-aos="fade-down"
+              data-aos-duration="2000"
             >
               " Je m'appelle Gérald Ferron je suis développeur d'applications
               Web, je conçois et développe des sites internet pour le web, je
               suis en veille technologique constante. "
             </h4>
             <h4
-              class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif invisible paratop2 text-white"
+              class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif aos-item paratop2 text-white"
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               "Mes objectifs sont d'accomplir vos projets en intégrant les
               dernières technologies numériques, pour un rendu de qualité , du
@@ -50,9 +59,11 @@
       <div class="d-flex justify-content-center align-items-center">
         <h2
           id="textPop"
-          class="lienSouris backPopMobile d-flex justify-content-center align-items-center  invisible my-5"
+          class="lienSouris backPopMobile d-flex justify-content-center align-items-center aos-item my-5"
+          data-aos="fade-left"
+          data-aos-duration="2000"
         >
-          Quelles sont mes Offres ?
+          Mes Offres ?
         </h2>
       </div>
       <div class="mx-0 row mobileCube3DBottomReverse">
@@ -64,7 +75,12 @@
         >
           <div class="my-5 col-sm-9 col-md-12 col-lg-12">
             <h5 class="text-white pt-3">
-              <ul id="liste" class=" invisible">
+              <ul
+                id="liste"
+                class="aos-item"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+              >
                 <li class="ecranFontparagraphe mobileFontpara">
                   - Vous avez un projet : création de plateforme E-commerce.
                 </li>
@@ -92,7 +108,9 @@
             <h4
               @click="toFoot"
               id="liste2"
-              class="lienSouris mobileFontpara invisible phraseContact pt-3 mobileStopPadTop"
+              class="lienSouris mobileFontpara aos-item phraseContact pt-3 mobileStopPadTop"
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               Mes services sont à votre disposition n'hésitez pas à me Contacter
               !
@@ -105,18 +123,26 @@
     <div class="d-flex justify-content-center align-items-center">
       <h2
         id="titreProjet"
-        class="mobileCompetenceTitre lienSouris invisible mb-0 pb-5 pt-5"
+        class="mobileCompetenceTitre lienSouris aos-item mb-0 pb-5 pt-5"
+        data-aos="fade-left"
+        data-aos-duration="2000"
       >
         Mes Projets
       </h2>
     </div>
-    <div id="carte" class="mb-5 invisible">
+    <div
+      id="carte"
+      class="mb-5 aos-item"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <Carte />
     </div>
   </div>
 </template>
 
 <script>
+import aos from "aos";
 import jump from "jump.js";
 import Competences from "./competences.vue";
 import Carte from "./carte.vue";
@@ -163,7 +189,7 @@ export default {
       //para2.classList.add("para2");
     });
 */
-
+    /*
     const objectif = document.getElementById("objectif");
     const paratop1 = document.querySelector(".paratop1");
     const paratop2 = document.querySelector(".paratop2");
@@ -210,6 +236,7 @@ export default {
         carte.classList.add("para3");
       }
     });
+    */
   },
   methods: {
     toFoot() {

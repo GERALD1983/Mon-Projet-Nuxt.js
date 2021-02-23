@@ -3,7 +3,9 @@
     <b-form @submit.prevent="submit" @reset="onReset" v-if="show">
       <div class="text-white d-flex justify-content-around">
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-right"
+          data-aos-duration="2000"
           id="boxC"
           label="Email:"
           label-for="input-1"
@@ -30,7 +32,9 @@
         </b-form-group>
 
         <b-form-group
-          class=" invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-right"
+          data-aos-duration="2000"
           id="boxE"
           label="Votre Nom:"
           label-for="input-2"
@@ -54,7 +58,10 @@
       </div>
       <div class="text-white d-flex justify-content-around">
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           id="boxD"
           label="Message:"
           label-for="input-4"
@@ -78,7 +85,10 @@
         </b-form-group>
 
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           id="boxF"
           label="Votre Téléphone:"
           label-for="input-5"
@@ -106,13 +116,19 @@
       <div class="d-flex justify-content-around">
         <b-button
           id="res"
-          class="lienSouris cursorNone bgFour btnReset invisible"
+          class="lienSouris cursorNone bgFour btnReset aos-item"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           type="reset"
           >Reset</b-button
         >
         <b-button
           id="sub"
-          class="lienSouris cursorNone invisible text-secondary colorSubmit"
+          class="lienSouris cursorNone aos-item text-secondary colorSubmit"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
           >Envoyer</b-button
@@ -189,6 +205,7 @@ export default {
     phone: { required, numeric, maxLength: maxLength(20) }
   },
   mounted() {
+    /*
     const boxC = document.getElementById("boxC");
     const boxD = document.getElementById("boxD");
     const boxE = document.getElementById("boxE");
@@ -220,6 +237,7 @@ export default {
         res.classList.add("para2");
       }
     });
+    */
   },
   /*
   async created() {

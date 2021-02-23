@@ -24,7 +24,13 @@ export default {
   css: ["@/assets/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/plugin.js"],
+  plugins: [
+    "@/plugins/plugin.js",
+    {
+      src: "~plugins/aos.js",
+      ssr: false
+    }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

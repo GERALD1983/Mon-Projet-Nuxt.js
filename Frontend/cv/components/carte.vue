@@ -4,7 +4,13 @@
       class="col-md-8 bgTree bordureBackCarte py-5   stopMargPad d-flex justify-content-around align-items-center "
     >
       <div class="py-5  d-flex flex-wrap justify-content-around">
-        <div v-for="(image, index) in images" :key="index" class=" ">
+        <div
+          v-for="(image, index) in images"
+          :key="index"
+          class="aos-item"
+          data-aos="flip-up"
+          data-aos-duration="1000"
+        >
           <div class="carteMobile my-5 carteSize bordureCarte ombreCarte card ">
             <div @click="insertImage(image)">
               <img
@@ -121,7 +127,7 @@ export default {
           id: 5,
           link: require("../assets/orinoco400.jpg"),
           link2: require("../assets/orinoco2.jpg"),
-          nom: "E-commerce Orinoco",
+          nom: "E-Commerce Orinoco",
           description: `Site E-commerce Orinoco version MVP.
           Ceci est l'application e-commerce front-end réaliser par mes soins à l'aide
           du Framework Bootstrap et en JavaScript Vanilla.
@@ -133,7 +139,7 @@ export default {
           id: 6,
           link: require("../assets/sauce400.jpg"),
           link2: require("../assets/sauce400.jpg"),
-          nom: "Critique Gastronomique",
+          nom: "Critiques Gastronomique",
           description: `Backend API d'ajout de vos sauces, Likes et DisLikes.
           Ceci est une application de Critiques Gastronomique pour une agence de sauces Sopekocko
           le côté front-end était ici déjà fourni.
@@ -146,7 +152,7 @@ export default {
           id: 7,
           link: require("../assets/groupomania400.jpg"),
           link2: require("../assets/groupomania.jpg"),
-          nom: "Réseau social",
+          nom: "Réseau Social",
           description: `Conception Backend et Frontend en base de données Mysql pour le projet Groupomania.
           Développé entièrement de A à Z du Back au Front.
           Ce site a été réalisé en Node Js Express avec une Api Rest et les
