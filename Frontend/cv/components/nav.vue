@@ -3,7 +3,7 @@
     id="nav"
     class="navSize mobileNavSize  d-flex justify-content-between align-items-center"
   >
-    <div>
+    <div @click="toTop" class=" ombreNav">
       <Logo />
     </div>
     <!--
@@ -23,7 +23,7 @@
         class="mobileNavLink30 mobileNavLink70 px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
-        <h4 class="lienSouris my-1 ">Mes projets</h4>
+        <h4 class="lienSouris my-1 ">Mes Projets</h4>
       </div>
       <div
         @click="toFoot"
@@ -62,6 +62,13 @@ export default {
     });
   },
   methods: {
+    toTop() {
+      // window.scrollTo(0, 400);
+      jump("#backMaPage", {
+        duration: 1000,
+        callback: () => console.log("Saut terminé!")
+      });
+    },
     toFoot() {
       // window.scrollTo(0, 400);
       jump(".ancreForm", {

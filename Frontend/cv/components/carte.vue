@@ -73,13 +73,10 @@ export default {
           link: require("../assets/cv400.jpg"),
           link2: require("../assets/cv.jpg"),
           nom: "Maquette Cv",
-          description: `Cv responsive. Ceci est un site fait entiérement en html et css il est optimiser
-           pour mobile.
-           il est le premiet projet concret que j'ai fait dans la formation developpeur web d'openclassroom.
-           Celui ci est une intégration d'apres une maquette fournit qui à été reproduit à la lettre et au
-            graphisme prés.
-           Celui ci récapitule aussi mon parcours professionnel dans le domaine du web.Vous pouvez en voir
-            un aperçu sur mon github page ici :`,
+          description: `Cv Responsive. Ceci est un site fait entièrement en Html et Css il est optimiser
+           pour mobile. Celui-ci est une intégration d'aprés une maquette fournit qui à été reproduit
+            à la lettre et au graphisme prés. Celui-ci récapitule aussi mon parcours professionnel fictif
+             dans le domaine du web. Vous pouvez en voir un aperçu sur mon GitHub page ici :`,
           url: "https://gerald1983.github.io/moncv/"
         },
         {
@@ -87,10 +84,9 @@ export default {
           link: require("../assets/resto400.jpg"),
           link2: require("../assets/resto.jpg"),
           nom: "Oh My Food",
-          description: `Projet oh my food restaurant.
-          Ceci est un rendu d'une maquette faite en HTML Css et du préprocesseur Saas.
+          description: `Projet Oh My Food restaurant.
+          Ceci est un rendu d'une maquette faite en HTML CSS et du Préprocesseur Saas.
           Une reproduction et version MVP de réservation de restaurants.
-          il a été réaliser dans le cadre du projet 3 du parcours Openclassroom.
           Il dispose de petites animations et de l'utilisation de police en conformité avec la maquette
           fournit et des spécifications demandées par le projet.
           Vous découvrirez l'intégralité de mon travail à cette adresse Git Page: `,
@@ -101,10 +97,10 @@ export default {
           link: require("../assets/site4001.jpg"),
           link2: require("../assets/site1.jpg"),
           nom: "Projet Site Perso",
-          description: `Mon portfolio cette maquette a été entiérement réaliser par mes soins de sa conception graphique ,
-           jusqu' à son développement.
-           Il a été conçu en Vue.js avec le framework Nuxt.js ,
-          un backend à également été réaliser en Node.js et Express avec une base de donnée SQL sécurisée`,
+          description: `Mon portfolio cette maquette a été entièrement réalisée par mes soins
+          de sa Conception graphique ,jusqu'à son développement.
+          Il a été conçu en Vue.js avec le Framework Nuxt.js ,
+          un Backend a également été réaliser en Node.js et Express avec une base de données SQL sécurisée.`,
           url: "#"
         },
         {
@@ -112,13 +108,13 @@ export default {
           link: require("../assets/chouette400.jpg"),
           link2: require("../assets/agence.jpg"),
           nom: "Agence Web",
-          description: `Amelioration site la chouette agence, Seo optimisation.
-          Ceci est le site chouette agence après optimisation des Seo des graphismes
-          des différentes erreur et bug sur la plate-forme.
-          Ceci a été revu grace à des outils comme Gt metirx et bien d'autres applications en ligne.
+          description: `Amélioration site la chouette agence, SEO optimisation.
+          Ceci est le site chouette agence après optimisation des SEO des graphismes
+          des différentes erreurs et Bug sur la plateforme.
+          Ceci a été revu grâce à des outils comme Gt Metrix ou bien d'autres applications en ligne.
           Le code a été revu et accompagné d'une liste de recommandations avant son optimisation
           et d'un rapport après la mise en oeuvre de celle-ci.
-          Vous pouvez découvrir l'application revue à cette adresse git hub Page`,
+          Vous pouvez découvrir l'application revue à cette adresse Git Hub Page :`,
           url: "https://gerald1983.github.io/chouette-modifier/"
         },
         {
@@ -126,12 +122,11 @@ export default {
           link: require("../assets/orinoco400.jpg"),
           link2: require("../assets/orinoco2.jpg"),
           nom: "E-commerce Orinoco",
-          description: `Site E-commerce Orinoco version Mvp.
+          description: `Site E-commerce Orinoco version MVP.
           Ceci est l'application e-commerce front-end réaliser par mes soins à l'aide
-          du Framework bootstrap et en Javascript vanilla.
+          du Framework Bootstrap et en JavaScript Vanilla.
           Le code est commenté et utilise des promises en requête Ajax sous forme de fonction.
-          Ce projet a été fait dans le cadre du projet 5 d'Openclassrooms.
-          Le backend été fourni ainsi que les informations et les différentes données affichaient en front-end.`,
+          Le Backend était fourni ainsi que les informations et les différentes données affichaient en front-end.`,
           url: "https://github.com/GERALD1983/FrontEndP5"
         },
         {
@@ -139,13 +134,12 @@ export default {
           link: require("../assets/sauce400.jpg"),
           link2: require("../assets/sauce400.jpg"),
           nom: "Critique Gastronomique",
-          description: `Backend projet6 api d'ajout de vos sauces, likes et dislikes.
-          Ceci est une application de critique gastronomique pour une agence de sauces Sopekocko
+          description: `Backend API d'ajout de vos sauces, Likes et DisLikes.
+          Ceci est une application de Critiques Gastronomique pour une agence de sauces Sopekocko
           le côté front-end était ici déjà fourni.
-          Ici j'ai donc réalisé le back end de l'application en Api rest avec Nodejs et Express.
+          Ici j'ai donc réalisé le Backend de l'application en Api Rest avec Nodejs et Express.
           Les règles de sécurité Owasp ont été également mis en place afin de sécuriser
-          l'application et la navigation de l'utilisateur.
-          Ce projet a été réalisé dans le cadre du projet 6 d'openclassroom.`,
+          l'application et la navigation de l'utilisateur.`,
           url: "https://github.com/GERALD1983/Projet6_SoPekocko"
         },
         {
@@ -153,16 +147,14 @@ export default {
           link: require("../assets/groupomania400.jpg"),
           link2: require("../assets/groupomania.jpg"),
           nom: "Réseau social",
-          description: `Conception Backend et Frontend
-          en base de donnee Mysql pour le projet Groupomania.
-          Ceci est le dernier projet de ma formation où j'ai développé entièrement
-          l'application d'A à Z du Back au Front.
-          Ce site à été réalisé en Node Js Express avec une api rest et les
-          règles de sécurité Owasp en Back-end.
-          Pour ce qui du Front-END les techniques utilisés sont: boostrap HTML Css et Vue .js.
+          description: `Conception Backend et Frontend en base de données Mysql pour le projet Groupomania.
+          Développé entièrement de A à Z du Back au Front.
+          Ce site a été réalisé en Node Js Express avec une Api Rest et les
+          règles de sécurité Owasp en Backend.
+          Pour ce qui du Frontend les techniques utilisées sont: Boostrap, Html, Css et Vue.js.
           Le projet Groupomania est un réseau social d'entreprise qui permet de partager
           des postes textes, vidéos, images.
-          Un admin peut également modérer le site, l'utilisateur peut modifier ou supprimer son profil.`,
+          Un Admin peut également modérer le site, l'utilisateur peut modifier ou supprimer son profil.`,
           url: "https://github.com/GERALD1983/Projet7_Reseau_social_entreprise"
         }
       ]

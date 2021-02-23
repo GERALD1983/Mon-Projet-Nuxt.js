@@ -118,7 +118,7 @@ export default {
         {
           titre: "Javascript",
           link: require("../assets/js.png"),
-          nom: "Mes compétences en Javascript",
+          nom: "Mes compétences en JavaScript",
           description1: "Gérer des événements JavaScript.",
           description2: "Interagir avec un web service avec JavaScript.",
           description3:
@@ -130,7 +130,7 @@ export default {
           nom: "Mes compétences en Json",
           description1: "Manipuler des données au format Json",
           description2:
-            "Convertir des données Json en Javascript et inversement",
+            "Convertir des données Json en JavaScript et inversement",
           description3: "Interagir avec un objet Json."
         },
         {
@@ -157,7 +157,7 @@ export default {
           link: require("../assets/npm.png"),
           nom: "Mes compétences en Npm",
           description1: "Utiliser Npm à l'aide d'un terminal de commande.",
-          description2: "Installer les différents packages Npm en ligne.",
+          description2: "Installer les différents Packages Npm en ligne.",
           description3: "Intégrer les dépendances Npm à l'application."
         },
         {
@@ -194,7 +194,8 @@ export default {
           nom: "Mes compétences en MongoDb",
           description1:
             "Stocker des données de manière sécurisée dans MongoDb.",
-          description2: "Gérer une base de donnée MongoDb et ses utilisateurs.",
+          description2:
+            "Gérer une base de données MongoDb et ses utilisateurs.",
           description3:
             "Utiliser Mongoose et modéliser des objets MongoDb pour Node.js."
         },
@@ -206,7 +207,7 @@ export default {
           description2:
             "Structurer l'arbre Git et garder les branches propres.",
           description3:
-            "Initialiser , commiter gérer les problémes de conflit sur Git"
+            "Initialiser , Commiter et gérer les problèmes de conflit sur Git"
         },
         {
           titre: "GitHub",
@@ -214,7 +215,7 @@ export default {
           nom: "Mes compétences en GitHub",
           description1: "Gérer plusieurs versions sur GitHub",
           description2: "Envoyer et héberger une application sur GitHub.",
-          description3: "Collaborer grâce à GitHub en utilisant les workflows."
+          description3: "Collaborer grâce à GitHub en utilisant les Workflows."
         },
         {
           titre: "Gimp",
@@ -222,15 +223,15 @@ export default {
           nom: "Mes compétences en Gimp",
           description1: "Intégrer une maquette et en saisir le contenu",
           description2:
-            "Revoir différents aspect d'une maquette taille , couleurs",
+            "Revoir différents aspects d'une maquette taille , couleurs",
           description3:
-            "Concevoir différents modéle de base images, banniéres, logos, textes."
+            "Concevoir différents modèles de base images, bannières, logos, textes."
         },
         {
           titre: "Node.js",
           link: require("../assets/node.png"),
           nom: "Mes compétences en Node.js",
-          description1: "Créer une API REST avec Node.js en modéle MVC.",
+          description1: "Créer une API REST avec Node.js en modèle MVC.",
           description2: "Concevoir des applications évolutives avec Node.js.",
           description3:
             "Réaliser toute une structure Backend fonctionnelle avec Node.js."
@@ -241,7 +242,7 @@ export default {
           nom: "Mes compétences en Ligne de Commande",
           description1: "Utiliser les commandes de base d'un terminal.",
           description2: "Manipuler des fichiers avec un terminal.",
-          description3: "Ajouter des packages et naviguer depuis un terminal."
+          description3: "Ajouter des Packages et naviguer depuis un terminal."
         },
         {
           titre: "Postman",
@@ -261,7 +262,7 @@ export default {
           description2:
             "Mettre en place un système d'authentification sur une application Express.",
           description3:
-            "Gérer des fichiers utilisateur sur une application Express."
+            "Gérer des fichiers utilisateurs sur une application Express."
         }
       ]
     };

@@ -5,13 +5,13 @@
         <b-form-group
           class="invisible largInput"
           id="boxC"
-          label="Email address:"
+          label="Email:"
           label-for="input-1"
         >
           <b-form-input
             id="input-1"
             type="email"
-            placeholder="Enter email"
+            placeholder="Entrer Email"
             required
             v-model.trim="$v.email.$model"
           ></b-form-input>
@@ -19,7 +19,7 @@
             class="error"
             v-if="!$v.email.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.email.email">
             écrire un email valide ex: marty@hotmail.com
@@ -32,12 +32,12 @@
         <b-form-group
           class=" invisible largInput"
           id="boxE"
-          label="Your Name:"
+          label="Votre Nom:"
           label-for="input-2"
         >
           <b-form-input
             id="input-2"
-            placeholder="Enter name"
+            placeholder="Entrer Nom"
             required
             v-model.trim="$v.nom.$model"
           ></b-form-input>
@@ -45,7 +45,7 @@
             class="error"
             v-if="!$v.nom.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.nom.strongNom">
             Ecrire un nom sans charactére spéciaux .Max 70 letrs. Merci!
@@ -63,14 +63,14 @@
             id="input-4"
             v-model.trim="$v.message.$model"
             type="text-area"
-            placeholder="Enter Message"
+            placeholder="Entrer Message"
             required
           ></b-form-textarea>
           <div
             class="error"
             v-if="!$v.message.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.message.strongMessage">
             Ecrire un message sans charactére spéciaux .Max 250 letrs. Merci!
@@ -80,20 +80,20 @@
         <b-form-group
           class="invisible largInput"
           id="boxF"
-          label="Your Phone:"
+          label="Votre Téléphone:"
           label-for="input-5"
         >
           <b-form-input
             id="input-5"
             v-model.trim="$v.phone.$model"
-            placeholder="Enter phone"
+            placeholder="Entrer Numéro"
             required
           ></b-form-input>
           <div
             class="error"
             v-if="!$v.phone.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.phone.numeric">
             Ecrire des chiffres sans espace sans charactére spéciaux Merci!
@@ -115,19 +115,19 @@
           class="lienSouris cursorNone invisible text-secondary colorSubmit"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
-          >Submit</b-button
+          >Envoyer</b-button
         >
       </div>
       <div>
         <p class="typo__p" v-if="submitStatus === 'OK'">
-          Thanks for your submission!
+          Merci pour votre envoi !
         </p>
         <p class="typo__p" v-if="submitStatus === 'ERROR'">
-          Please fill the form correctly.
+          Svp Entrez votre formulaire correctement.
         </p>
         <p class="typo__p" v-if="submitStatus === 'ERROR SERVEUR'">
-          erreur serveur:Le mot de passe ou l'email ne correponde pas OU server
-          HS !
+          Erreur Serveur: Chemin Https doit être utilisée pour l'envoi OU
+          Serveur HS !
         </p>
         <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
 
@@ -160,7 +160,7 @@ export default {
     };
   },
   validations: {
-    email: { required, email, maxLength: 70 },
+    email: { required, email, maxLength: maxLength(70) },
     nom: {
       required,
       strongNom(nom) {
@@ -186,7 +186,7 @@ export default {
         );
       }
     },
-    phone: { required, numeric, maxLength: 20 }
+    phone: { required, numeric, maxLength: maxLength(20) }
   },
   mounted() {
     const boxC = document.getElementById("boxC");

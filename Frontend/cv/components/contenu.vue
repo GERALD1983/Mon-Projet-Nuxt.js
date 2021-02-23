@@ -16,11 +16,11 @@
           Mes Objectifs
         </h2>
       </div>
-      <div class="row mobileCube3DBottom">
+      <div class="mx-0 row mobileCube3DBottom">
         <div
           class="col-8 bgSecondary backParagrapheSize bordureDivD d-flex justify-content-center align-items-center paragraphe mobileParagraphe mobileParagraphe550"
         >
-          <div class="col-md-8">
+          <div class="my-5 col-md-8">
             <h4
               class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif invisible paratop1 text-white "
             >
@@ -32,7 +32,7 @@
               class=" d-flex justify-content-center align-items-center mobileFont pt-3 objectif invisible paratop2 text-white"
             >
               "Mes objectifs sont d'accomplir vos projets en intégrant les
-              derniéres technologies digitales, pour un rendu de qualité , du
+              dernières technologies numériques, pour un rendu de qualité , du
               travail bien fait , un service optimisé. "
             </h4>
           </div>
@@ -52,46 +52,49 @@
           id="textPop"
           class="lienSouris backPopMobile d-flex justify-content-center align-items-center  invisible my-5"
         >
-          Quelles sont mes offres ?
+          Quelles sont mes Offres ?
         </h2>
       </div>
-      <div class="row mobileCube3DBottomReverse">
+      <div class="mx-0 row mobileCube3DBottomReverse">
         <div class="col-md-4 d-flex justify-content-center align-items-center">
           <Cube />
         </div>
         <div
           class="col-8 ml-auto d-flex justify-content-center align-items-center backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe mobileParagraphe2 mobileParagraphe550"
         >
-          <div class=" col-sm-9 col-md-12 col-lg-12">
+          <div class="my-5 col-sm-9 col-md-12 col-lg-12">
             <h5 class="text-white pt-3">
               <ul id="liste" class=" invisible">
                 <li class="ecranFontparagraphe mobileFontpara">
-                  - Vous avez un projet : création de plate-forme e-commerce
+                  - Vous avez un projet : création de plateforme E-commerce.
                 </li>
                 <br />
                 <li class="ecranFontparagraphe mobileFontpara">
-                  - Vous rêvez d'avoir votre propre réseau social et marquer
-                  l'histoire
+                  - Vous rêvez d'avoir votre propre Réseau social et marquer
+                  l'histoire.
                 </li>
                 <br />
                 <li class="ecranFontparagraphe mobileFontpara">
-                  - Vous aspirez à faire valoir votre savoir-faire
+                  - Vous aspirez à faire valoir votre Savoir-faire.
                 </li>
                 <br />
                 <li class="ecranFontparagraphe mobileFontpara">
-                  - Vous voulez développer votre entreprise
+                  - Vous voulez développer votre Entreprise.
                 </li>
                 <br />
                 <li class="ecranFontparagraphe mobileFontpara">
-                  - Où simplement afficher votre présence dans le monde digitale
+                  - Où simplement afficher votre présence dans le monde
+                  Numérique.
                 </li>
               </ul>
             </h5>
+
             <h4
+              @click="toFoot"
               id="liste2"
-              class="mobileFontpara invisible text-white pt-3 mobileStopPadTop"
+              class="lienSouris mobileFontpara invisible phraseContact pt-3 mobileStopPadTop"
             >
-              Mes services sont à votre disposition n'hésitez pas à me contacter
+              Mes services sont à votre disposition n'hésitez pas à me Contacter
               !
             </h4>
           </div>
@@ -104,7 +107,7 @@
         id="titreProjet"
         class="mobileCompetenceTitre lienSouris invisible mb-0 pb-5 pt-5"
       >
-        Mes projets
+        Mes Projets
       </h2>
     </div>
     <div id="carte" class="mb-5 invisible">
@@ -114,6 +117,7 @@
 </template>
 
 <script>
+import jump from "jump.js";
 import Competences from "./competences.vue";
 import Carte from "./carte.vue";
 export default {
@@ -206,11 +210,23 @@ export default {
         carte.classList.add("para3");
       }
     });
+  },
+  methods: {
+    toFoot() {
+      // window.scrollTo(0, 400);
+      jump(".ancreForm", {
+        duration: 1000,
+        callback: () => console.log("Saut terminé!")
+      });
+    }
   }
 };
 </script>
 
 <style>
+.phraseContact {
+  color: #ffdea4;
+}
 ul {
   list-style: none;
 }
@@ -235,7 +251,7 @@ li {
 @keyframes boxt {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    transform: translateX(100%);
   }
   100% {
     opacity: 1;
@@ -244,7 +260,7 @@ li {
 @keyframes boxb {
   0% {
     opacity: 0;
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
   100% {
     opacity: 1;
@@ -253,7 +269,7 @@ li {
 @keyframes para1 {
   0% {
     opacity: 0;
-    transform: translateY(-200%);
+    transform: translateY(-100%);
   }
   100% {
     visibility: hidden;
@@ -263,7 +279,7 @@ li {
 @keyframes para2 {
   0% {
     opacity: 0;
-    transform: translateY(200%);
+    transform: translateY(100%);
   }
   100% {
     visibility: hidden;
