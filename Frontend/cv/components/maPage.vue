@@ -52,7 +52,7 @@
                 </div>
                 <div id="dialogue2">
                   <span>
-                    je suis Développeur web Fullstack Javascript .
+                    je suis Développeur Web Fullstack JavaScript .
                   </span>
                 </div>
 
@@ -86,7 +86,7 @@ export default {
     return {
       messages: [
         "Développeur Web",
-        "Spécialisé en javascript",
+        "Spécialisé en JavaScript",
         "Développeur Frontend Vue.js",
         "Développeur Backend Node.js",
         "Intégrateur Prestashop",
