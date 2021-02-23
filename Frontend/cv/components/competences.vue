@@ -3,7 +3,9 @@
     <div class="d-flex justify-content-center align-items-center">
       <h2
         id="competence"
-        class="mobileCompetenceTitre lienSouris invisible py-5"
+        class="mobileCompetenceTitre lienSouris aos-item py-5"
+        data-aos="fade-left"
+        data-aos-duration="2000"
       >
         Mes Compétences
       </h2>
@@ -11,11 +13,15 @@
     <div class="d-flex justify-content-center">
       <div
         id="animBack"
-        class="col-md-8 bordureCercleSkill backSkillSize mobileCercleSkill mobileBackSkillSize invisible d-flex justify-content-center align-items-center"
+        class="col-md-8 bgTree bordureCercleSkill backSkillSize mobileCercleSkill mobileBackSkillSize aos-item d-flex justify-content-center align-items-center"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       >
         <div
           id="animLogos"
-          class="invisible backLogos col-md-8 col-lg-8 d-flex flex-wrap justify-content-around align-items-center "
+          class="aos-item backLogos col-md-8 col-lg-8 d-flex flex-wrap justify-content-around align-items-center "
+          data-aos="fade"
+          data-aos-duration="2000"
         >
           <div v-for="(image, index) in images" :key="index">
             <img
@@ -268,6 +274,7 @@ export default {
     };
   },
   mounted() {
+    /*
     const competence = document.getElementById("competence");
     const back = document.getElementById("animBack");
     const logos = document.getElementById("animLogos");
@@ -286,6 +293,7 @@ export default {
         logos.classList.add("logos");
       }
     });
+    */
   },
   methods: {
     readSkill: function(image) {
@@ -321,6 +329,7 @@ export default {
       const backMod = document.getElementById("animModal");
       const logos = document.getElementById("animLogos");
       logos.classList.remove("efface");
+      logos.classList.add("logos");
       //logos.classList.remove("logos");
 
       backMod.classList.add("efface");

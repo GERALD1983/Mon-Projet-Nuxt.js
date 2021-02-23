@@ -2,7 +2,12 @@
   <div id="footer" class="ancreForm bg-white ">
     <div class="backFooter foot mobileFootHeight">
       <div>
-        <h3 id="contact" class=" invisible text-light pt-5 pb-3">
+        <h3
+          id="contact"
+          class=" aos-item text-light pt-5 pb-3"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           Contact
         </h3>
       </div>
@@ -10,7 +15,9 @@
       <div class="mb-5 mt-3 d-flex justify-content-center ">
         <div
           id="logosReseaux"
-          class="invisible larg50 d-flex justify-content-between"
+          class="aos-item larg50 d-flex justify-content-between"
+          data-aos="fade-down"
+          data-aos-duration="2000"
         >
           <b-icon
             @click="clickFacebook"
@@ -40,16 +47,49 @@
       </div>
       <div class=" mobileFoot d-flex justify-content-around">
         <div class="d-flex flex-column justify-content-center text-light">
-          <h5 id="boxK" class="invisible">
+          <h5
+            id="boxK"
+            class="aos-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <b-icon icon="house-door-fill"></b-icon> Adresse :
           </h5>
-          <p id="boxJ" class="invisible">3 rue de la gare</p>
-          <p id="boxI" class="invisible">REDANGE 57390</p>
-          <p id="boxH" class="invisible">
+          <p
+            id="boxJ"
+            class="aos-item"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            data-aos-anchor="#boxK"
+          >
+            3 rue de la gare
+          </p>
+          <p
+            id="boxI"
+            class="aos-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-anchor="#boxK"
+          >
+            REDANGE 57390
+          </p>
+          <p
+            id="boxH"
+            class="aos-item"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            data-aos-anchor="#boxK"
+          >
             <b-icon class="mr-2" icon="telephone-plus"></b-icon> Tel: 03 82 52
             26 42
           </p>
-          <p id="boxG" class="invisible">
+          <p
+            id="boxG"
+            class="aos-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-anchor="#boxK"
+          >
             <b-icon class="mr-2" icon="mailbox"></b-icon> Mail:
             ferron-gerald@outlook.fr
           </p>
@@ -79,6 +119,7 @@ export default {
   },
 
   mounted() {
+    /*
     const contact = document.getElementById("contact");
     const logos = document.getElementById("logosReseaux");
     const boxK = document.getElementById("boxK");
@@ -114,6 +155,7 @@ export default {
         boxG.classList.add("boxG");
       }
     });
+    */
   },
   methods: {
     clickGit() {
