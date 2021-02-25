@@ -5,7 +5,7 @@
         width="300px"
         height="300px"
         class=" mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
-        src="../assets/moi350.jpg"
+        src="../assets/moi300.jpg"
         alt="photo profil développeur web"
       />
     </div>
@@ -15,10 +15,10 @@
         <h2
           id="objectif"
           class="lienSouris objectif aos-item nonvis py-5"
-          data-aos="fade-left"
+          data-aos="zoom-in"
           data-aos-duration="2000"
         >
-          Mes Objectifs
+          Objectifs
         </h2>
       </div>
       <div class="mx-0 row mobileCube3DBottom">
@@ -28,7 +28,7 @@
           <div class="my-5 col-md-8">
             <h4
               class="d-flex justify-content-center align-items-center mobileFont pb-3 objectif aos-item paratop1 text-white "
-              data-aos="fade-down"
+              data-aos="fade-up"
               data-aos-duration="2000"
             >
               " Je m'appelle Gérald Ferron je suis développeur d'applications
@@ -40,12 +40,13 @@
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              "Mes objectifs sont d'accomplir vos projets en intégrant les
+              "Les objectifs sont d'accomplir vos projets en intégrant les
               dernières technologies numériques, pour un rendu de qualité , du
               travail bien fait , un service optimisé. "
             </h4>
           </div>
         </div>
+
         <div class="col-md-4 d-flex justify-content-center align-items-center">
           <Cube />
         </div>
@@ -60,16 +61,18 @@
         <h2
           id="textPop"
           class="lienSouris backPopMobile d-flex justify-content-center align-items-center aos-item my-5"
-          data-aos="fade-left"
+          data-aos="zoom-in"
           data-aos-duration="2000"
         >
-          Mes Offres ?
+          Offres ?
         </h2>
       </div>
+
       <div class="mx-0 row mobileCube3DBottomReverse">
         <div class="col-md-4 d-flex justify-content-center align-items-center">
           <Cube />
         </div>
+
         <div
           class="col-8 ml-auto d-flex justify-content-center align-items-center backParagrapheSize bordureDivG bgSecondary paragraphe mobileParagraphe mobileParagraphe2 mobileParagraphe550"
         >
@@ -109,7 +112,7 @@
               @click="toFoot"
               id="liste2"
               class="lienSouris mobileFontpara aos-item phraseContact pt-3 mobileStopPadTop"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-duration="2000"
             >
               Mes services sont à votre disposition n'hésitez pas à me Contacter
@@ -124,12 +127,13 @@
       <h2
         id="titreProjet"
         class="mobileCompetenceTitre lienSouris aos-item mb-0 pb-5 pt-5"
-        data-aos="fade-left"
+        data-aos="zoom-in"
         data-aos-duration="2000"
       >
-        Mes Projets
+        Projets
       </h2>
     </div>
+
     <div
       id="carte"
       class="mb-5 aos-item"

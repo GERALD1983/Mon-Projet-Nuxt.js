@@ -31,7 +31,6 @@ a {
   font-weight: bold;
   color: white;
 }
-
 /*
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",

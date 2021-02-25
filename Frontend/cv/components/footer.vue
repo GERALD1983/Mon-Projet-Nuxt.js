@@ -13,83 +13,71 @@
       </div>
 
       <div class="mb-5 mt-3 d-flex justify-content-center ">
-        <div
-          id="logosReseaux"
-          class="aos-item larg50 d-flex justify-content-between"
-          data-aos="fade-down"
-          data-aos-duration="2000"
-        >
-          <b-icon
-            @click="clickFacebook"
-            class="lienSouris"
-            icon="facebook"
-            font-scale="2"
-          ></b-icon>
-          <b-icon
-            @click="clickGit"
-            class="lienSouris"
-            icon="github"
-            font-scale="2"
-          ></b-icon>
-          <b-icon
-            @click="clickLinkedIn"
-            class="lienSouris"
-            icon="linkedin"
-            font-scale="2"
-          ></b-icon>
-          <b-icon
-            @click="clickTwitter"
-            class="lienSouris"
-            icon="twitter"
-            font-scale="2"
-          ></b-icon>
+        <div id="logosReseaux" class=" larg50 d-flex justify-content-between">
+          <div class="aos-item" data-aos="fade-down" data-aos-duration="2000">
+            <b-icon
+              @click="clickFacebook"
+              class="lienSouris "
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              icon="facebook"
+              font-scale="2"
+            ></b-icon>
+          </div>
+
+          <div class="aos-item" data-aos="fade-down" data-aos-duration="2000">
+            <b-icon
+              @click="clickGit"
+              class="lienSouris "
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              icon="github"
+              font-scale="2"
+            ></b-icon>
+          </div>
+
+          <div class="aos-item" data-aos="fade-down" data-aos-duration="2000">
+            <b-icon
+              @click="clickLinkedIn"
+              class="lienSouris "
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              icon="linkedin"
+              font-scale="2"
+            ></b-icon>
+          </div>
+
+          <div class="aos-item" data-aos="fade-down" data-aos-duration="2000">
+            <b-icon
+              @click="clickTwitter"
+              class="lienSouris"
+              icon="twitter"
+              font-scale="2"
+            ></b-icon>
+          </div>
         </div>
       </div>
       <div class=" mobileFoot d-flex justify-content-around">
-        <div class="d-flex flex-column justify-content-center text-light">
-          <h5
-            id="boxK"
-            class="aos-item"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-          >
-            <b-icon icon="house-door-fill"></b-icon> Adresse :
-          </h5>
-          <p
-            id="boxJ"
-            class="aos-item"
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            data-aos-anchor="#boxK"
-          >
+        <div
+          class="aos-item margBlocAdresseMobile d-flex flex-column justify-content-center text-light"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
+          <h5 id="boxK"><b-icon icon="house-door-fill"></b-icon> Adresse :</h5>
+          <p id="boxJ">
             3 rue de la gare
           </p>
-          <p
-            id="boxI"
-            class="aos-item"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-anchor="#boxK"
-          >
+          <p id="boxI">
             REDANGE 57390
           </p>
-          <p
-            id="boxH"
-            class="aos-item"
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            data-aos-anchor="#boxK"
-          >
-            <b-icon class="mr-2" icon="telephone-plus"></b-icon> Tel: 03 82 52
-            26 42
+          <p id="boxH">
+            <b-icon class="mr-2" icon="telephone-plus"></b-icon> Tel: (+33) 03
+            82 52 26 42
           </p>
-          <p
-            id="boxG"
-            class="aos-item"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-anchor="#boxK"
-          >
+          <p>
+            Bureau: (+33) 09 70 44 46 21
+          </p>
+          <p id="boxG">
             <b-icon class="mr-2" icon="mailbox"></b-icon> Mail:
             ferron-gerald@outlook.fr
           </p>
