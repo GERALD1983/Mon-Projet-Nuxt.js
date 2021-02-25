@@ -11,7 +11,9 @@
           data-aos="flip-up"
           data-aos-duration="1000"
         >
-          <div class="carteMobile my-5 carteSize bordureCarte ombreCarte card ">
+          <div
+            class="carteMobile carteMobile360 my-5 carteSize bordureCarte ombreCarte card "
+          >
             <div @click="insertImage(image)">
               <img
                 width="325px"
@@ -53,7 +55,7 @@
           <img
             id="imageModale"
             class="hautImgModale largImgModaleMob"
-            src="../assets/resto400.jpg"
+            src="../assets/RESTO370.jpg"
             alt="Maquette projet site internet applications web"
           />
         </modale>
@@ -76,46 +78,47 @@ export default {
       images: [
         {
           id: 1,
-          link: require("../assets/cv400.jpg"),
+          link: require("../assets/CV370.jpg"),
           link2: require("../assets/cv.jpg"),
           nom: "Maquette Cv",
-          description: `Cv Responsive. Ceci est un site fait entièrement en Html et Css il est optimiser
-           pour mobile. Celui-ci est une intégration d'aprés une maquette fournit qui à été reproduit
-            à la lettre et au graphisme prés. Celui-ci récapitule aussi mon parcours professionnel fictif
-             dans le domaine du web. Vous pouvez en voir un aperçu sur mon GitHub page ici :`,
+          description: `Cv Responsive. Ceci est un site fait entièrement en Html et Css
+          il est optimisé pour mobile. Celui-ci est une intégration d'après une maquette fournit
+          qui a été reproduit
+          à la lettre et au graphisme prés. Celui-ci récapitule aussi mon parcours professionnel fictif
+          dans le domaine du web. Vous pouvez en voir un aperçu sur mon GitHub page ici :`,
           url: "https://gerald1983.github.io/moncv/"
         },
         {
           id: 2,
-          link: require("../assets/resto400.jpg"),
+          link: require("../assets/RESTO370.jpg"),
           link2: require("../assets/resto.jpg"),
           nom: "Oh My Food",
           description: `Projet Oh My Food restaurant.
           Ceci est un rendu d'une maquette faite en HTML CSS et du Préprocesseur Saas.
-          Une reproduction et version MVP de réservation de restaurants.
+          Une reproduction et une version MVP de réservation de restaurants.
           Il dispose de petites animations et de l'utilisation de police en conformité avec la maquette
           fournit et des spécifications demandées par le projet.
-          Vous découvrirez l'intégralité de mon travail à cette adresse Git Page: `,
+          Vous découvrirez l'intégralité de ce travail à cette adresse Git Page: `,
           url: "https://gerald1983.github.io/PROJET3/"
         },
         {
           id: 3,
-          link: require("../assets/site4001.jpg"),
+          link: require("../assets/SITE370.jpg"),
           link2: require("../assets/site1.jpg"),
           nom: "Projet Site Perso",
-          description: `Mon portfolio cette maquette a été entièrement réalisée par mes soins
-          de sa Conception graphique ,jusqu'à son développement.
+          description: `Portfolio cette maquette a été entièrement réalisée ,
+          de sa Conception graphique , jusqu'à son développement.
           Il a été conçu en Vue.js avec le Framework Nuxt.js ,
           un Backend a également été réaliser en Node.js et Express avec une base de données SQL sécurisée.`,
           url: "#"
         },
         {
           id: 4,
-          link: require("../assets/chouette400.jpg"),
+          link: require("../assets/CHOUETTE370.jpg"),
           link2: require("../assets/agence.jpg"),
           nom: "Agence Web",
-          description: `Amélioration site la chouette agence, SEO optimisation.
-          Ceci est le site chouette agence après optimisation des SEO des graphismes
+          description: `Amélioration site La Chouette Agence, SEO optimisation.
+          Ceci est le site La Chouette Agence après optimisation des SEO des graphismes
           des différentes erreurs et Bug sur la plateforme.
           Ceci a été revu grâce à des outils comme Gt Metrix ou bien d'autres applications en ligne.
           Le code a été revu et accompagné d'une liste de recommandations avant son optimisation
@@ -125,32 +128,32 @@ export default {
         },
         {
           id: 5,
-          link: require("../assets/orinoco400.jpg"),
+          link: require("../assets/ORINOCO370.jpg"),
           link2: require("../assets/orinoco2.jpg"),
           nom: "E-Commerce Orinoco",
           description: `Site E-commerce Orinoco version MVP.
-          Ceci est l'application e-commerce front-end réaliser par mes soins à l'aide
+          Ceci est une application E-Commerce réalisait à l'aide
           du Framework Bootstrap et en JavaScript Vanilla.
           Le code est commenté et utilise des promises en requête Ajax sous forme de fonction.
-          Le Backend était fourni ainsi que les informations et les différentes données affichaient en front-end.`,
+          Le Backend était fourni ainsi que les informations et les différentes données affichaient en Frontend.`,
           url: "https://github.com/GERALD1983/FrontEndP5"
         },
         {
           id: 6,
-          link: require("../assets/sauce400.jpg"),
+          link: require("../assets/SAUCE370.jpg"),
           link2: require("../assets/sauce400.jpg"),
           nom: "Critiques Gastronomique",
           description: `Backend API d'ajout de vos sauces, Likes et DisLikes.
           Ceci est une application de Critiques Gastronomique pour une agence de sauces Sopekocko
-          le côté front-end était ici déjà fourni.
-          Ici j'ai donc réalisé le Backend de l'application en Api Rest avec Nodejs et Express.
+          le côté Frontend était ici déjà fourni.
+          Ici le Backend de l'application a été réalisé en Api Rest avec Nodejs et Express.
           Les règles de sécurité Owasp ont été également mis en place afin de sécuriser
           l'application et la navigation de l'utilisateur.`,
           url: "https://github.com/GERALD1983/Projet6_SoPekocko"
         },
         {
           id: 7,
-          link: require("../assets/groupomania400.jpg"),
+          link: require("../assets/GROUPOMANIA370.jpg"),
           link2: require("../assets/groupomania.jpg"),
           nom: "Réseau Social",
           description: `Conception Backend et Frontend en base de données Mysql pour le projet Groupomania.

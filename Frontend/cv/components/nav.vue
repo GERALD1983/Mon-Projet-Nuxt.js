@@ -6,24 +6,14 @@
     <div @click="toTop" class=" ombreNav">
       <Logo />
     </div>
-    <!--
-    <div class="my-3">
-      <img
-        width="90px"
-        height="60px"
-        class="bg-white bordureLogo"
-        src="../assets/gf3.png"
-        alt="logo développeur gérald ferron"
-      />
-    </div>
-    -->
+
     <div class="mobileNavProjet col-lg-5 px-0 d-flex justify-content-around">
       <div
         @click="toProject"
         class="mobileNavLink30 mobileNavLink70 px-0 ombreNav col-md-4 col-lg-5 bgPrimary bordureLogo d-flex
         align-items-center justify-content-center"
       >
-        <h4 class="lienSouris my-1 ">Mes Projets</h4>
+        <h4 class="lienSouris my-1 ">Projets</h4>
       </div>
       <div
         @click="toFoot"

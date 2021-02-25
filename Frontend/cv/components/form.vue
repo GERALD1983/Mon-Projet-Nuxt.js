@@ -4,7 +4,7 @@
       <div class="text-white d-flex justify-content-around">
         <b-form-group
           class="aos-item largInput"
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="2000"
           id="boxC"
           label="Email:"
@@ -33,7 +33,7 @@
 
         <b-form-group
           class="aos-item largInput"
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="2000"
           id="boxE"
           label="Votre Nom:"
@@ -59,7 +59,7 @@
       <div class="text-white d-flex justify-content-around">
         <b-form-group
           class="aos-item largInput"
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-anchor="#boxC"
           id="boxD"
@@ -86,7 +86,7 @@
 
         <b-form-group
           class="aos-item largInput"
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-anchor="#boxC"
           id="boxF"
@@ -117,7 +117,7 @@
         <b-button
           id="res"
           class="lienSouris cursorNone bgFour btnReset aos-item"
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-anchor="#boxC"
           type="reset"
@@ -126,7 +126,7 @@
         <b-button
           id="sub"
           class="lienSouris cursorNone aos-item text-secondary colorSubmit"
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-duration="2000"
           data-aos-anchor="#boxC"
           type="submit"

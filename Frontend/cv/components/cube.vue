@@ -36,6 +36,7 @@ export default {
   width: 100px;
   height: 100px;
   perspective: 1000px;
+
   margin: 100px auto 100px;
 }
 

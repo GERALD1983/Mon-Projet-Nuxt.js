@@ -48,11 +48,11 @@
                 class="lienSouris dialogueFont text-white d-flex flex-column justify-content-center align-items-center blocapFontMob"
               >
                 <div id="dialogue1">
-                  <span>Hello ! Je m'appelle Gérald, </span>
+                  <span>Hello ! Je m'appelle Gérald , </span>
                 </div>
                 <div id="dialogue2">
                   <span>
-                    je suis Développeur Web Fullstack JavaScript .
+                    Vous voulez développer votre Projet !
                   </span>
                 </div>
 
@@ -71,7 +71,7 @@
           width="360px"
           height="360px"
           class="mobileEffacePhotoMoiG mb-2 mt-3 justify-content-left bordureProfil rounded-circle ombre"
-          src="../assets/moi350.jpg"
+          src="../assets/moi345.jpg"
           alt="photo profil développeur web"
         />
       </div>
@@ -239,28 +239,32 @@ export default {
 <style scoped>
 .dialogueFont {
   font-weight: 900;
+  /*
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  */
+  font-family: "Times New Roman", Times, serif Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 .dialogue1 {
   animation: typing1 3s steps(23, end) forwards, blink 1s infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid white;
-  width: 23ch;
+  width: 24ch;
 }
 .dialogue2 {
   animation: typing2 3s steps(23, end) forwards, blink2 1s infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid white;
-  width: 38ch;
+  width: 32ch;
 }
 .dialogue3 {
   animation: typing3 2s steps(23, end) forwards, blink3 1s infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid white;
-  width: 17ch;
+  width: 16ch;
 }
 .filtreImage {
   filter: sepia(100%);
@@ -387,7 +391,7 @@ export default {
     width: 0ch;
   }
   100% {
-    width: 23ch;
+    width: 25ch;
   }
 }
 @keyframes typing2 {
@@ -395,7 +399,7 @@ export default {
     width: 0ch;
   }
   100% {
-    width: 38ch;
+    width: 32ch;
   }
 }
 @keyframes typing3 {
@@ -403,7 +407,7 @@ export default {
     width: 0ch;
   }
   100% {
-    width: 17ch;
+    width: 16ch;
   }
 }
 @keyframes blink {

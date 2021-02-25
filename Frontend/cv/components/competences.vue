@@ -4,10 +4,10 @@
       <h2
         id="competence"
         class="mobileCompetenceTitre lienSouris aos-item py-5"
-        data-aos="fade-left"
+        data-aos="zoom-in"
         data-aos-duration="2000"
       >
-        Mes Compétences
+        Compétences
       </h2>
     </div>
     <div class="d-flex justify-content-center">
@@ -252,7 +252,7 @@ export default {
         },
         {
           titre: "Postman",
-          link: require("../assets/postman.jpg"),
+          link: require("../assets/postman.png"),
           nom: "Mes compétences avec Postman",
           description1: "Manipuler des API avec l'interface Postman.",
           description2:
@@ -347,7 +347,7 @@ export default {
 }
 .backModal {
   width: 20em;
-  height: 300px;
+  height: 360px;
   border-radius: 25px;
   background-color: white;
 }
@@ -369,23 +369,25 @@ export default {
     opacity: 1;
   }
 }
+/*
 .backSkill {
-  background-image: url("../assets/flux.jpg");
+ 
 
-  animation: rotate-vert-center 2s
-    /*cubic-bezier(0.455, 0.03, 0.515, 0.955) both*/ ease-in-out;
+  animation: rotate-vert-center 2s 
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both ease-in-out;
 }
 
 @keyframes rotate-vert-center {
   0% {
-    /* -webkit-transform: rotateY(0);
-    transform: rotateY(0);*/
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
     opacity: 0;
   }
   100% {
     /*  -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);*/
+    transform: rotateY(360deg);
     opacity: 1;
   }
 }
+*/
 </style>

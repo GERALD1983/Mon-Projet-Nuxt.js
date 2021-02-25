@@ -39,6 +39,7 @@ body {
 }
 .souris {
   width: 3rem;
+
   height: 3rem;
   border: 2px solid #886526;
   border-radius: 50%;
@@ -167,6 +168,14 @@ body {
 
   .mobileBackSlideSize {
     height: 50vh;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .margTitreMobile {
+    margin: 0 !important;
+  }
+  .margBlocAdresseMobile {
+    margin-bottom: 20px;
   }
 
   .mobileEffacePhotoMoiG {
@@ -275,9 +284,6 @@ body {
     justify-content: center !important;
     align-items: center;
   }
-  .margTitreMobile {
-    margin-top: 40px;
-  }
 }
 
 @media screen and (max-width: 450px) {
@@ -300,19 +306,27 @@ body {
     width: 10em !important;
     height: 120px !important;
   }
+  .carteMobile {
+    width: 330px !important;
+    min-height: 430px !important;
+    max-height: auto !important;
+  }
 }
 
 @media screen and (max-width: 380px) {
   .mobileHautImg {
     height: 300px !important;
   }
-  .carteMobile {
-    width: 300px !important;
-    min-height: 430px !important;
-    max-height: auto !important;
-  }
+
   .backPopMobile {
     height: 80px !important;
     border-radius: 4px !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .carteMobile360 {
+    width: 290px !important;
+    min-height: 430px !important;
+    max-height: auto !important;
   }
 }
