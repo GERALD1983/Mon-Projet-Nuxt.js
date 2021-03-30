@@ -273,28 +273,7 @@ export default {
       ]
     };
   },
-  mounted() {
-    /*
-    const competence = document.getElementById("competence");
-    const back = document.getElementById("animBack");
-    const logos = document.getElementById("animLogos");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 700) {
-        competence.classList.remove("invisible");
-        competence.classList.add("boxt");
-      }
-      if (window.scrollY >= 800) {
-        back.classList.remove("invisible");
-        // back.classList.add("backSkill");
-        back.classList.add("bgTree");
-
-        logos.classList.remove("invisible");
-        logos.classList.add("logos");
-      }
-    });
-    */
-  },
+  mounted() {},
   methods: {
     readSkill: function(image) {
       const backMod = document.getElementById("animModal");
@@ -369,25 +348,4 @@ export default {
     opacity: 1;
   }
 }
-/*
-.backSkill {
- 
-
-  animation: rotate-vert-center 2s 
-    cubic-bezier(0.455, 0.03, 0.515, 0.955) both ease-in-out;
-}
-
-@keyframes rotate-vert-center {
-  0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-    opacity: 0;
-  }
-  100% {
-    /*  -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-    opacity: 1;
-  }
-}
-*/
 </style>

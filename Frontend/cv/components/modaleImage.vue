@@ -57,7 +57,6 @@ export default {
   height: 90vh;
   width: 100vh;
   background: white;
-
   position: fixed;
   padding: 50px;
 }

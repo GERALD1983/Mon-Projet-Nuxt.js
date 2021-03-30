@@ -204,41 +204,7 @@ export default {
     },
     phone: { required, numeric, maxLength: maxLength(20) }
   },
-  mounted() {
-    /*
-    const boxC = document.getElementById("boxC");
-    const boxD = document.getElementById("boxD");
-    const boxE = document.getElementById("boxE");
-    const boxF = document.getElementById("boxF");
-    const sub = document.getElementById("sub");
-    const res = document.getElementById("res");
-
-    window.addEventListener("scroll", () => {
-      let scrollValue =
-        (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-
-      if (scrollValue > 0.94) {
-        boxC.classList.remove("invisible");
-        boxC.classList.add("boxC");
-
-        boxD.classList.remove("invisible");
-        boxD.classList.add("boxD");
-
-        boxE.classList.remove("invisible");
-        boxE.classList.add("boxE");
-
-        boxF.classList.remove("invisible");
-        boxF.classList.add("boxF");
-
-        sub.classList.remove("invisible");
-        sub.classList.add("para2");
-
-        res.classList.remove("invisible");
-        res.classList.add("para2");
-      }
-    });
-    */
-  },
+  mounted() {},
   /*
   async created() {
     axios
@@ -260,7 +226,7 @@ export default {
         this.submitStatus = "PENDING";
 
         axios
-          .post("", {
+          .post(process.env.ROUTE, {
             email: this.email,
             nom: this.nom,
             message: this.message,

@@ -1,7 +1,7 @@
 <template>
   <div class=" d-flex justify-content-center ">
     <div
-      class="col-md-8 bgTree bordureBackCarte py-5   stopMargPad d-flex justify-content-around align-items-center "
+      class="col-md-8 bgTree bordureBackCarte py-5 stopMargPad d-flex justify-content-around align-items-center "
     >
       <div class="py-5  d-flex flex-wrap justify-content-around">
         <div
@@ -105,7 +105,7 @@ export default {
           id: 3,
           link: require("../assets/SITE370.jpg"),
           link2: require("../assets/site1.jpg"),
-          nom: "Projet Site Perso",
+          nom: "Portfolio",
           description: `Portfolio cette maquette a été entièrement réalisée ,
           de sa Conception graphique , jusqu'à son développement.
           Il a été conçu en Vue.js avec le Framework Nuxt.js ,
@@ -136,7 +136,7 @@ export default {
           du Framework Bootstrap et en JavaScript Vanilla.
           Le code est commenté et utilise des promises en requête Ajax sous forme de fonction.
           Le Backend était fourni ainsi que les informations et les différentes données affichaient en Frontend.`,
-          url: "https://github.com/GERALD1983/FrontEndP5"
+          url: "https://youtu.be/kq28gLkrigA"
         },
         {
           id: 6,
@@ -149,7 +149,7 @@ export default {
           Ici le Backend de l'application a été réalisé en Api Rest avec Nodejs et Express.
           Les règles de sécurité Owasp ont été également mis en place afin de sécuriser
           l'application et la navigation de l'utilisateur.`,
-          url: "https://github.com/GERALD1983/Projet6_SoPekocko"
+          url: "https://youtu.be/Wno68xjuAe0"
         },
         {
           id: 7,
@@ -165,6 +165,42 @@ export default {
           des postes textes, vidéos, images.
           Un Admin peut également modérer le site, l'utilisateur peut modifier ou supprimer son profil.`,
           url: "https://github.com/GERALD1983/Projet7_Reseau_social_entreprise"
+        },
+        {
+          id: 8,
+          link: require("../assets/audio370.jpg"),
+          link2: require("../assets/audioAcceuil.jpg"),
+          nom: "Audio Prothésiste",
+          description: `Conception d'un Site vitrine d'audiologie pour le projet Audio Conseil.
+          Développé en Front avec Nuxt.js et Vue.js, Node.js pour le Back du formulaire.
+          Méthode Emailing Thunderbird et variables d'environnement. Pour ce qui du Frontend les
+          techniques utilisées sont: Boostrap, Html, Css et Nuxt.js. Le projet est un 
+          Site de présentation d'entreprise dans la vente d'audio prothèses.
+          Intégration d'une API Google Map dans la page Contact. Utilisation de différents
+          Packages Npm et méthode JavaScript Animation fluides en AOS. La maquette est
+          celle d'un Cms totalement re-développer en Nuxt.js avec ajout d'animations
+          et pages dynamiques non présentent dans le Cms.`,
+          url: "https://github.com/GERALD1983/Audio-conseil"
+        },
+        {
+          id: 9,
+          link: require("../assets/opticien370.jpg"),
+          link2: require("../assets/opticien.jpg"),
+          nom: "ValVision",
+          description: `Réalisation d'un Site E-commerce sous PrestaShop pour vente en ligne magasin d'optique.
+          Référencement naturel du site SEO et de chaque produit.
+          Ajout des produits sur le site de chaque catégorie, des marques pour l'ensemble du magasin,
+          gestion des stocks sur le site depuis le BackOffice et depuis le point de vente.
+          Gestion des commandes, des messages avec Thunderbird et depuis le BackOffice.
+          Création des factures des Templates automatisés et ajout des modules et configuration de ceux-ci.
+          Gestion des solutions Prestashop en FrontOffice design, images, ajout d'articles et
+          intégration de tout le site de la société.
+          Achat de nouveaux modules implémentation et gestion de leur intégration.
+          Ce site a été complètement réaliser par mes soins, plus de 1000 produits référencés
+          et 10 catégorie et plus de 50 marques ont été gérées.
+          Ceci m'a permis d'avoir une expertise confirmée en Webmaster et intégration Web et SEO
+          ainsi que le Web Marketing.`,
+          url: "http://www.valvision-optique.com/store/"
         }
       ]
     };

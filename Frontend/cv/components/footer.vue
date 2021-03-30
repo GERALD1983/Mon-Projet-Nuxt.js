@@ -106,45 +106,7 @@ export default {
     };
   },
 
-  mounted() {
-    /*
-    const contact = document.getElementById("contact");
-    const logos = document.getElementById("logosReseaux");
-    const boxK = document.getElementById("boxK");
-    const boxJ = document.getElementById("boxJ");
-    const boxI = document.getElementById("boxI");
-    const boxH = document.getElementById("boxH");
-    const boxG = document.getElementById("boxG");
-
-    window.addEventListener("scroll", () => {
-      let scrollValue =
-        (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-
-      if (scrollValue > 0.94) {
-        contact.classList.remove("invisible");
-        contact.classList.add("para1");
-
-        logos.classList.remove("invisible");
-        logos.classList.add("para1");
-
-        boxK.classList.remove("invisible");
-        boxK.classList.add("boxK");
-
-        boxJ.classList.remove("invisible");
-        boxJ.classList.add("boxJ");
-
-        boxI.classList.remove("invisible");
-        boxI.classList.add("boxI");
-
-        boxH.classList.remove("invisible");
-        boxH.classList.add("boxH");
-
-        boxG.classList.remove("invisible");
-        boxG.classList.add("boxG");
-      }
-    });
-    */
-  },
+  mounted() {},
   methods: {
     clickGit() {
       window.open(`${this.urlGitHub}`);

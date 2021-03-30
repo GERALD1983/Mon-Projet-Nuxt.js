@@ -134,12 +134,7 @@
       </h2>
     </div>
 
-    <div
-      id="carte"
-      class="mb-5 aos-item"
-      data-aos="fade-up"
-      data-aos-duration="2000"
-    >
+    <div id="carte" class="mb-5">
       <Carte />
     </div>
   </div>
@@ -156,92 +151,7 @@ export default {
     Competences,
     Carte
   },
-  mounted() {
-    /*
-    let observer = new IntersectionObserver(
-      function(observables) {
-        observables.forEach(function(observable) {
-          // L'élément devient visible
-          if (observable.intersectionRatio > 0.9) {
-            const element = observable.target;
-
-            element.classList.remove("invisible");
-          }
-        });
-      },
-      {
-        threshold: [0.9],
-      }
-    );
-    let objectifs = document.querySelectorAll(".objectif");
-    objectifs.forEach(function(objectif) {
-      observer.observe(objectif);
-      //objectif.classList.remove("invisible");
-      //objectif.classList.add("boxt");
-    });
-    /*
-    let para11 = document.querySelectorAll(".paratop1");
-    para11.forEach(function(para1) {
-      observer.observe(para1);
-      //para1.classList.remove("invisible");
-      //para1.classList.add("para1");
-    });
-    let para22 = document.querySelectorAll(".paratop2");
-    para22.forEach(function(para2) {
-      observer.observe(para2);
-      //para2.classList.remove("invisible");
-      //para2.classList.add("para2");
-    });
-*/
-    /*
-    const objectif = document.getElementById("objectif");
-    const paratop1 = document.querySelector(".paratop1");
-    const paratop2 = document.querySelector(".paratop2");
-    const textPop = document.getElementById("textPop");
-    const liste = document.getElementById("liste");
-    const liste2 = document.getElementById("liste2");
-    const titProjet = document.getElementById("titreProjet");
-    const carte = document.getElementById("carte");
-
-    window.addEventListener("scroll", () => {
-      let scrollValue =
-        (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-
-      if (window.scrollY >= 0) {
-      }
-      if (window.scrollY > 100) {
-        objectif.classList.remove("invisible");
-        objectif.classList.add("boxt");
-      }
-      if (window.scrollY > 200) {
-        paratop1.classList.remove("invisible");
-        paratop2.classList.remove("invisible");
-        paratop1.classList.add("para1");
-        paratop2.classList.add("para2");
-      }
-      if (window.scrollY > 1400) {
-        textPop.classList.remove("invisible");
-        textPop.classList.add("boxt");
-      }
-      if (window.scrollY > 1550) {
-        liste.classList.remove("invisible");
-        liste.classList.add("para1");
-      }
-      if (window.scrollY > 1700) {
-        liste2.classList.remove("invisible");
-        liste2.classList.add("para2");
-      }
-      if (window.scrollY > 2000) {
-        titProjet.classList.remove("invisible");
-        titProjet.classList.add("boxt");
-      }
-      if (window.scrollY > 2200) {
-        carte.classList.remove("invisible");
-        carte.classList.add("para3");
-      }
-    });
-    */
-  },
+  mounted() {},
   methods: {
     toFoot() {
       // window.scrollTo(0, 400);
