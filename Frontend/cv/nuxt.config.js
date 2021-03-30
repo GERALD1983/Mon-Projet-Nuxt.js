@@ -1,7 +1,13 @@
 export default {
   target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
-
+  render: {
+    // Setting up cache for 'static' directory - a year in milliseconds
+    // https://web.dev/uses-long-cache-ttl
+    static: {
+      Cache: { maxage: 31536000 }
+    }
+  },
   head: {
     title: "Développeur Web Gérald Ferron",
     htmlAttrs: {
@@ -40,6 +46,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@nuxtjs/dotenv",
     // https://go.nuxtjs.dev/bootstrap
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
