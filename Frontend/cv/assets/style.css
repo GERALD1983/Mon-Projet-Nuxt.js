@@ -12,11 +12,9 @@
 }
 
 /* hauteur */
-.slider {
-  height: 500px;
-}
+
 .paragraphe {
-  height: 400px;
+  height: 450px;
 }
 .foot {
   height: auto;
@@ -32,45 +30,111 @@
 .largInput {
   width: 40%;
 }
+/* souris */
+body {
+  cursor: none !important;
+}
+.cursorNone {
+  cursor: none !important;
+}
+.souris {
+  width: 3rem;
 
-/* cube */
-.cube {
-  width: 80px;
-  height: 80px;
+  height: 3rem;
+  border: 2px solid #886526;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 101 !important;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  backdrop-filter: sepia(70%);
+
+  transition: all 0.5s ease;
+  transition-property: background, transform;
+}
+.linkGrow {
+  transform: scale(1.5) translate(-25%, -25%) !important;
+  background: #886526 !important;
+  opacity: 0.8 !important;
+  z-index: 101 !important;
+}
+.hoveredLink {
+  color: white !important;
+
+  transition: 0.3s ease-in-out !important;
+  z-index: 9998 !important;
+}
+.hoveredLien {
+  background-color: black !important;
+  color: #ffdea4 !important;
+  transition: 0.3s ease-in-out !important;
+  z-index: 9999 !important ;
 }
 
 /* bordure */
 
 .bordureProfil {
-  border: 3mm ridge#a6b622ff;
+  border: 2mm ridge #ffdea4;
+}
+.bordureDivG {
+  border-radius: 20px 0 0 20px;
+}
+.bordureDivD {
+  border-radius: 0 20px 20px 0;
+}
+.bordureCercleSkill {
+  border-radius: 50%;
+}
+.bordureBackCarte {
+  width: auto;
+  border-radius: 25px;
+}
+/* back */
+.backParagrapheSize {
+  min-height: 400px;
 }
 
-/* back */
-
 .backSkillSize {
-  height: 500px;
-  width: 100%;
   background-size: 100% 100%;
+  height: 500px;
 }
 
 .backSlideSize {
-  height: 550px;
+  height: 100vh;
   width: 100%;
   background-size: 100% 100%;
 }
 
 /* COLOR */
+.bgFourOpac {
+  background-color: rgba(136, 101, 38, 0.7);
+}
+.bgPrimary {
+  background-color: #fffbf4;
+}
+.bgSecondary {
+  background-color: #909090;
+}
+.bgTree {
+  background-color: #ffdea4;
+}
+.bgFour {
+  background-color: #886526;
+}
 .backFooter {
-  background-color: #748928ff;
+  background-color: #909090;
 }
 .btnCarte {
-  background-color: #748928ff;
+  background-color: #886526;
 }
 .textSlide {
   color: #404020;
 }
 .colorSubmit {
-  background-color: #2c3e50;
+  background-color: #ffdea4;
+}
+.colorSubmit:hover {
+  color: #ffdea4 !important;
 }
 /* divers */
 
@@ -79,24 +143,56 @@
 }
 
 /*  media queries */
+
+@media screen and (max-width: 1100px) {
+  .ecranFontparagraphe {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 770px) {
+  .displayBlock {
+    display: block;
+  }
+  .mobileNavLink30 {
+    width: 30%;
+    border: none !important;
+  }
+
   .tailleModaleProjMob {
     width: 100% !important;
   }
   .backModalCompMobile {
     height: auto !important;
   }
+
   .mobileBackSlideSize {
-    height: 400px;
+    height: 50vh;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .margTitreMobile {
+    margin: 0 !important;
+  }
+  .margBlocAdresseMobile {
+    margin-bottom: 20px;
+  }
+
+  .mobileEffacePhotoMoiG {
+    display: none;
   }
   .mobileBackSize {
     width: 14em !important;
     font-size: 30px;
   }
+  .mobileCercleSkill {
+    border-radius: 0;
+  }
   .mobileSizeIcon {
     height: 30px;
     width: 30px;
   }
+
   .mobileFoot {
     flex-direction: column;
     align-items: center;
@@ -105,26 +201,68 @@
     width: 100%;
   }
   .mobileFootHeight {
+    min-height: 660px;
     height: auto;
   }
   .mobileMargTitre {
     margin-top: 0 !important;
   }
   .mobileParagraphe {
-    height: 550px !important;
+    height: 600px !important;
   }
   .mobileDernierCompMod {
     margin-bottom: 1.5em;
   }
+  .supprimDialPhotoMob {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mobileCube3DBottomReverse {
+    flex-direction: column-reverse !important;
+  }
+  .mobileCompetenceTitre {
+    padding-top: 0 !important;
+  }
+  .mobileProjetTitre {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media screen and (max-width: 650px) {
+  .mobileCube3DBottom {
+    flex-direction: column;
+  }
+
+  .mobileFontpara {
+    font-size: 20px !important;
+  }
+  .mobileNavSize {
+    height: 150px !important;
+  }
+
+  .mobileNavProjet {
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: center;
+  }
   .mobileParagraphe2 {
-    height: 530px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 550px) {
+  .mobileParagraphe550 {
+    height: 680px !important;
+  }
+  .mobileNavLink70 {
+    width: 80%;
+  }
+
   .largImgModaleMob {
     width: 100% !important;
   }
@@ -145,9 +283,6 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center;
-  }
-  .margTitreMobile {
-    margin-top: 40px;
   }
 }
 
@@ -171,14 +306,27 @@
     width: 10em !important;
     height: 120px !important;
   }
+  .carteMobile {
+    width: 330px !important;
+    min-height: 430px !important;
+    max-height: auto !important;
+  }
 }
 
 @media screen and (max-width: 380px) {
+  .mobileHautImg {
+    height: 300px !important;
+  }
+
   .backPopMobile {
     height: 80px !important;
     border-radius: 4px !important;
   }
-  .supprimDialPhotoMob {
-    display: none !important;
+}
+@media screen and (max-width: 360px) {
+  .carteMobile360 {
+    width: 290px !important;
+    min-height: 430px !important;
+    max-height: auto !important;
   }
 }

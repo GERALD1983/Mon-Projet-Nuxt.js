@@ -3,15 +3,17 @@
     <b-form @submit.prevent="submit" @reset="onReset" v-if="show">
       <div class="text-white d-flex justify-content-around">
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-down"
+          data-aos-duration="2000"
           id="boxC"
-          label="Email address:"
+          label="Email:"
           label-for="input-1"
         >
           <b-form-input
             id="input-1"
             type="email"
-            placeholder="Enter email"
+            placeholder="Entrer Email"
             required
             v-model.trim="$v.email.$model"
           ></b-form-input>
@@ -19,7 +21,7 @@
             class="error"
             v-if="!$v.email.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.email.email">
             écrire un email valide ex: marty@hotmail.com
@@ -30,14 +32,16 @@
         </b-form-group>
 
         <b-form-group
-          class=" invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-down"
+          data-aos-duration="2000"
           id="boxE"
-          label="Your Name:"
+          label="Votre Nom:"
           label-for="input-2"
         >
           <b-form-input
             id="input-2"
-            placeholder="Enter name"
+            placeholder="Entrer Nom"
             required
             v-model.trim="$v.nom.$model"
           ></b-form-input>
@@ -45,7 +49,7 @@
             class="error"
             v-if="!$v.nom.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.nom.strongNom">
             Ecrire un nom sans charactére spéciaux .Max 70 letrs. Merci!
@@ -54,7 +58,10 @@
       </div>
       <div class="text-white d-flex justify-content-around">
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           id="boxD"
           label="Message:"
           label-for="input-4"
@@ -63,14 +70,14 @@
             id="input-4"
             v-model.trim="$v.message.$model"
             type="text-area"
-            placeholder="Enter Message"
+            placeholder="Entrer Message"
             required
           ></b-form-textarea>
           <div
             class="error"
             v-if="!$v.message.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.message.strongMessage">
             Ecrire un message sans charactére spéciaux .Max 250 letrs. Merci!
@@ -78,22 +85,25 @@
         </b-form-group>
 
         <b-form-group
-          class="invisible largInput"
+          class="aos-item largInput"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           id="boxF"
-          label="Your Phone:"
+          label="Votre Téléphone:"
           label-for="input-5"
         >
           <b-form-input
             id="input-5"
             v-model.trim="$v.phone.$model"
-            placeholder="Enter phone"
+            placeholder="Entrer Numéro"
             required
           ></b-form-input>
           <div
             class="error"
             v-if="!$v.phone.required && submitStatus === 'ERROR'"
           >
-            Field is required
+            Champ requis
           </div>
           <div class="error" v-if="!$v.phone.numeric">
             Ecrire des chiffres sans espace sans charactére spéciaux Merci!
@@ -105,26 +115,35 @@
       </div>
       <div class="d-flex justify-content-around">
         <b-button
+          id="res"
+          class="lienSouris cursorNone bgFour btnReset aos-item"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
+          type="reset"
+          >Reset</b-button
+        >
+        <b-button
           id="sub"
-          class="invisible colorSubmit"
+          class="lienSouris cursorNone aos-item text-secondary colorSubmit"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          data-aos-anchor="#boxC"
           type="submit"
           :disabled="submitStatus === 'PENDING'"
-          >Submit</b-button
-        >
-        <b-button id="res" class="invisible" type="reset" variant="danger"
-          >Reset</b-button
+          >Envoyer</b-button
         >
       </div>
       <div>
         <p class="typo__p" v-if="submitStatus === 'OK'">
-          Thanks for your submission!
+          Merci pour votre envoi !
         </p>
         <p class="typo__p" v-if="submitStatus === 'ERROR'">
-          Please fill the form correctly.
+          Svp Entrez votre formulaire correctement.
         </p>
         <p class="typo__p" v-if="submitStatus === 'ERROR SERVEUR'">
-          erreur serveur:Le mot de passe ou l'email ne correponde pas OU server
-          HS !
+          Erreur Serveur: Chemin Https doit être utilisée pour l'envoi OU
+          Serveur HS !
         </p>
         <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
 
@@ -157,7 +176,7 @@ export default {
     };
   },
   validations: {
-    email: { required, email, maxLength: 70 },
+    email: { required, email, maxLength: maxLength(70) },
     nom: {
       required,
       strongNom(nom) {
@@ -183,45 +202,13 @@ export default {
         );
       }
     },
-    phone: { required, numeric, maxLength: 20 }
+    phone: { required, numeric, maxLength: maxLength(20) }
   },
-  mounted() {
-    const boxC = document.getElementById("boxC");
-    const boxD = document.getElementById("boxD");
-    const boxE = document.getElementById("boxE");
-    const boxF = document.getElementById("boxF");
-    const sub = document.getElementById("sub");
-    const res = document.getElementById("res");
-
-    window.addEventListener("scroll", () => {
-      let scrollValue =
-        (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-
-      if (scrollValue > 0.94) {
-        boxC.classList.remove("invisible");
-        boxC.classList.add("boxC");
-
-        boxD.classList.remove("invisible");
-        boxD.classList.add("boxD");
-
-        boxE.classList.remove("invisible");
-        boxE.classList.add("boxE");
-
-        boxF.classList.remove("invisible");
-        boxF.classList.add("boxF");
-
-        sub.classList.remove("invisible");
-        sub.classList.add("para2");
-
-        res.classList.remove("invisible");
-        res.classList.add("para2");
-      }
-    });
-  },
+  mounted() {},
   /*
   async created() {
     axios
-      .get("http://localhost:3100/client")
+      .get("")
       .then(response => ((this.client = response.data), console.log(response)))
       .catch(error => console.log(error));
   },
@@ -239,7 +226,7 @@ export default {
         this.submitStatus = "PENDING";
 
         axios
-          .post("http://localhost:3100/poster", {
+          .post(process.env.ROUTE, {
             email: this.email,
             nom: this.nom,
             message: this.message,
@@ -279,6 +266,9 @@ export default {
 };
 </script>
 <style>
+.btnReset:hover {
+  background-color: rgb(206, 46, 46) !important;
+}
 .boxC {
   animation: 1s linear boxC;
 }

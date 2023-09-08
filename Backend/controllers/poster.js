@@ -22,7 +22,7 @@ const db = require("knex")({
     host: "localhost",
     user: process.env.USER,
     password: process.env.PASSWORD,
-    database: "portfolio",
+    database: process.env.DATABASE,
   },
 });
 

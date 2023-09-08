@@ -1,15 +1,22 @@
 <template>
-  <div id="app" class="bg-secondary">
-    <div id="nav">
-      <Nuxt-link to="/">Acceuil</Nuxt-link>
-    </div>
+  <div id="app" class="bgPrimary ">
     <Nuxt />
   </div>
 </template>
 
+<script>
+export default {};
+</script>
 <style>
+html::-webkit-scrollbar {
+  background-color: #6c757d;
+}
+html::-webkit-scrollbar-thumb {
+  background: #aca5a5;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: /*Avenir,  Helvetica, Arial, sans-serif*/ "Times New Roman",
+    Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,7 +31,6 @@ a {
   font-weight: bold;
   color: white;
 }
-
 /*
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",

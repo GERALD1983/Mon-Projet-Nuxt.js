@@ -1,75 +1,93 @@
 <template>
-  <div class="bg-white margTitre mobileMargTitre">
+  <div class=" mobileMargTitre">
     <div class="d-flex justify-content-center align-items-center">
-      <h2 id="competence" class="invisible bg-white py-5">
-        Mes Compétences
+      <h2
+        id="competence"
+        class="mobileCompetenceTitre lienSouris aos-item py-5"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
+        Compétences
       </h2>
     </div>
-
-    <div
-      id="animBack"
-      class=" backSkillSize mobileBackSkillSize invisible slider d-flex justify-content-center align-items-center"
-    >
+    <div class="d-flex justify-content-center">
       <div
-        id="animLogos"
-        class="invisible backLogos col-md-6 d-flex flex-wrap justify-content-around align-items-center "
+        id="animBack"
+        class="col-md-8 bgTree bordureCercleSkill backSkillSize mobileCercleSkill mobileBackSkillSize aos-item d-flex justify-content-center align-items-center"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       >
-        <div v-for="(image, index) in images" :key="index">
-          <img
-            @click="readSkill(image)"
-            role="button"
-            class=" cube ombreLogo"
-            :src="image.link"
-            :alt="
-              'Langage informatique programmation compétences développeur web : ' +
-                image.titre
-            "
-          />
-        </div>
-      </div>
-      <div
-        id="animModal"
-        class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
-      >
-        <h4 class="text-right text-danger">
-          <span @click="clearReadSkill" role="button"> X </span>
-        </h4>
-        <div>
-          <img
-            id="imgMod"
-            class="cube"
-            src="../assets/html.png"
-            alt="langage programmation logo"
-          />
-        </div>
-        <div>
-          <h3 id="titreMod">TITRE</h3>
+        <div
+          id="animLogos"
+          class="aos-item backLogos col-md-8 col-lg-8 d-flex flex-wrap justify-content-around align-items-center "
+          data-aos="fade"
+          data-aos-duration="2000"
+        >
+          <div v-for="(image, index) in images" :key="index">
+            <img
+              width="70px"
+              height="70px"
+              @click="readSkill(image)"
+              class="ombreLogo"
+              :src="image.link"
+              :alt="
+                'Langage informatique programmation compétences développeur web : ' +
+                  image.titre
+              "
+            />
+          </div>
         </div>
         <div
-          class="d-flex  justify-content-center align-content-center align-items-center"
+          id="animModal"
+          class="backModal backModalCompMobile efface col-md-8 d-flex flex-column "
         >
-          <div
-            class="d-flex col-xxl-6 col-xl-10 col-lg-11 col-md-12 flex-column justify-content-left"
-          >
-            <div class="d-flex justify-content-left align-items-center">
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod1">
-                DESCRIPTION1
-              </p>
-            </div>
-            <div class="d-flex justify-content-left align-items-center">
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod2">
-                DESCRIPTION2
-              </p>
-            </div>
-            <div
-              class="d-flex justify-content-left align-items-center mobileDernierCompMod"
+          <h4 class="pt-1 text-right">
+            <span
+              @click="clearReadSkill"
+              role="button"
+              class="bg-dark text-white"
             >
-              <b-icon icon="circle-fill" variant="info"></b-icon>
-              <p class="stopMargPad ml-5" id="descriMod3">
-                DESCRIPTION3
-              </p>
+              X
+            </span>
+          </h4>
+          <div>
+            <img
+              width="75px"
+              height="75px"
+              id="imgMod"
+              src="../assets/html.png"
+              alt="langage programmation logo"
+            />
+          </div>
+          <div>
+            <h3 id="titreMod">TITRE</h3>
+          </div>
+          <div
+            class="d-flex  justify-content-center align-content-center align-items-center"
+          >
+            <div
+              class="d-flex col-xxl-6 col-xl-10 col-lg-11 col-md-12 flex-column justify-content-left"
+            >
+              <div class="d-flex justify-content-left align-items-center">
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod1">
+                  DESCRIPTION1
+                </p>
+              </div>
+              <div class="d-flex justify-content-left align-items-center">
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod2">
+                  DESCRIPTION2
+                </p>
+              </div>
+              <div
+                class="d-flex justify-content-left align-items-center mobileDernierCompMod"
+              >
+                <b-icon icon="circle-fill" variant="info"></b-icon>
+                <p class="stopMargPad ml-5" id="descriMod3">
+                  DESCRIPTION3
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +124,7 @@ export default {
         {
           titre: "Javascript",
           link: require("../assets/js.png"),
-          nom: "Mes compétences en Javascript",
+          nom: "Mes compétences en JavaScript",
           description1: "Gérer des événements JavaScript.",
           description2: "Interagir avec un web service avec JavaScript.",
           description3:
@@ -118,7 +136,7 @@ export default {
           nom: "Mes compétences en Json",
           description1: "Manipuler des données au format Json",
           description2:
-            "Convertir des données Json en Javascript et inversement",
+            "Convertir des données Json en JavaScript et inversement",
           description3: "Interagir avec un objet Json."
         },
         {
@@ -145,7 +163,7 @@ export default {
           link: require("../assets/npm.png"),
           nom: "Mes compétences en Npm",
           description1: "Utiliser Npm à l'aide d'un terminal de commande.",
-          description2: "Installer les différents packages Npm en ligne.",
+          description2: "Installer les différents Packages Npm en ligne.",
           description3: "Intégrer les dépendances Npm à l'application."
         },
         {
@@ -182,7 +200,8 @@ export default {
           nom: "Mes compétences en MongoDb",
           description1:
             "Stocker des données de manière sécurisée dans MongoDb.",
-          description2: "Gérer une base de donnée MongoDb et ses utilisateurs.",
+          description2:
+            "Gérer une base de données MongoDb et ses utilisateurs.",
           description3:
             "Utiliser Mongoose et modéliser des objets MongoDb pour Node.js."
         },
@@ -194,7 +213,7 @@ export default {
           description2:
             "Structurer l'arbre Git et garder les branches propres.",
           description3:
-            "Initialiser , commiter gérer les problémes de conflit sur Git"
+            "Initialiser , Commiter et gérer les problèmes de conflit sur Git"
         },
         {
           titre: "GitHub",
@@ -202,7 +221,7 @@ export default {
           nom: "Mes compétences en GitHub",
           description1: "Gérer plusieurs versions sur GitHub",
           description2: "Envoyer et héberger une application sur GitHub.",
-          description3: "Collaborer grâce à GitHub en utilisant les workflows."
+          description3: "Collaborer grâce à GitHub en utilisant les Workflows."
         },
         {
           titre: "Gimp",
@@ -210,15 +229,15 @@ export default {
           nom: "Mes compétences en Gimp",
           description1: "Intégrer une maquette et en saisir le contenu",
           description2:
-            "Revoir différents aspect d'une maquette taille , couleurs",
+            "Revoir différents aspects d'une maquette taille , couleurs",
           description3:
-            "Concevoir différents modéle de base images, banniéres, logos, textes."
+            "Concevoir différents modèles de base images, bannières, logos, textes."
         },
         {
           titre: "Node.js",
-          link: require("../assets/node1.png"),
+          link: require("../assets/node.png"),
           nom: "Mes compétences en Node.js",
-          description1: "Créer une API REST avec Node.js en modéle MVC.",
+          description1: "Créer une API REST avec Node.js en modèle MVC.",
           description2: "Concevoir des applications évolutives avec Node.js.",
           description3:
             "Réaliser toute une structure Backend fonctionnelle avec Node.js."
@@ -229,11 +248,11 @@ export default {
           nom: "Mes compétences en Ligne de Commande",
           description1: "Utiliser les commandes de base d'un terminal.",
           description2: "Manipuler des fichiers avec un terminal.",
-          description3: "Ajouter des packages et naviguer depuis un terminal."
+          description3: "Ajouter des Packages et naviguer depuis un terminal."
         },
         {
           titre: "Postman",
-          link: require("../assets/postman.jpg"),
+          link: require("../assets/postman.png"),
           nom: "Mes compétences avec Postman",
           description1: "Manipuler des API avec l'interface Postman.",
           description2:
@@ -249,30 +268,12 @@ export default {
           description2:
             "Mettre en place un système d'authentification sur une application Express.",
           description3:
-            "Gérer des fichiers utilisateur sur une application Express."
+            "Gérer des fichiers utilisateurs sur une application Express."
         }
       ]
     };
   },
-  mounted() {
-    const competence = document.getElementById("competence");
-    const back = document.getElementById("animBack");
-    const logos = document.getElementById("animLogos");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 700) {
-        competence.classList.remove("invisible");
-        competence.classList.add("boxt");
-      }
-      if (window.scrollY > 800) {
-        back.classList.remove("invisible");
-        back.classList.add("backSkill");
-
-        logos.classList.remove("invisible");
-        logos.classList.add("logos");
-      }
-    });
-  },
+  mounted() {},
   methods: {
     readSkill: function(image) {
       const backMod = document.getElementById("animModal");
@@ -302,10 +303,14 @@ export default {
         "descriMod3"
       ).textContent = `${image.description3}`;
     },
+
     clearReadSkill: function() {
       const backMod = document.getElementById("animModal");
       const logos = document.getElementById("animLogos");
       logos.classList.remove("efface");
+      logos.classList.add("logos");
+      //logos.classList.remove("logos");
+
       backMod.classList.add("efface");
     }
   }
@@ -314,12 +319,14 @@ export default {
 
 <style scoped>
 .ombreLogo:hover {
-  box-shadow: 0 0 0 0 #748928ff;
+  /* box-shadow: 0 0 0 0 #748928ff; */
+  box-shadow: 0 0 0 0 rgb(23, 255, 236);
   animation: pulse 1.3s infinite;
+  background-color: #fffbf4;
 }
 .backModal {
   width: 20em;
-  height: 300px;
+  height: 360px;
   border-radius: 25px;
   background-color: white;
 }
@@ -330,33 +337,14 @@ export default {
   display: none !important;
 }
 .logos {
-  animation: 1.5s linear logo;
+  animation: 1s linear logo;
 }
 @keyframes logo {
   0% {
     opacity: 0;
-    transform: translateY(150%);
+    /* transform: translateY(150%);*/
   }
   100% {
-    opacity: 1;
-  }
-}
-.backSkill {
-  background-image: url("../assets/flux.jpg");
-
-  animation: rotate-vert-center 2s
-    /*cubic-bezier(0.455, 0.03, 0.515, 0.955) both*/ ease-in-out;
-}
-
-@keyframes rotate-vert-center {
-  0% {
-    /* -webkit-transform: rotateY(0);
-    transform: rotateY(0);*/
-    opacity: 0;
-  }
-  100% {
-    /*  -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);*/
     opacity: 1;
   }
 }
