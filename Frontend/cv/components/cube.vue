@@ -57,7 +57,7 @@ export default {
 
 .top {
   background: #886526;
-  transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(10deg) translateZ(50px);
 }
 .bottom {
   background: #886526;

@@ -136,7 +136,7 @@ export default {
           du Framework Bootstrap et en JavaScript Vanilla.
           Le code est commenté et utilise des promises en requête Ajax sous forme de fonction.
           Le Backend était fourni ainsi que les informations et les différentes données affichaient en Frontend.`,
-          url: "https://youtu.be/kq28gLkrigA"
+          url: "https://github.com/GERALD1983/FrontEndP5"
         },
         {
           id: 6,
@@ -149,7 +149,7 @@ export default {
           Ici le Backend de l'application a été réalisé en Api Rest avec Nodejs et Express.
           Les règles de sécurité Owasp ont été également mis en place afin de sécuriser
           l'application et la navigation de l'utilisateur.`,
-          url: "https://youtu.be/Wno68xjuAe0"
+          url: "https://github.com/GERALD1983/Projet6_SoPekocko"
         },
         {
           id: 7,
@@ -181,26 +181,6 @@ export default {
           celle d'un Cms totalement re-développer en Nuxt.js avec ajout d'animations
           et pages dynamiques non présentent dans le Cms.`,
           url: "https://github.com/GERALD1983/Audio-conseil"
-        },
-        {
-          id: 9,
-          link: require("../assets/opticien370.jpg"),
-          link2: require("../assets/opticien.jpg"),
-          nom: "ValVision",
-          description: `Réalisation d'un Site E-commerce sous PrestaShop pour vente en ligne magasin d'optique.
-          Référencement naturel du site SEO et de chaque produit.
-          Ajout des produits sur le site de chaque catégorie, des marques pour l'ensemble du magasin,
-          gestion des stocks sur le site depuis le BackOffice et depuis le point de vente.
-          Gestion des commandes, des messages avec Thunderbird et depuis le BackOffice.
-          Création des factures des Templates automatisés et ajout des modules et configuration de ceux-ci.
-          Gestion des solutions Prestashop en FrontOffice design, images, ajout d'articles et
-          intégration de tout le site de la société.
-          Achat de nouveaux modules implémentation et gestion de leur intégration.
-          Ce site a été complètement réaliser par mes soins, plus de 1000 produits référencés
-          et 10 catégorie et plus de 50 marques ont été gérées.
-          Ceci m'a permis d'avoir une expertise confirmée en Webmaster et intégration Web et SEO
-          ainsi que le Web Marketing.`,
-          url: "http://www.valvision-optique.com/store/"
         }
       ]
     };
